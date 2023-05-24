@@ -1,0 +1,127 @@
+.modal {
+	@media(max-width: 768px) {
+		padding: 28px 20px;
+	}
+	@media(max-width: 690px) {
+		max-width: 100%;
+        padding: 28px 15px;
+	}
+	@media(max-width: 360px) {
+		padding: 20px 15px;
+	}
+}
+.modal-header {
+    display: flex;
+    gap: 32px;
+	@media(max-width: 1380px) {
+		display: flex;
+        gap: 32px;
+	}
+	@media(max-width: 690px) {
+		gap: 24px;
+	}
+}
+.modal-header {
+    justify-content: end;
+	@media(max-width: 1380px) {
+		display: flex;
+        gap: 32px;
+	}
+}
+
+.header-mobile__btn {
+    flex-basis: 60px;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    border: 1px solid var(--light-gray);
+    border-radius: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+.modal-header__btn {
+    flex-basis: 60px;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    border-radius: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: #FFF;
+}
+.modal-header__close {
+    background-color: var(--main);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    transition: .3s;
+    display: flex;
+    justify-content: end;
+    visibility: hidden;
+    transition: .2s;
+}
+
+.modal {
+    background-color: #F0F0F2;
+    padding: 28px 80px;
+    position: relative;
+    height: 100vh;
+    max-width: 467px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    overflow: auto;
+}
+
+.modal-menu {
+    font-size: 4rem;
+    flex-grow: 1;
+	@media(max-width: 690px) {
+		font-size: 2.4rem;
+	}
+}
+.modal-menu > a {
+    display: block;
+}
+.modal-menu > a + a {
+    margin-top: 32px;
+	@media(max-width: 690px) {
+		margin-top: 24px;
+	}
+}
+
+.modal__btn {
+    background-color: #5486E5;
+    border-radius: 10rem;
+    border: none;
+    padding: 30px 0;
+    display: block;
+    width: 100%;
+    color: #FFF;
+    font-size: 16px;
+    @media(max-width: 690px) {
+		padding: 20px 30px;
+	}
+}
+.modal__btn > span {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, #FFF 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=transparent, endColorstr=#FFF, GradientType=0);
+    background-repeat: repeat-x;
+    background-position: 0 85%;
+    background-size: 1px 1px;
+}
+

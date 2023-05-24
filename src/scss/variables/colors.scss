@@ -1,0 +1,25 @@
+:root {
+  --tr: 0.2s;
+  --tr-regular: all var(--tr) ease;
+
+  // Colors
+  --dark: #202A34;
+  --accent: #5486E5;
+  --accent-hover: #2C67D7;
+  --main: #EA5D2A;
+  --main-hover: #D43C00;
+  --light-gray: #BABABA;
+  --light: #F8F8F8;
+
+  // Widths
+  --w-container: 1440px;
+  @media (max-width: $desktop-m) {
+    --w-container: 1260px;
+  }
+  @media (max-width: $desktop-s) {
+    --w-container: 892px;
+  }
+  @media (max-width: 768px) {
+    --w-container: 100%;
+  }
+}

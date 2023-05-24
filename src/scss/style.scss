@@ -1,0 +1,104 @@
+/* stylelint-disable no-invalid-position-at-import-rule */
+@use "sass:math";
+
+@import "./variables/variables";
+@import "./variables/colors";
+@import "./mixins";
+
+.container {
+  max-width: 1820px;
+  margin: 0 auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  @media(max-width: 1440px) {
+    max-width: 1280px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  @media(max-width: 768px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @media(max-width: 690px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@import "./components";
+
+// Шрифты
+@include font('Manrope', normal, 400, '../resources/fonts/manrope/manrope-regular');
+@include font('Manrope', normal, 600, '../resources/fonts/manrope/manrope-semibold');
+
+:root {
+  --gap: 32px;
+  @media(max-width: 1440px) {
+    --gap: 24px;
+  }
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font: 400 1.8rem/2rem 'Manrope', sans-serif;
+  color: var(--dark);
+  line-height: 1.45;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+input,
+button {
+  font-family: 'Manrope', sans-serif;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
+
+input::placeholder {
+  color: var(--light-gray)
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.title-h1 {
+  font-size: 7.2rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.title-h2 {
+  font-size: 6.4rem;
+  font-weight: 600;
+}
+
+.title-h3 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+// Библиотеки
+@import "./libs/swiper";
+@import "./sections";
