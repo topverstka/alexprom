@@ -7,7 +7,7 @@ import imagemin from "gulp-imagemin";
 import webp from "gulp-webp";
 
 export function imagesBuild() {
-  console.log(app.useWebp);
+  // console.log(app.useWebp);
   return (
     gulp
       .src(app.path.src.images)

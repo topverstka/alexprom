@@ -1,0 +1,48 @@
+.burger {
+  --line-width: 61.5%;
+  --line-height: 2px;
+  position: relative;
+  width: var(--burger-width, 40px);
+  height: var(--burger-height, 40px);
+  transition: var(--tr);
+
+  @media (min-width: $tablet + 1) {
+    display: none;
+  }
+}
+
+.burger span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: var(--line-width, 40%);
+  height: var(--line-height, 0.2rem);
+  background: var(--c-burger-line, var(--c-text-regular));
+  transition: var(--tr);
+  border-radius: 2rem;
+}
+
+.burger span:nth-child(1) {
+  transform: translate(-50%, calc(-50% - 12px));
+}
+
+.burger span:nth-child(2) {
+  transform: translate(-50%, calc(-50% - 4px));
+}
+
+.burger span:nth-child(3) {
+  transform: translate(-50%, calc(-50% + 3px)) scaleX(0.6);
+  transform-origin: left;
+}
+
+.burger.is-active span:nth-child(1) {
+  transform: translate(-50%, calc(-50% - 4px)) rotate(45deg);
+}
+.burger.is-active span:nth-child(2) {
+  width: 0;
+}
+.burger.is-active span:nth-child(3) {
+  transform: translate(-50%, calc(-50% - 4px)) rotate(-45deg);
+  transform-origin: unset;
+}
