@@ -2789,16 +2789,16 @@ button.swiper-pagination-bullet {
 
 .swiper-button-next,
 .swiper-button-prev {
-  width: 72px;
-  height: 72px;
-  background-color: #FFF;
+  width: 97px;
+  height: 97px;
   border-radius: 100%;
   top: calc(50% - 36px);
   transition: 0.2s;
-}
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  background-color: var(--main);
+  transform: translateZ(0);
+  background: rgba(217, 217, 217, 0.1);
+  box-shadow: inset 10.7333px -10.7333px 10.7333px rgba(165, 165, 165, 0.1), inset -10.7333px 10.7333px 10.7333px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10.7333px);
+  border-radius: 50%;
 }
 
 @media (max-width: 1440px) {
@@ -2820,11 +2820,11 @@ button.swiper-pagination-bullet {
 .swiper-button-prev::after {
   content: "";
   display: block;
-  width: 24px;
-  height: 24px;
+  width: 72px;
+  height: 72px;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
-  -webkit-mask-size: contain;
+  -webkit-mask-size: 24px;
   background-color: var(--dark);
   transition: 0.2s;
 }
@@ -2846,13 +2846,17 @@ button.swiper-pagination-bullet {
 .swiper-button-prev::before {
   content: "";
   display: block;
-  width: 97px;
-  height: 97px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-image: url(../images/circle-blur.svg);
+  background-color: #FFF;
+  border-radius: 50%;
+  width: 72px;
+  height: 72px;
   position: absolute;
+  transition: 0.3s ease;
+}
+
+.swiper-button-next:hover::before,
+.swiper-button-prev:hover::before {
+  background-color: var(--main);
 }
 
 .gallery-carousel {
