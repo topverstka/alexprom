@@ -86,11 +86,35 @@ h3 {
   font-size: 7.2rem;
   font-weight: 600;
   line-height: 1.35;
+
+  @media (max-width: $desktop-m) {
+    font-size: 5.4rem;
+  }
+
+  @media (max-width: $tablet-m) {
+    font-size: 5rem;
+  }
+
+  @media (max-width: $mobile-l) {
+    font-size: 4rem;
+  }
 }
 
 .title-h2 {
   font-size: 6.4rem;
   font-weight: 600;
+
+  @media (max-width: $desktop-m) {
+    font-size: 5rem;
+  }
+
+  @media (max-width: $tablet-m) {
+    font-size: 4.8rem;
+  }
+
+  @media (max-width: $mobile-l) {
+    font-size: 3.2rem;
+  }
 }
 
 .title-h3 {

@@ -1,10 +1,18 @@
-.form-input {
+.input {
+  --input-fz: 1.6rem;
+  --input-fg: var(--dark);
+  --input-bg: #FFF;
+  --input-border: 1px solid #BABABA;
+  --input-padding: 28px 24px;
+}
+
+.input__field {
   width: 100%;
-  font-size: 1.6rem;
-  color: var(--dark);
-  padding: 28px 24px;
-  background-color: #FFF;
-  border: 1px solid #BABABA;
+  font-size: var(--input-fz);
+  color: var(--input-fg);
+  padding: var(--input-padding);
+  background-color: var(--input-bg);
+  border: var(--input-border);
   border-radius: 2rem;
   box-sizing: border-box;
 }
