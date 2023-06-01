@@ -49,35 +49,6 @@ var swiper = new Swiper(".swiper-gallery", {
     document.body.style.padding = "0";
   }
   
-  // FAQ
-  
-  const faqCards = document.querySelectorAll('.faq__card');
-
-  const openFaq = () => {
-  }
-  const closeFaq = () => {
-
-  }
-  
-  faqCards.forEach(faqCard =>{
-    let btn = faqCard.querySelector('.faq-card__question');
-    let icon = faqCard.querySelector('.faq-card__question span:last-child');
-    var answer = faqCard.lastElementChild;
-    var answers = document.querySelectorAll('.faq-card .faq-card__answer');
-    btn.addEventListener('click', ()=>{
-        answers.forEach(ans =>{
-            let ansIcon = ans.parentElement.querySelector('.faq-card__question span:last-child');
-            if(answer !== ans){
-              ans.classList.add('hideText');
-              ansIcon.className = '_close';
-            }
-        });
-        answer.classList.toggle('hideText');
-        icon.className === '_open' ? icon.className = '_close' 
-        : icon.className ='_open';
-    });
-  });
-  
   // Mobile Mask
   
   const input = document.querySelector(".mask-tel");
