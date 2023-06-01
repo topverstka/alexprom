@@ -62,7 +62,7 @@
     display: block;
     width: 32px;
     height: 32px;
-    -webkit-mask-image: url(../img/arrow.svg);
+    -webkit-mask-image: url(../images/arrow.svg);
     background-color: var(--dark);
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center;
@@ -103,10 +103,10 @@
     top: calc(50% - 12px);
 }
 .swiper-gallery__arg::before {
-    background-image: url(../img/icons/parameter.svg);
+    background-image: url(../images/icons/parameter.svg);
 }
 .swiper-gallery__loc::before {
-    background-image: url(../img/icons/location.svg);
+    background-image: url(../images/icons/location.svg);
 }
 
 .swiper-button-next,
@@ -151,11 +151,11 @@
 }
 
 .swiper-button-next::after {
-    -webkit-mask-image: url(../img/arrow-next.svg);
+    -webkit-mask-image: url(../images/arrow-next.svg);
 }
 
 .swiper-button-prev::after {
-    -webkit-mask-image: url(../img/arrow-prev.svg);
+    -webkit-mask-image: url(../images/arrow-prev.svg);
 }
 
 .swiper-button-next:hover::after,
@@ -172,7 +172,7 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    background-image: url(../img/circle-blur.svg);
+    background-image: url(../images/circle-blur.svg);
     position: absolute;
 }
 

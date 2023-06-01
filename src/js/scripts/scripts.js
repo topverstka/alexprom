@@ -51,19 +51,25 @@ var swiper = new Swiper(".swiper-gallery", {
   
   // FAQ
   
-  const elements = document.querySelectorAll('.faq__item');
+  const faqCards = document.querySelectorAll('.faq__card');
+
+  const openFaq = () => {
+  }
+  const closeFaq = () => {
+
+  }
   
-  elements.forEach(element =>{
-    let btn = element.querySelector('.faq__question');
-    let icon = element.querySelector('.faq__question span:last-child');
-    var answer = element.lastElementChild;
-    var answers = document.querySelectorAll('.faq__item .faq__answer');
+  faqCards.forEach(faqCard =>{
+    let btn = faqCard.querySelector('.faq-card__question');
+    let icon = faqCard.querySelector('.faq-card__question span:last-child');
+    var answer = faqCard.lastElementChild;
+    var answers = document.querySelectorAll('.faq-card .faq-card__answer');
     btn.addEventListener('click', ()=>{
         answers.forEach(ans =>{
-            let ansIcon = ans.parentElement.querySelector('.faq__question span:last-child');
+            let ansIcon = ans.parentElement.querySelector('.faq-card__question span:last-child');
             if(answer !== ans){
-                ans.classList.add('hideText');
-                ansIcon.className = '_close';
+              ans.classList.add('hideText');
+              ansIcon.className = '_close';
             }
         });
         answer.classList.toggle('hideText');

@@ -244,6 +244,104 @@
   box-sizing: border-box;
 }
 
+.bayan {
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+.bayan__top {
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.bayan__bottom {
+  transition: all 0.4s;
+  opacity: 0;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  width: 100%;
+  grid-template-rows: 0fr;
+  display: grid;
+}
+
+.bayan__bottom > * {
+  min-height: 0;
+  transition: var(--tr-regular);
+}
+
+.bayan:not(.bayan--opened) .bayan__bottom > * {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.bayan__bottom--absolute {
+  position: absolute;
+}
+
+.bayan--opened .bayan__bottom {
+  opacity: 1;
+  grid-template-rows: 1fr;
+}
+
+.bayan__toggler {
+  --line-width: 100%;
+  --line-height: 0.4rem;
+  --closer-width: 3rem;
+  --closer-height: 3rem;
+  position: relative;
+  width: var(--closer-width, 3rem);
+  height: var(--closer-height, 3rem);
+  transition: var(--tr);
+  transform-origin: center;
+}
+@media (max-width: 992px) {
+  .bayan__toggler {
+    --closer-width: 1.6rem;
+    --closer-height: 1.6rem;
+    --line-height: 0.2rem;
+  }
+}
+
+.bayan__toggler:before,
+.bayan__toggler:after {
+  content: "";
+  position: relative;
+  top: 50%;
+  left: 50%;
+  display: block;
+  background: var(--togler-color, var(--c-text-regular));
+  transition: var(--tr);
+  border-radius: 2rem;
+}
+
+.bayan__toggler:before {
+  width: var(--line-width, 40%);
+  height: var(--line-height, 0.2rem);
+}
+
+.bayan__toggler:after {
+  width: var(--line-height, 0.2rem);
+  height: var(--line-width, 40%);
+}
+
+.bayan__toggler:before {
+  transform: translate(-50%, -50%);
+}
+
+.bayan__toggler:after {
+  transform: translate(-50%, -60%);
+}
+
+.bayan--opened .bayan__toggler:before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.bayan--opened .bayan__toggler:after {
+  transform: translate(-50%, -60%) rotate(45deg);
+}
+
 @media (max-width: 768px) {
   .modal {
     padding: 28px 20px;
@@ -1501,7 +1599,7 @@ button.swiper-pagination-bullet {
 @media (max-width: 1100px) {
   .hero__thumb {
     height: auto;
-    background-image: url(../img/bg-thumb.png);
+    background-image: url(../images/bg-thumb.png);
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 54vw;
@@ -1837,23 +1935,23 @@ button.swiper-pagination-bullet {
   margin-top: 80px;
 }
 
-.faq__item {
+.faq-card {
   border-radius: 30px;
   font-size: 1.8rem;
   line-height: 1.25;
   background-color: var(--light);
 }
 @media (max-width: 768px) {
-  .faq__item {
+  .faq-card {
     font-size: 1.4rem;
   }
 }
 
-.faq__item + .faq__item {
+.faq-card + .faq-card {
   margin-top: 4rem;
 }
 
-.faq__question {
+.faq-card__question {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1873,81 +1971,66 @@ button.swiper-pagination-bullet {
   transition: 0.2s;
 }
 @media (max-width: 768px) {
-  .faq__question {
+  .faq-card__question {
     font-size: 1.6rem;
     padding: 30px 20px;
     gap: 3rem;
   }
 }
 
-.faq__question > span {
+.faq-card__question > span {
   transition: 0.2s;
 }
 
-.faq__question > span:first-child {
+.faq-card__question > span:first-child {
   flex-basis: calc(100% - 32px);
 }
 @media (max-width: 768px) {
-  .faq__question > span:first-child {
+  .faq-card__question > span:first-child {
     flex-basis: calc(100% - 24px);
   }
 }
 
-.faq__question > span:last-child {
+.faq-card .bayan__toggler {
   flex-basis: 32px;
   width: 32px;
   height: 32px;
   transition: 0.3s;
-  -webkit-mask-image: url(../img/arrow.svg);
+  -webkit-mask-image: url(../images/arrow.svg);
   background-color: var(--dark);
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: cover;
   transition: 0.2s;
 }
 @media (max-width: 768px) {
-  .faq__question > span:last-child {
+  .faq-card .bayan__toggler {
     flex-basis: 24px;
     width: 24px;
     height: 24px;
   }
 }
 
-.faq__question > span._open {
+.faq-card.bayan--opened .bayan__toggler {
   transform: rotate(-90deg);
 }
 
-.faq__question > span._close {
-  transform: rotate(0);
-}
-
-.faq__question:hover > span {
+.faq-card__question:hover > span {
   color: var(--accent);
 }
 
-.faq__question:hover > span:last-child {
+.faq-card:hover .bayan__toggler {
   background-color: var(--accent);
 }
 
-.faq__item .faq__answer {
+.faq-card .faq-card__answer {
   padding: 0 40px 20px 40px;
-  animation: animate 0.5s;
   transition: 0.3s;
 }
 
-.hideText {
-  display: none;
+.faq-card__answer p:first-child {
+  margin-top: 0;
 }
 
-@keyframes animate {
-  from {
-    opacity: 0;
-    transform: scale(0.7);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
 .services__head {
   display: flex;
   align-items: center;
@@ -2089,7 +2172,7 @@ button.swiper-pagination-bullet {
 }
 
 .consultation {
-  background-image: url(../img/city.jpg);
+  background-image: url(../images/city.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -2651,7 +2734,7 @@ button.swiper-pagination-bullet {
   display: block;
   width: 32px;
   height: 32px;
-  -webkit-mask-image: url(../img/arrow.svg);
+  -webkit-mask-image: url(../images/arrow.svg);
   background-color: var(--dark);
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -2697,11 +2780,11 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-gallery__arg::before {
-  background-image: url(../img/icons/parameter.svg);
+  background-image: url(../images/icons/parameter.svg);
 }
 
 .swiper-gallery__loc::before {
-  background-image: url(../img/icons/location.svg);
+  background-image: url(../images/icons/location.svg);
 }
 
 .swiper-button-next,
@@ -2747,11 +2830,11 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-button-next::after {
-  -webkit-mask-image: url(../img/arrow-next.svg);
+  -webkit-mask-image: url(../images/arrow-next.svg);
 }
 
 .swiper-button-prev::after {
-  -webkit-mask-image: url(../img/arrow-prev.svg);
+  -webkit-mask-image: url(../images/arrow-prev.svg);
 }
 
 .swiper-button-next:hover::after,
@@ -2768,7 +2851,7 @@ button.swiper-pagination-bullet {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-image: url(../img/circle-blur.svg);
+  background-image: url(../images/circle-blur.svg);
   position: absolute;
 }
 

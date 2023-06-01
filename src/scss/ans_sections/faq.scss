@@ -2,7 +2,7 @@
     margin-top: 80px;
 } 
 
-.faq__item {
+.faq-card {
     border-radius: 30px;
     font-size: 1.8rem;
     line-height: 1.25;
@@ -12,11 +12,11 @@
 	}
 }
 
-.faq__item + .faq__item {
+.faq-card + .faq-card {
     margin-top: 4rem;
 }
 
-.faq__question {
+.faq-card__question {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,6 +34,7 @@
     cursor: pointer;
     box-sizing: border-box;
     transition: .2s;
+
 	@media(max-width: 768px) {
 		font-size: 1.6rem;
         padding: 30px 20px;
@@ -41,27 +42,28 @@
 	}
 }
 
-.faq__question > span {
+.faq-card__question > span {
     transition: .2s;
 }
 
-.faq__question > span:first-child {
+.faq-card__question > span:first-child {
     flex-basis: calc(100% - 32px);
 	@media(max-width: 768px) {
 		flex-basis: calc(100% - 24px);
 	}
 }
 
-.faq__question > span:last-child {
+.faq-card .bayan__toggler {
     flex-basis: 32px;
     width: 32px;
     height: 32px;
     transition: .3s;
-    -webkit-mask-image: url(../img/arrow.svg);
+    -webkit-mask-image: url(../images/arrow.svg);
     background-color: var(--dark);
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: cover;
     transition: .2s;
+
 	@media(max-width: 768px) {
 		flex-basis: 24px;
         width: 24px;
@@ -69,38 +71,23 @@
 	}
 }
 
-.faq__question > span._open {
+.faq-card.bayan--opened .bayan__toggler {
     transform: rotate(-90deg);
 }
 
-.faq__question > span._close {
-    transform: rotate(0);
-}
-
-.faq__question:hover > span {
+.faq-card__question:hover > span {
     color: var(--accent);
 }
-.faq__question:hover > span:last-child {
+
+.faq-card:hover .bayan__toggler {
     background-color: var(--accent);
 }
 
-.faq__item .faq__answer {
+.faq-card .faq-card__answer {
     padding: 0 40px 20px 40px;
-    animation: animate .5s;
     transition: .3s;
 }
-.hideText {
-    display: none;
-}
 
-@keyframes animate {
-    from {
-        opacity: 0;
-        transform: scale(0.7);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+.faq-card__answer p:first-child {
+    margin-top: 0;
 }
