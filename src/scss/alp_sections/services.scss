@@ -52,6 +52,10 @@
     height: 265px;
     border-radius: 20px;
     margin-bottom: 39px;
+    @media (max-width: $desktop-m) {
+        height: 200px;
+        margin-bottom: 29px;
+    }
     @media(max-width: 1100px) {
         height: 23vw;
     }

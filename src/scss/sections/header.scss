@@ -22,12 +22,14 @@
 	}
 }
 
-.header__nav {
+.header__menu {
     flex-grow: 1;
+}
+.header__nav {
     display: flex;
     gap: var(--gap);
 	@media(max-width: 1380px) {
-		display: none;
+		// display: none;
 	}
 }
 

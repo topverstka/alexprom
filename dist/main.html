@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
-        <link rel="stylesheet" href="./css/style.css?_v=20230601193733">
+        <link rel="stylesheet" href="./css/style.css?_v=20230602084725">
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no">
@@ -20,14 +20,16 @@
           <a class="header__logo" href="#">
               <img class="header__img" src="./images/logo.svg" alt="AlexProm">
           </a>
-          <nav class="header__nav">
-              <a href="">Услуги</a>
-              <a href="">Цены</a>
-              <a href="">Проекты</a>
-              <a href="">О компании</a>
-              <a href="">Блог</a>
-              <a href="">Контакты</a>
-          </nav>
+          <div class="header__menu">
+            <nav class="header__nav">
+                <a href="">Услуги</a>
+                <a href="">Цены</a>
+                <a href="">Проекты</a>
+                <a href="">О компании</a>
+                <a href="">Блог</a>
+                <a href="">Контакты</a>
+            </nav>
+          </div>
           <div class="header__info">
               <a class="link" href="mailto:zakaz@alexprom.ru">zakaz@alexprom.ru</a>
               <a class="link" href="tel:+74951090242">+7 (495) 109-02-42</a>
@@ -58,7 +60,7 @@
                     <label class="input hero__input form-control">
                       <input class="input__field mask-tel" type="tel" value="" placeholder="Ваш номер телефона">
                     </label>
-                    <button class="hero__btn" type="submit">Оставить заявку</button>
+                    <button class="hero__btn" type="submit">Получить прайс-лист</button>
                 </form>
                 <div class="hero-info">
                     <div class="hero-info__stroke">
@@ -92,9 +94,9 @@
             <img class="hero__worker" src="./images/bg-mobile.png" alt="Услуги промышленного альпинизма">
         </div>
       </main>
-      <div class="light-gray">
+      <div class="section-flip">
           <div class="container">
-              <section class="services">
+              <section class="section services">
                   <div class="services__head">
                       <h2 class="title-h2">Услуги</h2>
                       <a href="#" class="btn-primary">Смотреть все услуги</a>
@@ -331,7 +333,7 @@
                   </div>
               </div>
 
-              <section class="section-shifter price">
+              <section class="section price">
                   <h2 class="title-h2 center">Цены на&nbsp;основные услуги</h2>
                   <div class="price-card">
                       <a href="" class="price-card__title">Ремонт фасадов зданий</a>
@@ -394,7 +396,7 @@
                       </div>
                   </div>
               </section>
-              <section class="section-shifter advantages">
+              <section class="advantages">
                   <h2 class="title-h2 center">Ваши преимущества работы с&nbsp;нами</h2>
                   <div class="advantages__box">
                       <div class="advantages__card _bg">
@@ -419,203 +421,205 @@
               </section>
           </div>
       </div>
-      <div class="white">
-          <div class="container">
-              <section class="section-shifter gallery">
-                  <div class="gallery__head">
-                      <h2 class="title-h2">Галерея выполненных работ</h2>
-                      <a href="#" class="btn-primary _desktop">Смотреть все проекты</a>
-                  </div>
-                  <div class="gallery-carousel">
-                      <div class="swiper swiper-gallery">
-                          <div class="swiper-wrapper">
-                            <div class="swiper-slide swiper-gallery__slide">
-                              <picture class="swiper-gallery__thumb">
-                                  <img class="swiper-gallery__img" src="./images/gallery/01.jpg" alt="">
-                              </picture>
-                              <a href="#" class="swiper-gallery__link">Штаб квартира “Газпром”</a>
-                              <span class="swiper-gallery__title">Мойка окон</span>
-                              <span class="swiper-gallery__info swiper-gallery__arg">6500м²</span>
-                              <span class="swiper-gallery__info swiper-gallery__loc">Москва, улица Наметкина, дом 16</span>
+      <div class="section-flip section-flip--light">
+        <div class="white">
+            <div class="container">
+                <section class="section gallery">
+                    <div class="gallery__head">
+                        <h2 class="title-h2">Галерея выполненных работ</h2>
+                        <a href="#" class="btn-primary _desktop">Смотреть все проекты</a>
+                    </div>
+                    <div class="gallery-carousel">
+                        <div class="swiper swiper-gallery">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide swiper-gallery__slide">
+                                <picture class="swiper-gallery__thumb">
+                                    <img class="swiper-gallery__img" src="./images/gallery/01.jpg" alt="">
+                                </picture>
+                                <a href="#" class="swiper-gallery__link">Штаб квартира “Газпром”</a>
+                                <span class="swiper-gallery__title">Мойка окон</span>
+                                <span class="swiper-gallery__info swiper-gallery__arg">6500м²</span>
+                                <span class="swiper-gallery__info swiper-gallery__loc">Москва, улица Наметкина, дом 16</span>
+                              </div>
+                              <div class="swiper-slide swiper-gallery__slide">
+                                <picture class="swiper-gallery__thumb">
+                                    <img class="swiper-gallery__img" src="./images/gallery/01.jpg" alt="">
+                                </picture>
+                                <a href="#" class="swiper-gallery__link">Штаб квартира “Газпром”</a>
+                                <span class="swiper-gallery__title">Мойка окон</span>
+                                <span class="swiper-gallery__info swiper-gallery__arg">6500м²</span>
+                                <span class="swiper-gallery__info swiper-gallery__loc">Москва, улица Наметкина, дом 16</span>
+                              </div>
+                              <div class="swiper-slide swiper-gallery__slide">
+                                <picture class="swiper-gallery__thumb">
+                                    <img class="swiper-gallery__img" src="./images/gallery/01.jpg" alt="">
+                                </picture>
+                                <a href="#" class="swiper-gallery__link">Штаб квартира “Газпром”</a>
+                                <span class="swiper-gallery__title">Мойка окон</span>
+                                <span class="swiper-gallery__info swiper-gallery__arg">6500м²</span>
+                                <span class="swiper-gallery__info swiper-gallery__loc">Москва, улица Наметкина, дом 16</span>
+                              </div>
+                              <div class="swiper-slide swiper-gallery__slide">
+                                <picture class="swiper-gallery__thumb">
+                                    <img class="swiper-gallery__img" src="./images/gallery/01.jpg" alt="">
+                                </picture>
+                                <a href="#" class="swiper-gallery__link">Штаб квартира “Газпром”</a>
+                                <span class="swiper-gallery__title">Мойка окон</span>
+                                <span class="swiper-gallery__info swiper-gallery__arg">6500м²</span>
+                                <span class="swiper-gallery__info swiper-gallery__loc">Москва, улица Наметкина, дом 16</span>
+                              </div>
+                              <div class="swiper-slide swiper-gallery__slide">
+                                <picture class="swiper-gallery__thumb">
+                                    <img class="swiper-gallery__img" src="./images/gallery/01.jpg" alt="">
+                                </picture>
+                                <a href="#" class="swiper-gallery__link">Штаб квартира “Газпром”</a>
+                                <span class="swiper-gallery__title">Мойка окон</span>
+                                <span class="swiper-gallery__info swiper-gallery__arg">6500м²</span>
+                                <span class="swiper-gallery__info swiper-gallery__loc">Москва, улица Наметкина, дом 16</span>
+                              </div>
+                              <div class="swiper-slide swiper-gallery__slide">
+                                <picture class="swiper-gallery__thumb">
+                                    <img class="swiper-gallery__img" src="./images/gallery/01.jpg" alt="">
+                                </picture>
+                                <a href="#" class="swiper-gallery__link">Штаб квартира “Газпром”</a>
+                                <span class="swiper-gallery__title">Мойка окон</span>
+                                <span class="swiper-gallery__info swiper-gallery__arg">6500м²</span>
+                                <span class="swiper-gallery__info swiper-gallery__loc">Москва, улица Наметкина, дом 16</span>
+                              </div>
                             </div>
-                            <div class="swiper-slide swiper-gallery__slide">
-                              <picture class="swiper-gallery__thumb">
-                                  <img class="swiper-gallery__img" src="./images/gallery/01.jpg" alt="">
-                              </picture>
-                              <a href="#" class="swiper-gallery__link">Штаб квартира “Газпром”</a>
-                              <span class="swiper-gallery__title">Мойка окон</span>
-                              <span class="swiper-gallery__info swiper-gallery__arg">6500м²</span>
-                              <span class="swiper-gallery__info swiper-gallery__loc">Москва, улица Наметкина, дом 16</span>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    <a href="#" class="btn-accent _mobile">Смотреть все проекты</a>
+                </section>
+                <div class="section-shifter consultation">
+                    <div class="consultation__bg">
+                        <div class="consultation__content">
+                            <h2 class="consultation__title">
+                                Запишитесь на&nbsp;бесплатную консультацию
+                            </h2>
+                            <p class="consultation__text">Оставьте заявку, и&nbsp;наш менеджер перезвонит вам в&nbsp;течение 30&nbsp;минут и&nbsp;проконсультируем по&nbsp;всем вопросам.</p>
+                        </div>
+                        <div class="consultation__box">
+                            <form class="consultation__form">
+                                <label class="input form-control">
+                                  <input class="input__field" type="text" placeholder="Ваше имя">
+                                </label>
+                                <label class="input form-control">
+                                  <input class="input__field mask-tel" type="tel" value="" placeholder="Ваш номер телефона">
+                                </label>
+                                <button class="btn-main" type="submit">Оставить заявку</button>
+                            </form>
+                            <span class="consultation__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="">персональных данных</a></span>
+                        </div>
+                    </div>
+                </div>
+                <section class="section-shifter faq">
+                    <h2 class="title-h2">Вопросы и ответы</h2>
+                    <div class="faq__box">
+                        <div class="faq-card bayan">
+                            <div class="faq-card__question">
+                                <span>В какое время года лучше приступить к гидроизоляционным работам крыши?</span>
                             </div>
-                            <div class="swiper-slide swiper-gallery__slide">
-                              <picture class="swiper-gallery__thumb">
-                                  <img class="swiper-gallery__img" src="./images/gallery/01.jpg" alt="">
-                              </picture>
-                              <a href="#" class="swiper-gallery__link">Штаб квартира “Газпром”</a>
-                              <span class="swiper-gallery__title">Мойка окон</span>
-                              <span class="swiper-gallery__info swiper-gallery__arg">6500м²</span>
-                              <span class="swiper-gallery__info swiper-gallery__loc">Москва, улица Наметкина, дом 16</span>
+                            <div class="faq-card__answer">
+                                <p>Нет, такого никто не предлагает. В конце концов, кто-то же должен производить товары и контент, а также предлагать услуги. Рассел всего лишь рекомендует сократить количество часов, которое люди проводят за работой, и даже называет оптимальное число — четыре. Такого количества времени вполне хватит, чтобы справиться с необходимым количеством задач, если они будут поделены между людьми разумно, и человечество не будет делиться на безработных и трудоголиков.
+                                </p>
                             </div>
-                            <div class="swiper-slide swiper-gallery__slide">
-                              <picture class="swiper-gallery__thumb">
-                                  <img class="swiper-gallery__img" src="./images/gallery/01.jpg" alt="">
-                              </picture>
-                              <a href="#" class="swiper-gallery__link">Штаб квартира “Газпром”</a>
-                              <span class="swiper-gallery__title">Мойка окон</span>
-                              <span class="swiper-gallery__info swiper-gallery__arg">6500м²</span>
-                              <span class="swiper-gallery__info swiper-gallery__loc">Москва, улица Наметкина, дом 16</span>
+                        </div>
+                        <div class="faq-card bayan">
+                            <div class="faq-card__question">
+                                <span>В какое время года лучше приступить к гидроизоляционным работам крыши?</span>
                             </div>
-                            <div class="swiper-slide swiper-gallery__slide">
-                              <picture class="swiper-gallery__thumb">
-                                  <img class="swiper-gallery__img" src="./images/gallery/01.jpg" alt="">
-                              </picture>
-                              <a href="#" class="swiper-gallery__link">Штаб квартира “Газпром”</a>
-                              <span class="swiper-gallery__title">Мойка окон</span>
-                              <span class="swiper-gallery__info swiper-gallery__arg">6500м²</span>
-                              <span class="swiper-gallery__info swiper-gallery__loc">Москва, улица Наметкина, дом 16</span>
+                            <div class="faq-card__answer">
+                                <p>Нет, такого никто не предлагает. В конце концов, кто-то же должен производить товары и контент, а также предлагать услуги. Рассел всего лишь рекомендует сократить количество часов, которое люди проводят за работой, и даже называет оптимальное число — четыре. Такого количества времени вполне хватит, чтобы справиться с необходимым количеством задач, если они будут поделены между людьми разумно, и человечество не будет делиться на безработных и трудоголиков.
+                                </p>
                             </div>
-                            <div class="swiper-slide swiper-gallery__slide">
-                              <picture class="swiper-gallery__thumb">
-                                  <img class="swiper-gallery__img" src="./images/gallery/01.jpg" alt="">
-                              </picture>
-                              <a href="#" class="swiper-gallery__link">Штаб квартира “Газпром”</a>
-                              <span class="swiper-gallery__title">Мойка окон</span>
-                              <span class="swiper-gallery__info swiper-gallery__arg">6500м²</span>
-                              <span class="swiper-gallery__info swiper-gallery__loc">Москва, улица Наметкина, дом 16</span>
+                        </div>
+                        <div class="faq-card bayan">
+                            <div class="faq-card__question">
+                                <span>В какое время года лучше приступить к гидроизоляционным работам крыши?</span>
                             </div>
-                          </div>
-                      </div>
-                      <div class="swiper-button-next"></div>
-                      <div class="swiper-button-prev"></div>
-                  </div>
-                  <a href="#" class="btn-accent _mobile">Смотреть все проекты</a>
-              </section>
-              <div class="section-shifter consultation">
-                  <div class="consultation__bg">
-                      <div class="consultation__content">
-                          <h2 class="consultation__title">
-                              Запишитесь на&nbsp;бесплатную консультацию
-                          </h2>
-                          <p class="consultation__text">Оставьте заявку, и&nbsp;наш менеджер перезвонит вам в&nbsp;течение 30&nbsp;минут и&nbsp;проконсультируем по&nbsp;всем вопросам.</p>
-                      </div>
-                      <div class="consultation__box">
-                          <form class="consultation__form">
-                              <label class="input form-control">
-                                <input class="input__field" type="text" placeholder="Ваше имя">
-                              </label>
-                              <label class="input form-control">
-                                <input class="input__field mask-tel" type="tel" value="" placeholder="Ваш номер телефона">
-                              </label>
-                              <button class="btn-main" type="submit">Оставить заявку</button>
-                          </form>
-                          <span class="consultation__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="">персональных данных</a></span>
-                      </div>
-                  </div>
-              </div>
-              <section class="section-shifter faq">
-                  <h2 class="title-h2">Вопросы и ответы</h2>
-                  <div class="faq__box">
-                      <div class="faq-card bayan">
-                          <div class="faq-card__question">
-                              <span>В какое время года лучше приступить к гидроизоляционным работам крыши?</span>
-                          </div>
-                          <div class="faq-card__answer">
-                              <p>Нет, такого никто не предлагает. В конце концов, кто-то же должен производить товары и контент, а также предлагать услуги. Рассел всего лишь рекомендует сократить количество часов, которое люди проводят за работой, и даже называет оптимальное число — четыре. Такого количества времени вполне хватит, чтобы справиться с необходимым количеством задач, если они будут поделены между людьми разумно, и человечество не будет делиться на безработных и трудоголиков.
-                              </p>
-                          </div>
-                      </div>
-                      <div class="faq-card bayan">
-                          <div class="faq-card__question">
-                              <span>В какое время года лучше приступить к гидроизоляционным работам крыши?</span>
-                          </div>
-                          <div class="faq-card__answer">
-                              <p>Нет, такого никто не предлагает. В конце концов, кто-то же должен производить товары и контент, а также предлагать услуги. Рассел всего лишь рекомендует сократить количество часов, которое люди проводят за работой, и даже называет оптимальное число — четыре. Такого количества времени вполне хватит, чтобы справиться с необходимым количеством задач, если они будут поделены между людьми разумно, и человечество не будет делиться на безработных и трудоголиков.
-                              </p>
-                          </div>
-                      </div>
-                      <div class="faq-card bayan">
-                          <div class="faq-card__question">
-                              <span>В какое время года лучше приступить к гидроизоляционным работам крыши?</span>
-                          </div>
-                          <div class="faq-card__answer">
-                              <p>Нет, такого никто не предлагает. В конце концов, кто-то же должен производить товары и контент, а также предлагать услуги. Рассел всего лишь рекомендует сократить количество часов, которое люди проводят за работой, и даже называет оптимальное число — четыре. Такого количества времени вполне хватит, чтобы справиться с необходимым количеством задач, если они будут поделены между людьми разумно, и человечество не будет делиться на безработных и трудоголиков.
-                              </p>
-                          </div>
-                      </div>
-                      <div class="faq-card bayan">
-                          <div class="faq-card__question">
-                              <span>В какое время года лучше приступить к гидроизоляционным работам крыши?</span>
-                          </div>
-                          <div class="faq-card__answer">
-                              <p>Выбор времени года для гидроизоляционных работ на крыше зависит от нескольких факторов. Во-первых, важно учитывать климатические условия в вашем регионе. Если вы живете в районе с дождливым или снежным климатом, лучшее время для гидроизоляции крыши - это лето или начало осени, когда вероятность дождей или снегопадов минимальна. Во-вторых, необходимо учитывать состояние крыши. Если крыша в хорошем состоянии и не требует крупных ремонтов, гидроизоляционные работы можно проводить в любое время года. Однако, если крыша нуждается в капитальном ремонте, лучше выполнить его до начала сезона дождей или снегопадов. В-третьих, необходимо учитывать доступность крыши в течение года. Если крыша находится в месте, где зимой бывают сильные метели или летом жарко и душно, лучше выбрать период времени, когда работы можно проводить безопасно и комфортно. В целом, лучшее время для гидроизоляционных работ на крыше - это лето или начало осени, когда погода наиболее благоприятна и вероятность дождей или снегопадов минимальна. Однако, следует учитывать все вышеперечисленные факторы при выборе времени проведения работ.</p>
-                          </div>
-                      </div>
-                  </div>
-              </section>
-              <section class="section-shifter clients">
-                  <h2 class="title-h2">Среди наших клиентов</h2>
-                  <div class="clients__box">
-                      <picture class="clients__thumb">
-                          <img class="clients__img" src="./images/clients/gazprom.svg" alt="">
-                      </picture>
-                      <picture class="clients__thumb">
-                          <img class="clients__img" src="./images/clients/ingosstrakh.svg" alt="">
-                      </picture>
-                      <picture class="clients__thumb">
-                          <img class="clients__img" src="./images/clients/moslift.svg" alt="">
-                      </picture>
-                      <picture class="clients__thumb">
-                          <img class="clients__img" src="./images/clients/mgimo.svg" alt="">
-                      </picture>
-                      <picture class="clients__thumb">
-                          <img class="clients__img" src="./images/clients/gazprom.svg" alt="">
-                      </picture>
-                      <picture class="clients__thumb">
-                          <img class="clients__img" src="./images/clients/gazprom.svg" alt="">
-                      </picture>
-                      <picture class="clients__thumb">
-                          <img class="clients__img" src="./images/clients/gazprom.svg" alt="">
-                      </picture>
-                      <picture class="clients__thumb">
-                          <img class="clients__img" src="./images/clients/gazprom.svg" alt="">
-                      </picture>
-                      <picture class="clients__thumb">
-                          <img class="clients__img" src="./images/clients/gazprom.svg" alt="">
-                      </picture>
-                      <picture class="clients__thumb">
-                          <img class="clients__img" src="./images/clients/gazprom.svg" alt="">
-                      </picture>
-                      <picture class="clients__thumb">
-                          <img class="clients__img" src="./images/clients/gazprom.svg" alt="">
-                      </picture>
-                      <picture class="clients__thumb">
-                          <img class="clients__img" src="./images/clients/gazprom.svg" alt="">
-                      </picture>
-                  </div>
-              </section>
-              <div class="section-shifter consultation">
-                  <div class="consultation__bg">
-                      <div class="consultation__content">
-                          <h2 class="consultation__title">
-                              Запишитесь на&nbsp;бесплатную консультацию
-                          </h2>
-                          <p class="consultation__text">Оставьте заявку, и&nbsp;наш менеджер перезвонит вам в&nbsp;течение 30&nbsp;минут и&nbsp;проконсультируем по&nbsp;всем вопросам.</p>
-                      </div>
-                      <div class="consultation__box">
-                          <form class="consultation__form">
-                              <label class="input form-control">
-                                <input class="input__field" type="text" placeholder="Ваше имя">
-                              </label>
-                              <label class="input form-control">
-                                <input class="input__field mask-tel" type="tel" value="" placeholder="Ваш номер телефона">
-                              </label>
-                              <button class="btn-main" type="submit">Оставить заявку</button>
-                          </form>
-                          <span class="consultation__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="">персональных данных</a></span>
-                      </div>
-                  </div>
-              </div>
-          </div>
+                            <div class="faq-card__answer">
+                                <p>Нет, такого никто не предлагает. В конце концов, кто-то же должен производить товары и контент, а также предлагать услуги. Рассел всего лишь рекомендует сократить количество часов, которое люди проводят за работой, и даже называет оптимальное число — четыре. Такого количества времени вполне хватит, чтобы справиться с необходимым количеством задач, если они будут поделены между людьми разумно, и человечество не будет делиться на безработных и трудоголиков.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-card bayan">
+                            <div class="faq-card__question">
+                                <span>В какое время года лучше приступить к гидроизоляционным работам крыши?</span>
+                            </div>
+                            <div class="faq-card__answer">
+                                <p>Выбор времени года для гидроизоляционных работ на крыше зависит от нескольких факторов. Во-первых, важно учитывать климатические условия в вашем регионе. Если вы живете в районе с дождливым или снежным климатом, лучшее время для гидроизоляции крыши - это лето или начало осени, когда вероятность дождей или снегопадов минимальна. Во-вторых, необходимо учитывать состояние крыши. Если крыша в хорошем состоянии и не требует крупных ремонтов, гидроизоляционные работы можно проводить в любое время года. Однако, если крыша нуждается в капитальном ремонте, лучше выполнить его до начала сезона дождей или снегопадов. В-третьих, необходимо учитывать доступность крыши в течение года. Если крыша находится в месте, где зимой бывают сильные метели или летом жарко и душно, лучше выбрать период времени, когда работы можно проводить безопасно и комфортно. В целом, лучшее время для гидроизоляционных работ на крыше - это лето или начало осени, когда погода наиболее благоприятна и вероятность дождей или снегопадов минимальна. Однако, следует учитывать все вышеперечисленные факторы при выборе времени проведения работ.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section-shifter clients">
+                    <h2 class="title-h2">Среди наших клиентов</h2>
+                    <div class="clients__box">
+                        <picture class="clients__thumb">
+                            <img class="clients__img" src="./images/clients/gazprom.svg" alt="">
+                        </picture>
+                        <picture class="clients__thumb">
+                            <img class="clients__img" src="./images/clients/ingosstrakh.svg" alt="">
+                        </picture>
+                        <picture class="clients__thumb">
+                            <img class="clients__img" src="./images/clients/moslift.svg" alt="">
+                        </picture>
+                        <picture class="clients__thumb">
+                            <img class="clients__img" src="./images/clients/mgimo.svg" alt="">
+                        </picture>
+                        <picture class="clients__thumb">
+                            <img class="clients__img" src="./images/clients/gazprom.svg" alt="">
+                        </picture>
+                        <picture class="clients__thumb">
+                            <img class="clients__img" src="./images/clients/gazprom.svg" alt="">
+                        </picture>
+                        <picture class="clients__thumb">
+                            <img class="clients__img" src="./images/clients/gazprom.svg" alt="">
+                        </picture>
+                        <picture class="clients__thumb">
+                            <img class="clients__img" src="./images/clients/gazprom.svg" alt="">
+                        </picture>
+                        <picture class="clients__thumb">
+                            <img class="clients__img" src="./images/clients/gazprom.svg" alt="">
+                        </picture>
+                        <picture class="clients__thumb">
+                            <img class="clients__img" src="./images/clients/gazprom.svg" alt="">
+                        </picture>
+                        <picture class="clients__thumb">
+                            <img class="clients__img" src="./images/clients/gazprom.svg" alt="">
+                        </picture>
+                        <picture class="clients__thumb">
+                            <img class="clients__img" src="./images/clients/gazprom.svg" alt="">
+                        </picture>
+                    </div>
+                </section>
+                <div class="section-shifter consultation">
+                    <div class="consultation__bg">
+                        <div class="consultation__content">
+                            <h2 class="consultation__title">
+                                Запишитесь на&nbsp;бесплатную консультацию
+                            </h2>
+                            <p class="consultation__text">Оставьте заявку, и&nbsp;наш менеджер перезвонит вам в&nbsp;течение 30&nbsp;минут и&nbsp;проконсультируем по&nbsp;всем вопросам.</p>
+                        </div>
+                        <div class="consultation__box">
+                            <form class="consultation__form">
+                                <label class="input form-control">
+                                  <input class="input__field" type="text" placeholder="Ваше имя">
+                                </label>
+                                <label class="input form-control">
+                                  <input class="input__field mask-tel" type="tel" value="" placeholder="Ваш номер телефона">
+                                </label>
+                                <button class="btn-main" type="submit">Оставить заявку</button>
+                            </form>
+                            <span class="consultation__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="">персональных данных</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
       </div>
 
       <footer class="footer">
@@ -677,6 +681,6 @@
 
     </div>
 
-    <script src="./js/bundle.min.js?_v=20230601193733"></script>
+    <script src="./js/bundle.min.js?_v=20230602084725"></script>
   </body>
 </html>
