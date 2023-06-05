@@ -1,4 +1,4 @@
-import {bodyLock} from '../utils/helpers.js'
+import {bodyLock} from '../../b_helpers/action-helpers.js'
 // import { bodyLock, bodyUnlock } from "../utils/functions.js";
 const burger = document.querySelector(".burger");
 const header = document.querySelector(".header");

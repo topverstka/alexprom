@@ -4,6 +4,7 @@
 @import "./variables/variables";
 @import "./variables/colors";
 @import "./mixins";
+@import "./reset";
 
 .container {
   max-width: 1820px;
@@ -47,6 +48,11 @@ body {
   color: var(--dark);
   line-height: 1.45;
   margin: 0;
+}
+
+body._lock {
+  overflow: hidden;
+  touch-action: none;
 }
 
 a {
