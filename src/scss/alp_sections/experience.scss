@@ -8,23 +8,66 @@
 	border-radius: 100px;
 	padding-top: 75px;
 	overflow: hidden;
+	margin-top: 180px;
+
+	@media (max-width: $desktop-m) {
+		margin-top: 210px;
+		padding-top: 45px;
+	}
+
+	@media (max-width: $tablet-m) {
+		margin-top: 180px;
+		padding-top: 80px;
+	}
+
+	@media (max-width: $mobile-l) {
+		margin-top: 100px;
+		padding-top: 55px;
+		border-radius: 60px;
+	}
 }
 
 .experience__container {
 	display: grid;
 	grid-template-columns: 2fr 1fr;
+
+	@media (max-width: $tablet-m) {
+		grid-template-columns: 100%;
+	}
 }
 
 .experience__content {
 	max-width: 797px;
 	width: 100%;
 	margin-left: auto;
+
+	@media (max-width: $desktop-m) {
+		max-width: 620px;
+	}
+	@media (max-width: $tablet-m) {
+		margin-left: unset;
+		max-width: initial;
+	}
 }
 
 .experience__title {
 	font-size: 5.6rem;
 	line-height: 1.3;
 	margin-bottom: 4rem;
+
+	@media (max-width: $desktop-m) {
+		font-size: 4rem;
+	}
+
+	@media (max-width: $tablet-m) {
+		font-size: 4.8rem;
+		margin-bottom: 2.2rem;
+	}
+
+	@media (max-width: $mobile-l) {
+		font-size: 2.7rem; //3.2 дизайнер зачем-то сокращение добавил
+		margin-bottom: 2.4rem;
+	}
 }
 
 .experience__gallery {
@@ -34,6 +77,10 @@
 
 .experience__hero {
 	position: relative;
+
+	@media (max-width: $tablet-m) {
+		order: 2;
+	}
 }
 
 .experience__hero-pic {
@@ -51,9 +98,17 @@
 .experience__video {
 	display: grid;
 	grid-template-columns: 1.3fr 1fr;
-	column-gap: 4.1rem;
+	gap: 4.1rem;
 	align-items: center;
 	margin-bottom: 4rem;
+
+	@media (max-width: $tablet-m) {
+		grid-template-columns: 100%;
+		gap: 2.4rem;
+	}
+	@media (max-width: $mobile-l) {
+		gap: 3.2rem;
+	}
 }
 
 .experience__video-box {
@@ -61,6 +116,10 @@
 	border-radius: 30px;
   position: relative;
   padding-top: 54.8%;
+
+  @media (max-width: $tablet-m) {
+  	order: 2;
+  }
 }
 
 .experience__video-cover {
@@ -71,6 +130,12 @@
 	position: absolute;
   top: 0;
   left: 0;
+}
+.experience__video-desc {
+	@media (max-width: $tablet-m) {
+		max-width: 618px;
+		font-size: 1.6rem;
+	}
 }
 
 

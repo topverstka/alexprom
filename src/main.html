@@ -277,33 +277,13 @@
                     </ul>
                 </div>
             </div>
+            <div class="services-buttons">
+                <button class="btn-accent services__button" type="button">Показать больше</button>
+            </div>
           </div>
         </section>
 
-        <div class="container">
-          <div class="section-shifter consultation">
-              <div class="consultation__bg">
-                  <div class="consultation__content">
-                      <h2 class="consultation__title">
-                          Получите бесплатную консультацию
-                      </h2>
-                      <p class="consultation__text">Оставьте заявку, и&nbsp;наш менеджер перезвонит вам в&nbsp;течение 30&nbsp;минут и&nbsp;проконсультируем по&nbsp;всем вопросам.</p>
-                  </div>
-                  <div class="consultation__box">
-                      <form class="consultation__form">
-                          <label class="input form-control">
-                            <input class="input__field" type="text" placeholder="Ваше имя">
-                          </label>
-                          <label class="input form-control">
-                            <input class="input__field mask-tel" type="tel" value="" placeholder="Ваш номер телефона">
-                          </label>
-                          <button class="btn-main" type="submit">Оставить заявку</button>
-                      </form>
-                      <span class="consultation__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="">персональных данных</a></span>
-                  </div>
-              </div>
-          </div>
-        </div>
+        @@include('tpls/alp/consultation.html',{title: "Получите бесплатную консультацию"})
 
         <section class="section experience">
           <div class="container experience__container">
@@ -324,7 +304,7 @@
             <div class="experience__content">
               <h2 class="title-h2 experience__title">
                 Опыт, накопленный <br>
-                за 12 лет работы в сфере
+                за 12 лет работы в&nbsp;сфере
                 промышленного альпинизма
               </h2>
               <div class="experience__video">
@@ -334,7 +314,7 @@
                 <p class="experience__video-desc">
                   Позволяет нам предлагать рынку 
                   нестандартные решения в обмен  
-                  на интересные и амбициозные проекты. 
+                  на&nbsp;интересные и амбициозные проекты. 
                   Смотрите видео о нашей компании.
                 </p>
               </div>
@@ -421,7 +401,7 @@
 
         <section class="section price">
           <div class="container">
-            <h2 class="title-h2 center">Цены на&nbsp;основные услуги</h2>
+            <h2 class="title-h2 price__title">Цены <br> на&nbsp;основные услуги</h2>
             <div class="price-card">
                 <a href="" class="price-card__title">Ремонт фасадов зданий</a>
                 <div class="price-table">
@@ -484,9 +464,10 @@
             </div>
           </div>
         </section>
-        <section class="advantages">
+
+        <section class="section advantages">
           <div class="container">
-            <h2 class="title-h2 center">Ваши преимущества работы с&nbsp;нами</h2>
+            <h2 class="title-h2 advantages__title">Ваши преимущества <br> работы с&nbsp;нами</h2>
             <div class="advantages__box">
                 <div class="advantages-card _has-img">
                     <picture class="advantages-card__pic">
@@ -499,13 +480,16 @@
                     <picture class="advantages-card__pic">
                       <img src="./images/advantages/helmet.png" alt="" class="advantages-card__img">
                     </picture>
-                    <h3 class="advantages-card__title">80% сотрудников имеют опыт более 10 лет</h3>
+                    <h3 class="advantages-card__title">
+                        80% сотрудников <br>
+                        имеют опыт более 10&nbsp;лет
+                    </h3>
                     <p>Наша команда выполнила более 21500 объектов. Делаем работу профессионально, не допускаем ошибок.
                     <br><br>Соблюдение сроков — для нас не пустые слова, большая часть работ сдается досрочно.</p>
                 </div>
                 <div class="advantages-card">
-                    <h3 class="advantages-card__title">Для нас хороший результат - это Довольный клиент и долгосрочное сотрудничество</h3>
-                    <p>Соблюдение сроков и финансовых условий договора, а также гибкая политика ценообразования – основные приоритеты компании.
+                    <h3 class="advantages-card__title">Для нас хороший результат -&nbsp;это&nbsp;Довольный клиент и&nbsp;долгосрочное сотрудничество</h3>
+                    <p>Соблюдение сроков и финансовых условий договора, а&nbsp;также гибкая политика ценообразования – основные приоритеты компании.
                     <br><br>Мы всегда стремимся к балансу между стоимостью работ, нормативными требованиями и желаниями Заказчика</p>
                 </div>
                 <div class="advantages-card _has-img">
@@ -523,9 +507,8 @@
         </section>
       </div>
       <div class="section-flip section-flip--light">
-        <div class="white">
-            <div class="container">
-                <section class="section gallery">
+            <section class="section gallery">
+                <div class="container">
                     <div class="gallery__head">
                         <h2 class="title-h2">Галерея выполненных работ</h2>
                         <a href="#" class="btn-primary _desktop">Смотреть все проекты</a>
@@ -592,31 +575,14 @@
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
                     </div>
-                    <a href="#" class="btn-accent _mobile">Смотреть все проекты</a>
-                </section>
-                <div class="section-shifter consultation">
-                    <div class="consultation__bg">
-                        <div class="consultation__content">
-                            <h2 class="consultation__title">
-                                Запишитесь на&nbsp;бесплатную консультацию
-                            </h2>
-                            <p class="consultation__text">Оставьте заявку, и&nbsp;наш менеджер перезвонит вам в&nbsp;течение 30&nbsp;минут и&nbsp;проконсультируем по&nbsp;всем вопросам.</p>
-                        </div>
-                        <div class="consultation__box">
-                            <form class="consultation__form">
-                                <label class="input form-control">
-                                  <input class="input__field" type="text" placeholder="Ваше имя">
-                                </label>
-                                <label class="input form-control">
-                                  <input class="input__field mask-tel" type="tel" value="" placeholder="Ваш номер телефона">
-                                </label>
-                                <button class="btn-main" type="submit">Оставить заявку</button>
-                            </form>
-                            <span class="consultation__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="">персональных данных</a></span>
-                        </div>
-                    </div>
+                    <a href="#" class="gallery__button-all btn-primary _mobile">Смотреть все проекты</a>
                 </div>
-                <section class="section-shifter faq">
+            </section>
+
+            @@include('tpls/alp/consultation.html', {title: "Запишитесь на\u00A0бесплатную консультацию", })
+
+            <section class="section faq">
+                <div class="container">
                     <h2 class="title-h2">Вопросы и ответы</h2>
                     <div class="faq__box">
                         <div class="faq-card bayan">
@@ -655,71 +621,52 @@
                             </div>
                         </div>
                     </div>
-                </section>
-                <section class="section-shifter clients">
-                    <h2 class="title-h2">Среди наших клиентов</h2>
-                    <div class="clients__box">
-                        <picture class="clients__thumb">
-                            <img class="clients__img" src="./images/clients/gazprom.svg" alt="">
-                        </picture>
-                        <picture class="clients__thumb">
-                            <img class="clients__img" src="./images/clients/ingosstrakh.svg" alt="">
-                        </picture>
-                        <picture class="clients__thumb">
-                            <img class="clients__img" src="./images/clients/moslift.svg" alt="">
-                        </picture>
-                        <picture class="clients__thumb">
-                            <img class="clients__img" src="./images/clients/mgimo.svg" alt="">
-                        </picture>
-                        <picture class="clients__thumb">
-                            <img class="clients__img" src="./images/clients/gazprom.svg" alt="">
-                        </picture>
-                        <picture class="clients__thumb">
-                            <img class="clients__img" src="./images/clients/gazprom.svg" alt="">
-                        </picture>
-                        <picture class="clients__thumb">
-                            <img class="clients__img" src="./images/clients/gazprom.svg" alt="">
-                        </picture>
-                        <picture class="clients__thumb">
-                            <img class="clients__img" src="./images/clients/gazprom.svg" alt="">
-                        </picture>
-                        <picture class="clients__thumb">
-                            <img class="clients__img" src="./images/clients/gazprom.svg" alt="">
-                        </picture>
-                        <picture class="clients__thumb">
-                            <img class="clients__img" src="./images/clients/gazprom.svg" alt="">
-                        </picture>
-                        <picture class="clients__thumb">
-                            <img class="clients__img" src="./images/clients/gazprom.svg" alt="">
-                        </picture>
-                        <picture class="clients__thumb">
-                            <img class="clients__img" src="./images/clients/gazprom.svg" alt="">
-                        </picture>
-                    </div>
-                </section>
-                <div class="section-shifter consultation">
-                    <div class="consultation__bg">
-                        <div class="consultation__content">
-                            <h2 class="consultation__title">
-                                Запишитесь на&nbsp;бесплатную консультацию
-                            </h2>
-                            <p class="consultation__text">Оставьте заявку, и&nbsp;наш менеджер перезвонит вам в&nbsp;течение 30&nbsp;минут и&nbsp;проконсультируем по&nbsp;всем вопросам.</p>
-                        </div>
-                        <div class="consultation__box">
-                            <form class="consultation__form">
-                                <label class="input form-control">
-                                  <input class="input__field" type="text" placeholder="Ваше имя">
-                                </label>
-                                <label class="input form-control">
-                                  <input class="input__field mask-tel" type="tel" value="" placeholder="Ваш номер телефона">
-                                </label>
-                                <button class="btn-main" type="submit">Оставить заявку</button>
-                            </form>
-                            <span class="consultation__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="">персональных данных</a></span>
-                        </div>
-                    </div>
                 </div>
-            </div>
+            </section>
+
+            <section class="section-shifter clients">
+                <h2 class="title-h2">Среди наших клиентов</h2>
+                <div class="clients__box">
+                    <picture class="clients__thumb">
+                        <img class="clients__img" src="./images/clients/gazprom.png" alt="">
+                    </picture>
+                    <picture class="clients__thumb">
+                        <img class="clients__img" src="./images/clients/ingosstrakh.svg" alt="">
+                    </picture>
+                    <picture class="clients__thumb">
+                        <img class="clients__img" src="./images/clients/moslift.svg" alt="">
+                    </picture>
+                    <picture class="clients__thumb">
+                        <img class="clients__img" src="./images/clients/mgimo.svg" alt="">
+                    </picture>
+                    <picture class="clients__thumb">
+                        <img class="clients__img" src="./images/clients/gazprom.png" alt="">
+                    </picture>
+                    <picture class="clients__thumb">
+                        <img class="clients__img" src="./images/clients/gazprom.png" alt="">
+                    </picture>
+                    <picture class="clients__thumb">
+                        <img class="clients__img" src="./images/clients/gazprom.png" alt="">
+                    </picture>
+                    <picture class="clients__thumb">
+                        <img class="clients__img" src="./images/clients/gazprom.png" alt="">
+                    </picture>
+                    <picture class="clients__thumb">
+                        <img class="clients__img" src="./images/clients/gazprom.png" alt="">
+                    </picture>
+                    <picture class="clients__thumb">
+                        <img class="clients__img" src="./images/clients/gazprom.png" alt="">
+                    </picture>
+                    <picture class="clients__thumb">
+                        <img class="clients__img" src="./images/clients/gazprom.png" alt="">
+                    </picture>
+                    <picture class="clients__thumb">
+                        <img class="clients__img" src="./images/clients/gazprom.png" alt="">
+                    </picture>
+                </div>
+            </section>
+
+            @@include('tpls/alp/consultation.html', {title: "Запишитесь на\u00A0бесплатную консультацию", })
         </div>
       </div>
 

@@ -1,5 +1,9 @@
 .faq__box {
     margin-top: 80px;
+
+    @media (max-width: $mobile-l) {
+        margin-top: 55px;
+    }
 } 
 
 .faq-card {
@@ -14,6 +18,10 @@
 
 .faq-card + .faq-card {
     margin-top: 4rem;
+
+    @media (max-width: $mobile-l) {
+        margin-top: 2rem;
+    }
 }
 
 .faq-card__question {
@@ -76,11 +84,15 @@
 }
 
 .faq-card__question:hover > span {
-    color: var(--accent);
+    @media (any-hover:hover) {
+        color: var(--accent);
+    }
 }
 
 .faq-card:hover .bayan__toggler {
-    background-color: var(--accent);
+    @media (any-hover:hover) {
+        background-color: var(--accent);
+    }
 }
 
 .faq-card .faq-card__answer {

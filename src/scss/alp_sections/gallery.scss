@@ -3,15 +3,23 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 80px;
+
+    @media (max-width: $mobile-l) {
+        margin-bottom: 60px;
+    }
 }
 
 .swiper-gallery__slide {
     background-color: #F0F2F5;
     border-radius: 30px;
     padding: 40px;
-    box-sizing: border-box;
-    @media(max-width: 1440px) {
+
+    @media(max-width: $desktop-m) {
         padding: 20px;
+    }
+
+    @media (max-width: $tablet-m) {
+        padding-bottom: 40px;
     }
 }
 
@@ -20,13 +28,22 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    max-height: 348px;
-    height: 17vw;
+    max-height: 345px;
+    height: 18vw;
     border-radius: 30px;
     margin-bottom: 4rem;
-    @media(max-width: 1440px) {
+
+    @media(max-width: $desktop-m) {
         margin-bottom: 3.2rem;
         height: clamp(200px, 17vw, 300px);
+    }
+
+    @media (max-width: $tablet-m) {
+        height: 300px;
+    }
+
+    @media (max-width: $mobile-l) {
+        height: 200px;
     }
 }
 
@@ -71,6 +88,9 @@
     @media(max-width: 1440px) {
         width: 24px;
         height: 24px;
+    }
+    @media (max-width: $mobile-l) {
+        content: none;
     }
 }
 
@@ -183,4 +203,12 @@
 
 .gallery-carousel {
     position: relative;
+}
+
+.gallery__button-all {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }

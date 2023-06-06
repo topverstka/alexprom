@@ -66,6 +66,8 @@ header {
 		padding: 223px 20px 30px 74px;
 		transition: inherit;
 		transform: translateX(150vw);
+		pointer-events: auto;
+		overflow: auto;
 	}
 
 	@media (max-width: $mobile-l) {
@@ -83,7 +85,7 @@ header {
 	pointer-events: initial;
     display: flex;
 
-	@media(max-width: $laptop-l) {
+	@media(max-width: $laptop-m) {
 		// display: none;
 		flex-direction: column;
 	}

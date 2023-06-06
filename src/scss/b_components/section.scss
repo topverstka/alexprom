@@ -1,24 +1,43 @@
 .section {
   padding-top: 140px;
   padding-bottom: 140px;
+
   @media (max-width: $desktop-m) {
     padding-top: 80px;
     padding-bottom: 80px;
+  }
+
+  @media (max-width: $mobile-l) {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
 
 .section-shifter {
   margin-top: 40px;
   margin-bottom: 40px;
-  padding-top: 180px;
-  padding-bottom: 180px;
+  padding-top: 0;
+  padding-bottom: 0;
+
   @media (max-width: $desktop-m) {
     margin-top: 100px;
     margin-bottom: 100px;
   }
+
+  @media (max-width: $tablet-m) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   @media(max-width: 690px) {
     padding-top: 100px;
     padding-bottom: 100px;
+  }
+
+  @media (max-width: $mobile-l) {
+    padding: 0 16px;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 }
 
@@ -26,20 +45,32 @@
   background-color: var(--light);
   position: relative;
   border-radius: 10rem 10rem 0 0;
-  padding-bottom: 240px;
+  padding-bottom: 120px;
   margin-top: -120px;
-  // padding-top: 140px;
-  // max-width: 1920px;
-  // margin: -108px auto 0;
-  // @media(max-width: 1440px) {
-  //   margin-top: -90px;
-  // }
+
   @media (max-width: $desktop-m) {
     margin-top: -100px;
   }
+
+  @media (max-width: $tablet-m) {
+    padding-top: 0;
+  }
+
+  @media (max-width: $mobile-l) {
+    border-radius: 6rem 6rem 0 0;
+  }
 }
+
 .section-flip .section:first-child {
   padding-top: 140px;
+
+  @media (max-width: $tablet-m) {
+    padding-top: 100px;
+  }
+
+  @media (max-width: $mobile-l) {
+    padding-top: 36px;
+  }
 }
 
 .section-flip--light {
