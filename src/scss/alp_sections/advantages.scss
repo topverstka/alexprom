@@ -116,7 +116,7 @@
 .advantages-card:nth-child(4n+1) {
     grid-column: 1 / 8;
 
-    @media(max-width: 1440px) {
+    @media(max-width: $desktop-m) {
         grid-column: 1 / 2;
     }
 
@@ -135,7 +135,7 @@
 .advantages-card:nth-child(2),
 .advantages-card:nth-child(4n+2) {
     grid-column: 8 / 13;
-    @media(max-width: 1440px) {
+    @media(max-width: $desktop-m) {
         grid-column: 2 / 3;
     }
 
@@ -172,7 +172,7 @@
 .advantages-card:nth-child(4n+3) {
     grid-column: 1 / 6;
 
-    @media(max-width: 1440px) {
+    @media(max-width: $desktop-m) {
         grid-column: 1 / 2;
     }
 

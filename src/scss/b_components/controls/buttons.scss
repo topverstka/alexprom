@@ -75,3 +75,67 @@
     background-color: var(--main-hover);
   }
 }
+
+.play-cover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(32, 42, 52, 0.6);
+}
+
+.play-cover:before,
+.play-cover:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: block;
+  max-width: var(--size);
+  min-width: var(--size);
+  width: var(--size);
+  height: var(--size);
+  transition: all 0.3s ease;
+}
+
+.play-cover:before {
+  --size: 100px;
+  --bg-circle: var(--c-surface);
+  background-color: var(--bg-circle);
+  z-index: 1;
+  border-radius: var(--size);
+
+  @media (max-width: $tablet-m) {
+    --size: 56px;
+  }
+}
+
+.play-cover:after {
+  --size: 40px;
+  --path: polygon(17% 0, 17% 100%, 100% 50%);
+  --bg-play: var(--main);
+  background-color: var(--bg-play);
+  clip-path: var(--path);
+  -webkit-clip-path: var(--path);
+  z-index: 2;
+
+  @media (max-width: $tablet-m) {
+    --size: 22px;
+  }
+}
+
+.play-cover:hover::before,
+.play-cover:hover::after {
+  @media (any-hover:hover) {
+    --bg-circle: var(--main);
+    --bg-play: var(--c-surface);
+  }
+}

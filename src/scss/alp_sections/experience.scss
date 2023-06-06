@@ -266,6 +266,10 @@
 	position: relative;
 	margin-top: auto;
 
+	@media (max-width: $desktop-l) and (min-width: $desktop-m + 1) {
+		margin-bottom: -40px;
+	}
+
 	@media (max-width: $mobile-l) {
 		height: 305px;
 	}
@@ -329,6 +333,10 @@
   margin-top: -150px;
   position: relative;
   z-index: 3;
+
+  @media (max-width: $desktop-l) {
+  	margin-top: -90px;
+  }
 
   @media (max-width: $desktop-m) {
   	margin-left: -15px;
