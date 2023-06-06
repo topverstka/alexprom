@@ -20,7 +20,7 @@
     }
 }
 .price__title br {
-    @media (min-width: $tablet-m + 1) {
+    @media (min-width: $mobile-l + 1) {
         display: none;
     }
 }

@@ -52,6 +52,11 @@
     height: auto;
     max-width: 182px;
     max-height: 110px;
+
+    @media (max-width: $tablet-m) {
+        max-width: 222px;
+        max-height: 130px;
+    }
     @media(max-width: 690px) {
         max-width: 100%;
     }

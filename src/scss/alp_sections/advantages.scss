@@ -30,6 +30,12 @@
     }
 }
 
+.advantages__title br {
+    @media (min-width: $tablet-m + 1) {
+        display: none;
+    }
+}
+
 .advantages-card {
     border-radius: 30px;
     padding: 50px;
