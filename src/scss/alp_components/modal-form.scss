@@ -53,6 +53,11 @@
 	--closer-color: #BABABA;
 	top: 27px;
 	right: 27px;
+
+	@media (max-width: $mobile-xl) {
+		top: 12px;
+		right: 12px;
+	}
 }
 
 .modal-form .b_modal__closer::before,
