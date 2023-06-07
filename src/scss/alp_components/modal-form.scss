@@ -1,0 +1,61 @@
+.modal-form {
+	background-color: var(--c-surface);
+	border-radius: 30px;
+	padding: 40px;
+	color: var(--dark);
+
+	@media (max-width: $mobile-l) {
+		padding: 32px 20px;
+	}
+}
+
+.modal-form__head {
+	margin-bottom: 32px;
+
+	@media (max-width: $mobile-l) {
+		margin-bottom: 24px;
+	}
+}
+
+.modal-form__title {
+	font-size: 40px;
+	line-height: 1.35;
+	margin-bottom: 24px;
+
+	@media (max-width: $mobile-l) {
+		font-size: 24px;
+		margin-bottom: 8px;
+	}
+}
+
+.modal-form__title br {
+	@media (max-width: $mobile-l) {
+		display: none;
+	}
+}
+
+.modal-form__desc {
+	font-size: 18px;
+	line-height: 1.45;
+
+	@media (max-width: $mobile-l) {
+		font-size: 14px;	
+	}
+}
+
+.modal-form__desc br {
+	@media (max-width: $mobile-l) {
+		display: none;
+	}
+}
+
+.modal-form .b_modal__closer {
+	--closer-color: #BABABA;
+	top: 27px;
+	right: 27px;
+}
+
+.modal-form .b_modal__closer::before,
+.modal-form .b_modal__closer::after {
+	height: 12%;
+}

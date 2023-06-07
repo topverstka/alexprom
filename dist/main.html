@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
-        <link rel="stylesheet" href="./css/style.css?_v=20230607174541">
+        <link rel="stylesheet" href="./css/style.css?_v=20230607184142">
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no">
@@ -337,7 +337,7 @@
               <p class="consultation__text">Оставьте заявку, и&nbsp;наш менеджер перезвонит вам в&nbsp;течение 30&nbsp;минут и&nbsp;проконсультируем по&nbsp;всем вопросам.</p>
           </div>
           <div class="consultation__box">
-              <form class="consultation__form">
+              <form class="form-vertical">
                   <label class="input form-control">
                     <input class="input__field" type="text" placeholder="Ваше имя">
                   </label>
@@ -345,8 +345,8 @@
                     <input class="input__field mask-tel" type="tel" value="" placeholder="Ваш номер телефона">
                   </label>
                   <button class="btn-main" type="submit">Получить консультацию</button>
+                  <span class="form__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="">персональных данных</a></span>
               </form>
-              <span class="consultation__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="">персональных данных</a></span>
           </div>
       </div>
   </div>
@@ -919,7 +919,7 @@
               <p class="consultation__text">Оставьте заявку, и&nbsp;наш менеджер перезвонит вам в&nbsp;течение 30&nbsp;минут и&nbsp;проконсультируем по&nbsp;всем вопросам.</p>
           </div>
           <div class="consultation__box">
-              <form class="consultation__form">
+              <form class="form-vertical">
                   <label class="input form-control">
                     <input class="input__field" type="text" placeholder="Ваше имя">
                   </label>
@@ -927,8 +927,8 @@
                     <input class="input__field mask-tel" type="tel" value="" placeholder="Ваш номер телефона">
                   </label>
                   <button class="btn-main" type="submit">Получить консультацию</button>
+                  <span class="form__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="">персональных данных</a></span>
               </form>
-              <span class="consultation__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="">персональных данных</a></span>
           </div>
       </div>
   </div>
@@ -1106,7 +1106,7 @@
               <p class="consultation__text">Оставьте заявку, и&nbsp;наш менеджер перезвонит вам в&nbsp;течение 30&nbsp;минут и&nbsp;проконсультируем по&nbsp;всем вопросам.</p>
           </div>
           <div class="consultation__box">
-              <form class="consultation__form">
+              <form class="form-vertical">
                   <label class="input form-control">
                     <input class="input__field" type="text" placeholder="Ваше имя">
                   </label>
@@ -1114,8 +1114,8 @@
                     <input class="input__field mask-tel" type="tel" value="" placeholder="Ваш номер телефона">
                   </label>
                   <button class="btn-main" type="submit">Получить консультацию</button>
+                  <span class="form__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="">персональных данных</a></span>
               </form>
-              <span class="consultation__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="">персональных данных</a></span>
           </div>
       </div>
   </div>
@@ -1155,32 +1155,33 @@
   </div>
 </footer>
 
-<div class="overlay" id="overlayMenu">
-  <div class="modal">
-      <div class="modal-header">
-          <a class="modal-header__btn" href="tel:+74951090242">
-              <img src="./img/icons/phone-menu.svg" alt="+74951090242">
-          </a>
-          <button type="button" class="modal-header__btn modal-header__close" onclick="closeModalMenu()">
-              <img src="./img/icons/close.svg" alt="Закрыть">
-          </button>
-      </div>
-      <div class="modal-menu">
-          <a href="">Услуги</a>
-          <a href="">Цены</a>
-          <a href="">Проекты</a>
-          <a href="">О компании</a>
-          <a href="">Блог</a>
-          <a href="">Контакты</a>
-      </div>
-      <button class="modal__btn" type="btn">
-          <span>Заказать обратный звонок</span>
-      </button>
-  </div>
+<div class="modal-form b_modal" id="form-contact" data-closer-type="inner">
+	<div class="modal-form__head">
+		<h3 class="modal-form__title">
+			Оставьте свои контакты <br>
+			и мы вам перезвоним
+		</h3>
+		<p class="modal-form__desc">
+			Оставьте заявку, и наш менеджер перезвонит вам <br>
+			в течение 30 минут и проконсультирует по всем вопросам.
+		</p>
+	</div>
+	<div class="modal-form__body">
+	  <form class="form-vertical">
+	      <label class="input form-control">
+	        <input class="input__field" type="text" placeholder="Ваше имя">
+	      </label>
+	      <label class="input form-control">
+	        <input class="input__field mask-tel" type="tel" value="" placeholder="Ваш номер телефона">
+	      </label>
+	      <button class="btn-main" type="submit">Получить консультацию</button>
+			  <span class="form__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="#">персональных данных</a></span>
+	  </form>
+	</div>
 </div>
 
     </div>
 
-    <script src="./js/bundle.min.js?_v=20230607174541"></script>
+    <script src="./js/bundle.min.js?_v=20230607184142"></script>
   </body>
 </html>

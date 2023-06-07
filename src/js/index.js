@@ -37,4 +37,5 @@ import "./alp_sections/reviews.js";
 import "./alp_sections/locations.js";
 
 import "./b_components/groupers/bayan.js";
+import "./b_components/spawners/b_modal.js";
 
