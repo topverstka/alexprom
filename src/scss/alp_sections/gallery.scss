@@ -216,6 +216,13 @@
     position: relative;
 }
 
+.gallery-carousel .swiper-button-next,
+.gallery-carousel .swiper-button-prev {
+    @media (max-width: $tablet-m) {
+        display: none;
+    }
+}
+
 .gallery__button-all {
     display: flex;
     justify-content: center;

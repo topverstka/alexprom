@@ -530,6 +530,48 @@
         </section>
       </div>
       <div class="section-flip section-flip--light">
+        <section class="section reviews">
+            <div class="container reviews__container">
+                <div class="reviews__head">
+                    <h2 class="title-h2 reviews__tilte">Отзывы о нас</h2>
+                    <div class="reviews__head-aside">
+                        <a href="#" target="_blank" class="reviews__head-button btn-primary">
+                            Смотреть 2gis
+                        </a>
+                        <a href="#" target="_blank" class="reviews__head-button btn-primary">
+                            Смотреть Яндекс
+                        </a>
+                        <a href="#" target="_blank" class="reviews__head-button btn-primary">
+                            Смотреть Google
+                        </a>
+                    </div>
+                </div>
+                <div class="reviews-carousel">
+                    <div class="swiper reviews-gallery">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide reviews-gallery__slide">
+                            @@include('tpls/alp/review-card.html', {sourceLogo: "google.svg", })
+                          </div>
+                          <div class="swiper-slide reviews-gallery__slide">
+                            @@include('tpls/alp/review-card.html', {sourceLogo: "2gis.svg", })
+                          </div>
+                          <div class="swiper-slide reviews-gallery__slide">
+                            @@include('tpls/alp/review-card.html', {sourceLogo: "yandex.svg", })
+                          </div>
+                          <div class="swiper-slide reviews-gallery__slide">
+                            @@include('tpls/alp/review-card.html', {sourceLogo: "google.svg", })
+                          </div>
+                          <div class="swiper-slide reviews-gallery__slide">
+                            @@include('tpls/alp/review-card.html', {sourceLogo: "google.svg", })
+                          </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+
             <section class="section gallery">
                 <div class="container">
                     <div class="gallery__head">

@@ -122,8 +122,11 @@
         padding-right: 0;
     }
 }
+
 .services-list__link:hover {
-    color: var(--accent);
+    @media (any-hover:hover) {
+        color: var(--accent);
+    }
 }
 
 .services-list__link::after {
@@ -146,8 +149,10 @@
 }
 
 .services-list__link:hover::after {
-    transform: rotate(-90deg);
-    background-color: var(--accent);
+    @media (any-hover:hover) {
+        transform: rotate(-90deg);
+        background-color: var(--accent);
+    }
 }
 
 

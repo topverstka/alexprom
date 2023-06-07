@@ -5,7 +5,7 @@
     margin-right: auto;
 
     @media (max-width: $desktop-m) {
-        max-width: 1060px;
+        max-width: 1090px;
         margin-bottom: 20px;
     }
 
@@ -135,10 +135,8 @@
 }
 
 .price-table__item:nth-child(3) {
-    @media (max-width: $mobile-l) {
-        display: inline-flex;
-        justify-content: flex-end;
-    }
+    display: inline-flex;
+    justify-content: flex-end;
 }
 
 .price-table__qt {

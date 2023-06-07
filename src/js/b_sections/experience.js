@@ -1,4 +1,6 @@
 window.addEventListener('DOMContentLoaded', (event) => {
+  const experience = document.querySelector('.experience');
+  if (!experience) return;
 
 	let experienceGallery = new Swiper(".experience-gallery", {
     navigation: {
