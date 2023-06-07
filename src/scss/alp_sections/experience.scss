@@ -28,6 +28,7 @@
 	border-radius: 100px;
 	padding-top: 75px;
 	padding-bottom: 120px;
+	overflow: hidden;
 
 	@media (max-width: $desktop-m) {
 		padding-top: 45px;
@@ -41,7 +42,6 @@
 	@media (max-width: $mobile-l) {
 		padding-top: 55px;
 		border-radius: 60px;
-		overflow: hidden;
 	}
 }
 
@@ -130,17 +130,17 @@
 
 .experience-slides .swiper-button-prev,
 .experience-slides .swiper-button-next {
-	@media (max-width: $tablet-m) {
-	  top: calc(50% + 20px);
-	  transform: translateY(-50%);
+	@media (max-width: $tablet) {
 	  width: 60px;
 	  height: 60px;
+	  top: calc(50% + 20px);
+	  transform: translateY(-50%);
 	}
 }
 
 .experience-slides .swiper-button-next::before,
 .experience-slides .swiper-button-prev::before {
-	@media (max-width: $tablet-m) {
+	@media (max-width: $tablet) {
 		height: 44px;
 		width: 44px;
 	}
@@ -151,6 +151,7 @@
 		left: 3px;
 	}
 }
+
 .experience-slides .swiper-button-next {
 	@media (max-width: $tablet-m) {
 		right: 3px;
@@ -166,6 +167,7 @@
 }
 
 .experience__hero-pic {
+  position: relative;
 	display: block;
 	width: 100%;
 	height: 100%;
@@ -173,6 +175,10 @@
 	@media (max-width: $desktop-m) {
 		max-width: 120%;
 		width: 120%;
+	}
+
+	@media (max-width: $tablet) {
+	  z-index: 2;
 	}
 
 	@media (max-width: $tablet-m) {
@@ -184,8 +190,6 @@
     max-width: 100%;
     margin-left: 0;
     margin-top: 110px;
-    position: relative;
-    z-index: 2;
 	}
 }
 
@@ -207,10 +211,13 @@
 		margin-right: -30px;
 	}
 
+	@media (max-width: $desktop-s) {
+		margin-right: 0;
+	}
+
 	@media (max-width: $tablet-m) {
 		grid-template-columns: 100%;
 		gap: 2.4rem;
-		margin-right: 0;
 	}
 
 	@media (max-width: $mobile-l) {
@@ -266,8 +273,8 @@
 	position: relative;
 	margin-top: auto;
 
-	@media (max-width: $desktop-l) and (min-width: $desktop-m + 1) {
-		margin-bottom: -40px;
+	@media (max-width: $desktop-l) and (min-width: $tablet-l + 1) {
+		margin-bottom: -75px;
 	}
 
 	@media (max-width: $mobile-l) {
@@ -280,22 +287,26 @@
 	// bottom: 41.7%;
 	bottom: 22.7%;
 	left: 0;
+	z-index: 1;
 
 	@media (max-width: $desktop-m) {
 		bottom: 16%;
     left: -15px;
 	}
+	@media (max-width: $desktop-s) {
+    bottom: unset;
+    top: -30%;
+    left: 10px;
+	}
 
 	@media (max-width: $tablet-m) {
 		left: unset;
     right: 60px;
-    bottom: unset;
     top: 14%;	
 	}
 
 	@media (max-width: $mobile-l) {
 		top: 1%;
-		z-index: 1;
 	}
 }
 
