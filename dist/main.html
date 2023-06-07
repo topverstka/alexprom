@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
-        <link rel="stylesheet" href="./css/style.css?_v=20230607102348">
+        <link rel="stylesheet" href="./css/style.css?_v=20230607134533">
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no">
@@ -1022,6 +1022,80 @@
                 </div>
             </section>
 
+            <section class="section locations">
+                <div class="container">
+                    <h2 class="title-h2 locations__title">Работаем <br> по Москве и области</h2>
+                    <div class="locations__content">
+                        <div class="locations__map">
+                            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Addaad24cf3d8860d29cae9d9530e4bc91bb9433505d187a45ba17a99b73afad7&amp;source=constructor" frameborder="0"></iframe>
+                        </div>
+                        <div class="locations-addresses">
+                            <div class="swiper locations-addresses__slider">
+                                <div class="swiper-wrapper">
+
+                                    <!--
+                                        <?php // Простая конструкция для вывода в цикле всех названий локаций ?>
+                                        <?php foreach ($cities as $city_count => $city) : ?>
+                                            <?php if ($city_count === 0) : ?>
+                                                <?php // Открываем обертку слайда для первого элемента ?>
+                                                <div class="swiper-slide cases-gallery-slide">
+                                            <?php elseif ($city_count % 18 === 0 && $city_count !== 0) :?>
+                                                <?php // Для каждого ненулевого и 18 элемента открываем новую обертку ?>
+                                                </div>
+                                                <div class="swiper-slide cases-gallery-slide">
+                                            <?php endif;?>
+                                                <?php // Размещаем элемент на каждой итерации ?>
+                                                <a href="#" class="locations-addresses__link">Апрелевка</a>
+                                            <?php if ($city_count === (count($cities) - 1)) : ?>
+                                                <?php // Закрываем для последнего элемента блок группировщик ?>
+                                                </div>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
+                                    -->
+
+                                    <div class="swiper-slide locations-addresses__address">
+                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
+                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
+                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
+                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
+                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
+                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
+                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
+                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
+                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
+                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
+                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
+                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
+                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
+                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
+                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
+                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
+                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
+                                    </div>
+                                    <div class="swiper-slide locations-addresses__address">
+                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
+                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
+                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
+                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
+                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
+                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
+                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
+                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="locations-addresses__buttons">
+                                <button class="locations-addresses__button-prev" type="button"></button>
+                                <button class="locations-addresses__button-next" type="button"></button>
+                                <button class="btn-accent locations-addresses__button-more">
+                                    Показать больше
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section class="section-shifter consultation">
   <div class="container consultation__container">
     <div class="consultation__bg">
@@ -1107,6 +1181,6 @@
 
     </div>
 
-    <script src="./js/bundle.min.js?_v=20230607102348"></script>
+    <script src="./js/bundle.min.js?_v=20230607134533"></script>
   </body>
 </html>

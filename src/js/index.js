@@ -6,6 +6,11 @@
 import "./libs/lazyload.min.js";
 let lazyLoadInstance = new LazyLoad();
 
+window.mediaSizes = {
+  tabletM: 768,
+  mobileL: 420,
+}
+
 /**
  * Fancybox
  */ 
@@ -25,8 +30,11 @@ import "./libs/swiper-bundle.min.js";
 
 import "./scripts/scripts.js";
 
-import "./b_sections/experience.js";
-import "./b_sections/reviews.js";
+import "./alp_components/gallery.js";
+
+import "./alp_sections/experience.js";
+import "./alp_sections/reviews.js";
+import "./alp_sections/locations.js";
 
 import "./b_components/groupers/bayan.js";
 
