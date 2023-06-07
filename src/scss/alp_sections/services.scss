@@ -9,6 +9,14 @@
     }
 }
 
+.services__head-button {
+    @media (max-width: $mobile-s) {
+        font-size: 1.4rem;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
 .services-box {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

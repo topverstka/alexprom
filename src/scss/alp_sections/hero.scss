@@ -283,6 +283,10 @@
 	@media (max-width: $mobile-l) {
 		width: 80%;
 	}
+
+	@media (max-width: $mobile-s) {
+		width: 90%;
+	}
 }
 
 .hero-info__title {

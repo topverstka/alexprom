@@ -135,6 +135,7 @@
 	  height: 60px;
 	  top: calc(50% + 20px);
 	  transform: translateY(-50%);
+	  display: flex;
 	}
 }
 
@@ -150,11 +151,19 @@
 	@media (max-width: $tablet-m) {
 		left: 3px;
 	}
+
+	@media (max-width: $mobile-s) {
+		left: -12px;
+	}
 }
 
 .experience-slides .swiper-button-next {
 	@media (max-width: $tablet-m) {
 		right: 3px;
+	}
+	
+	@media (max-width: $mobile-s) {
+		right: -12px;
 	}
 }
 

@@ -110,6 +110,9 @@
         background-position: -10px 60px;
         background-size: 200%;
     }
+    @media (max-width: $mobile-s) {
+        background-position: -10px 110px;
+    }
 }
 
 .advantages-card:nth-child(1),
@@ -130,6 +133,10 @@
 .advantages-card:nth-child(4n+1) .advantages-card__title,
 .advantages-card:nth-child(4n+1) .advantages-card__title+p {
     max-width: 650px;
+
+    @media(max-width: $mobile-xl) {
+        max-width: 500px;
+    }
 }
 
 .advantages-card:nth-child(2),
@@ -215,6 +222,9 @@
     @media(max-width: 1100px) {
         grid-column: initial;
     }
+    @media (max-width: $mobile-l) {
+        background-position: -8rem 16rem;
+    }
 }
 
 .advantages-card:nth-child(4) .advantages-card__title,
@@ -234,6 +244,10 @@
     @media (max-width: $desktop-m) {
         width: 80%;
     }
+
+    @media (max-width: $mobile-s) {
+        width: 65%;
+    }
 }
 
 .advantages-card__title {
@@ -243,8 +257,9 @@
     margin: 0;
     margin-bottom: 2.4rem;
 
-    @media(max-width: 690px) {
+    @media(max-width: $mobile-xl) {
         font-size: 2.4rem;
+        max-width: 450px;
     }
 
     @media (max-width: $mobile-l) {

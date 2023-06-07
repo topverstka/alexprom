@@ -1,7 +1,7 @@
 .faq__box {
     margin-top: 80px;
 
-    @media (max-width: $mobile-l) {
+    @media (max-width: $mobile-xl) {
         margin-top: 55px;
     }
 } 
@@ -11,7 +11,8 @@
     font-size: 1.8rem;
     line-height: 1.25;
     background-color: var(--light);
-	@media(max-width: 768px) {
+
+	@media(max-width: $tablet-m) {
 		font-size: 1.4rem;
 	}
 }
@@ -19,7 +20,7 @@
 .faq-card + .faq-card {
     margin-top: 4rem;
 
-    @media (max-width: $mobile-l) {
+    @media (max-width: $mobile-xl) {
         margin-top: 2rem;
     }
 }
