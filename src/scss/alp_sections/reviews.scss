@@ -18,7 +18,7 @@
 	align-items: center;
 	justify-content: flex-end;
 
-	@media (max-width: $mobile-l) {
+	@media (max-width: $tablet-s) {
 		display: none;
 	}
 }
@@ -26,7 +26,7 @@
 .reviews__head-button {
 	margin-left: 16px;
 
-	@media (max-width: $tablet-m) {
+	@media (max-width: $tablet-l) {
 		padding: 0;
 		border: none;
 		border-bottom: 1px solid;
@@ -37,6 +37,11 @@
 
 .reviews-carousel {
 	position: relative;
+
+	@media (max-width: $desktop-m) and (min-width: $tablet-m + 1) {
+		max-width: 96%;
+		margin-left: auto;
+	}
 }
 
 .reviews-carousel .swiper-button-prev {
@@ -54,7 +59,7 @@
 .reviews-carousel .swiper-button-next {
 	right: 14.4%;
 
-	@media (max-width: $desktop-m) {
+	@media (max-width: $desktop-s) {
 		right: 7.2%;
 	}
 

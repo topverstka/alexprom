@@ -7,7 +7,9 @@ import "./libs/lazyload.min.js";
 let lazyLoadInstance = new LazyLoad();
 
 window.mediaSizes = {
+  laptop: 1100,
   tabletM: 768,
+  mobileXl: 690,
   mobileL: 420,
 }
 

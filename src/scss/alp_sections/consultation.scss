@@ -6,11 +6,12 @@
     border-radius: 30px;
     padding: 120px 30px;
 
-    @media(max-width: 1440px) {
+    @media(max-width: $desktop-m) {
         padding: 50px;
+        max-width: 1280px;
     }
     
-    @media(max-width: 1100px) {
+    @media(max-width: $laptop) {
         background: none;
         padding: 0;
     }
@@ -27,17 +28,17 @@
     padding: 80px 60px;
     box-sizing: border-box;
     
-    @media(max-width: 1440px) {
+    @media(max-width: $desktop-m) {
         align-items: center;
         max-width: 1060px;
         padding: 3vw 5vw;
         gap: 4vw;
     }
 
-    @media(max-width: 1100px) {
+
+    @media(max-width: $tablet) {
         display: grid;
         justify-content: initial;
-        // flex-direction: column;
         align-items: flex-start;
         gap: 40px;
     }
@@ -47,7 +48,7 @@
         padding-bottom: 60px;
     }
 
-    @media(max-width: 500px) {
+    @media(max-width: $mobile-xl) {
         padding: 40px 20px;
         gap: 34px;
     }
@@ -55,10 +56,11 @@
 
 .consultation__content {
     flex-basis: 416px;
-    @media(max-width: 1440px) {
+
+    @media(max-width: $desktop-m) {
         flex-basis: 340px;
     }
-    @media(max-width: 1100px) {
+    @media(max-width: $laptop) {
         flex-basis: auto;
     }
 }

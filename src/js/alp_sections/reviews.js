@@ -17,7 +17,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         slidesPerView: 1.15,
         spaceBetween: 20,
       },
-      769: {
+      963: {
         slidesPerView: 2.23,
         spaceBetween: 40,
       },

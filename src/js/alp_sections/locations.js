@@ -1,6 +1,7 @@
 window.addEventListener('DOMContentLoaded', (event) => {
 	const locations = document.querySelector('.locations');
 	if (!locations) return;
+	const mediaBreakpoint = window.mediaSizes.laptop;
 
 	let locationsCarousel;
 
@@ -24,7 +25,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 	let isPageLoadInit = true;
 	function checkWidth() {
-	  if (window.innerWidth > window.mediaSizes.tabletM) {
+	  if (window.innerWidth > mediaBreakpoint) {
 	  	wrapSlideItems();
 	  	initLocationsCarousel();
 	  } else {
@@ -53,6 +54,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 	const maxLinksPerPage = 17;
 	function wrapSlideItems() {
+		if (pagesCount == 0) return;
+
 		let {carousel, pages, links, wrapper} = getCarouselWrapStructure();
 
 		for (let i = 0; i < pagesCount; i++) {
@@ -73,7 +76,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 	function getCurrentShowCardsCount() {
 		let showGroupCount = 8;
-		if (window.innerWidth > window.mediaSizes.mobileL) {
+
+		if (window.innerWidth > window.mediaSizes.mobileXl) {
 			showGroupCount = 12;
 		}
 

@@ -11,6 +11,7 @@ header {
     align-items: center;
     padding: 28px 0;
     font-size: 1.6rem;
+
 	@media(max-width: 1380px) {
 		justify-content: space-between;
 	}
@@ -35,7 +36,7 @@ header {
 .header__menu {
     flex-grow: 1;
 
-    @media (max-width: $laptop-m) {
+    @media (max-width: $laptop) {
     	position: fixed;
     	width: 100%;
     	z-index: 2;
@@ -55,7 +56,7 @@ header {
 }
 
 .header__menu-inner {
-	@media (max-width: $laptop-m) {
+	@media (max-width: $laptop) {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -85,7 +86,7 @@ header {
 	pointer-events: initial;
     display: flex;
 
-	@media(max-width: $laptop-m) {
+	@media(max-width: $laptop) {
 		// display: none;
 		flex-direction: column;
 	}
@@ -99,7 +100,7 @@ header {
     	margin-right: 2.4rem;
     }
 
-    @media (max-width: $laptop-m) {
+    @media (max-width: $laptop) {
     	font-size: 4rem;
     	font-weight: 600;
     	line-height: 1.45;
@@ -130,7 +131,7 @@ header {
 	padding-bottom: 3rem;
 	text-decoration: underline;
 
-	@media (min-width: $laptop-m + 1) {
+	@media (min-width: $laptop + 1) {
 		display: none;
 	}
 
@@ -160,7 +161,7 @@ header {
     display: flex;
     align-items: center;
 
-	@media(max-width: $laptop-m) {
+	@media(max-width: $laptop) {
 		display: none;
 	}
 }
@@ -172,7 +173,7 @@ header {
     	margin-right: 2.4rem;
     }
     
-	@media (max-width: $laptop-m) {
+	@media (max-width: $laptop) {
 		margin-right: 0;
 	}
 }
@@ -186,13 +187,8 @@ header {
     display: none;
     z-index: 2;
 
-	@media(max-width: $laptop-m) {
+	@media(max-width: $laptop) {
 		display: flex;
-        // gap: 32px;
-	}
-
-	@media(max-width: 690px) {
-		// gap: 24px;
 	}
 }
 
