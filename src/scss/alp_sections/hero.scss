@@ -16,13 +16,17 @@
         padding-bottom: 54vw;
 	}
 
+	@media(max-width: $tablet-m) {
+		padding-bottom: 88vw;
+	}
+
 	@media(max-width: $mobile-xl) {
 		padding-bottom: 100vw;
 	}
 }
 
 .hero__thumb p {
-	@media(max-width: $mobile-xl) {
+	@media(max-width: $mobile-l) {
 		max-width: 300px;
 	}
 }
@@ -61,6 +65,11 @@
         height: 50vw;
         width: auto;
 	}
+
+	@media(max-width: $tablet-m) {
+		height: 85vw;
+	}
+
 	@media(max-width: $mobile-xl) {
 		height: 90vw;
         bottom: 10vw;
@@ -87,8 +96,11 @@
 	}
 
 	@media(max-width: $mobile-xl) {
-		max-width: 380px;
 		padding-top: 50px;
+	}
+
+	@media(max-width: $mobile-l) {
+		max-width: 380px;
 	}
 }
 
@@ -122,6 +134,18 @@
 	}
 }
 
+.hero__buttons {
+    margin-top: 32px;
+
+	@media (max-width: $tablet-m) {
+		margin-top: 46px;
+	}
+
+	@media(max-width: $mobile-xl) {
+        margin-top: 32px;
+	}
+}
+
 .hero__form {
     display: inline-grid;
     grid-template-columns: 1fr 1fr;
@@ -145,6 +169,7 @@
 }
 
 .hero__btn {
+	display: block;
     font-size: 1.6rem;
     color: #FFF;
     padding: 28px 44px;
@@ -168,6 +193,8 @@
     margin-top: 86px;
     padding: 8px;
     border-radius: 30px;
+    position: relative;
+    z-index: 2;
 
 	@media(max-width: 1670px) {
 		margin-top: 100px;

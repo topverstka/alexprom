@@ -1,0 +1,73 @@
+<section class="section locations">
+	<div class="container">
+    <h2 class="title-h2 locations__title">Работаем <br> по Москве и&nbsp;области</h2>
+    <div class="locations__content">
+      <div class="locations__map">
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Addaad24cf3d8860d29cae9d9530e4bc91bb9433505d187a45ba17a99b73afad7&amp;source=constructor" frameborder="0"></iframe>
+      </div>
+      <div class="locations-addresses">
+        <div class="swiper locations-addresses__slider">
+          <div class="swiper-wrapper">
+            <!--
+              <?php // Простая конструкция для вывода в цикле всех названий локаций ?>
+              <?php foreach ($cities as $city_count => $city) : ?>
+                <?php if ($city_count === 0) : ?>
+                  <?php // Открываем обертку слайда для первого элемента ?>
+                  <div class="swiper-slide cases-gallery-slide">
+                <?php elseif ($city_count % 18 === 0 && $city_count !== 0) :?>
+                  <?php // Для каждого ненулевого и 18 элемента открываем новую обертку ?>
+                  </div>
+                  <div class="swiper-slide cases-gallery-slide">
+                <?php endif;?>
+                    <?php // Размещаем элемент на каждой итерации ?>
+			              <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <?php if ($city_count === (count($cities) - 1)) : ?>
+                  <?php // Закрываем для последнего элемента блок группировщик ?>
+                  </div>
+                <?php endif; ?>
+              <?php endforeach; ?>
+            -->
+
+            <div class="swiper-slide locations-addresses__address">
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+            </div>
+            <div class="swiper-slide locations-addresses__address">
+              <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+              <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+              <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+              <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+              <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+              <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+              <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+              <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+            </div>
+          </div>
+        </div>
+        <div class="locations-addresses__buttons">
+          <button class="locations-addresses__button-prev" type="button"></button>
+          <button class="locations-addresses__button-next" type="button"></button>
+          <button class="btn-accent locations-addresses__button-more">
+              Показать больше
+          </button>
+        </div>
+      </div>
+    </div>
+	</div>
+</section>
+

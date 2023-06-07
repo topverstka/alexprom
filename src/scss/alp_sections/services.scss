@@ -49,10 +49,7 @@
     background-color: #F0F2F5;
     border-radius: 30px;
     padding: 20px;
-
-    @media (max-width: $mobile-l) {
-        padding-bottom: 10px;
-    }
+    padding-bottom: 10px;
 }
 
 .services-box__item:nth-child(10),

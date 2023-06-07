@@ -20,6 +20,10 @@
 .faq-card + .faq-card {
     margin-top: 4rem;
 
+    @media (max-width: $tablet-m) {
+        margin-top: 2.2rem;
+    }
+    
     @media (max-width: $mobile-xl) {
         margin-top: 2rem;
     }

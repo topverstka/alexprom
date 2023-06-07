@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+        <link rel="stylesheet" href="./css/style.css?_v=20230607222412">
+
+    <!-- Отключить автодетект телефонов -->
+    <meta name="format-detection" content="telephone=no">
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+  <div class="container">
+      <div class="header">
+          <a class="header__logo" href="#">
+              <img class="header__img" src="./images/logo.svg" alt="AlexProm">
+          </a>
+          <div class="header__menu">
+            <div class="header__menu-inner">
+              <nav class="header__nav">
+                  <a class="header__nav-link" href="#">Услуги</a>
+                  <a class="header__nav-link" href="#">Цены</a>
+                  <a class="header__nav-link" href="#">Проекты</a>
+                  <a class="header__nav-link" href="#">О компании</a>
+                  <a class="header__nav-link" href="#">Блог</a>
+                  <a class="header__nav-link" href="#">Контакты</a>
+              </nav>
+              <button class="btn-accent header__button-callback" data-b_modal-open="form-contact">Заказать обратный звонок</button>
+            </div>
+          </div>
+          <div class="header__info">
+              <a class="link" href="mailto:zakaz@alexprom.ru">zakaz@alexprom.ru</a>
+              <a class="link" href="tel:+74951090242">+7 (495) 109-02-42</a>
+              <button class="btn-primary header__btn" type="button" data-b_modal-open="form-contact">Заказать звонок</button>
+          </div>
+          <div class="header-mobile">
+              <a class="header-mobile__btn" href="tel:+74951090242">
+                  <img src="./images/icons/phone-menu.svg" alt="+74951090242">
+              </a>
+              <button class="header-mobile__btn burger" type="button">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+              </button>
+          </div>
+      </div>
+  </div>
+</header>
+
+      <main class="hero">
+        <div class="hero__thumb">
+            <picture class="hero__pic">
+              <img class="hero__img" src="./images/page-services/services-hero.jpg" alt="Услуги промышленного альпинизма">
+            </picture>
+            <div class="container">
+                <h1 class="title-h1 hero__title">
+                    Услуги <br>
+                    промышленного <br>
+                    альпинизма <br>
+                </h1>
+                <p class="hero__desc">Получите точный расчет стоимости наших услуг</p>
+                <p>Оставьте свой номер, чтобы получить прайс-лист на&nbsp;Whatsapp</p>
+                <div class="hero__buttons">
+                    <button class="hero__btn" type="button" data-b_modal-open="form-price">Получить прайс-лист</button>
+                </div>
+                <div class="hero-info">
+                    <div class="hero-info__stroke">
+                        <div class="hero-info__item">
+                            <div class="hero-info__desc">
+                                <span class="hero-info__text">Приступим к работам уже&nbsp;через 3&nbsp;часа после согласования всех условий</span>
+                            </div>
+                            <picture class="hero-info__icon">
+                                <img src="./images/icons/notice.svg" alt="Приступим к работам уже через 3 часа">
+                            </picture>
+                        </div>
+                        <div class="hero-info__item">
+                            <div class="hero-info__desc">
+                                <span class="hero-info__text">Работаем 24/7 без праздников и выходных. Всегда на&nbsp;связи</span>
+                            </div>
+                            <picture class="hero-info__icon">
+                                <img src="./images/icons/celandar.svg" alt="Работаем без праздников и выходных">
+                            </picture>
+                        </div>
+                        <div class="hero-info__item">
+                            <div class="hero-info__desc">
+                                <span class="hero-info__text">Предоставляем гарантию 5&nbsp;лет на все виды наших&nbsp;работ</span>
+                            </div>
+                            <picture class="hero-info__icon">
+                                <img src="./images/icons/garant.svg" alt="редоставляем гарантию 5 лет">
+                            </picture>
+                        </div>
+                        <div class="hero-info__item">
+                            <div class="hero-info__desc">
+                                <span class="hero-info__text">По&nbsp;статистике 84,6% всех&nbsp;наших работ мы заканчиваем досрочно</span>
+                            </div>
+                            <picture class="hero-info__icon">
+                                <img src="./images/icons/chart.svg" alt="85% всех наших работ заканчиваем досрочно">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img class="hero__worker" src="./images/page-services/services-hero--mobile.png" alt="Услуги промышленного альпинизма">
+        </div>
+      </main>
+
+      <div class="section-flip section-flip--light">
+        <section class="section services">
+          <div class="container">
+            <div class="services__head">
+                <h2 class="title-h2">Фасадные работы</h2>
+            </div>
+            <div class="services-box">
+                <div class="services-box__item">
+                    <picture class="services-box__thumb">
+                        <img class="services-box__img lazy" data-src="./images/page-services/services-1-1.jpg" alt="">
+                    </picture>
+                    <h3 class="title-h3 services-box__title">Герметизация <br> межпанельных швов</h3>
+                    <ul class="services-list">
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="services-box__item">
+                    <picture class="services-box__thumb">
+                        <img class="services-box__img lazy" data-src="./images/page-services/services-1-2.jpg" alt="">
+                    </picture>
+                    <h3 class="title-h3 services-box__title">Утепление <br> стен</h3>
+                    <ul class="services-list">
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="services-box__item">
+                    <picture class="services-box__thumb">
+                        <img class="services-box__img lazy" data-src="./images/page-services/services-1-3.jpg" alt="">
+                    </picture>
+                    <h3 class="title-h3 services-box__title">Установка системы <br> вентиляции</h3>
+                    <ul class="services-list">
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="services-box__item">
+                    <picture class="services-box__thumb">
+                        <img class="services-box__img lazy" data-src="./images/page-services/services-1-4.jpg" alt="">
+                    </picture>
+                    <h3 class="title-h3 services-box__title">Штукатурка <br> фасадов</h3>
+                    <ul class="services-list">
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="services-box__item">
+                    <picture class="services-box__thumb">
+                        <img class="services-box__img lazy" data-src="./images/page-services/services-1-5.jpg" alt="">
+                    </picture>
+                    <h3 class="title-h3 services-box__title">Ремонт -  капитальный и&nbsp;косметический</h3>
+                    <ul class="services-list">
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="services-box__item">
+                    <picture class="services-box__thumb">
+                        <img class="services-box__img lazy" data-src="./images/page-services/services-1-6.jpg" alt="">
+                    </picture>
+                    <h3 class="title-h3 services-box__title">Облицовка <br> натуральным камнем</h3>
+                    <ul class="services-list">
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="services-box__item">
+                    <picture class="services-box__thumb">
+                        <img class="services-box__img lazy" data-src="./images/page-services/services-1-7.jpg" alt="">
+                    </picture>
+                    <h3 class="title-h3 services-box__title">Монтаж <br> сайдинга</h3>
+                    <ul class="services-list">
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="services-box__item">
+                    <picture class="services-box__thumb">
+                        <img class="services-box__img lazy" data-src="./images/page-services/services-1-8.jpg" alt="">
+                    </picture>
+                    <h3 class="title-h3 services-box__title">Гидрофобизация <br> стен</h3>
+                    <ul class="services-list">
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="services-box__item">
+                    <picture class="services-box__thumb">
+                        <img class="services-box__img lazy" data-src="./images/page-services/services-1-9.jpg" alt="">
+                    </picture>
+                    <h3 class="title-h3 services-box__title">Облицовка <br> кирпичом</h3>
+                    <ul class="services-list">
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section services">
+          <div class="container">
+            <div class="services__head">
+                <h2 class="title-h2">Клининговые услуги</h2>
+            </div>
+            <div class="services-box">
+                <div class="services-box__item">
+                    <picture class="services-box__thumb">
+                        <img class="services-box__img lazy" data-src="./images/page-services/services-2-1.jpg" alt="">
+                    </picture>
+                    <h3 class="title-h3 services-box__title">Сброс <br> снега с крыш</h3>
+                    <ul class="services-list">
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="services-box__item">
+                    <picture class="services-box__thumb">
+                        <img class="services-box__img lazy" data-src="./images/page-services/services-2-2.jpg" alt="">
+                    </picture>
+                    <h3 class="title-h3 services-box__title">Абонентское обслуживание <br> в зимний сезон</h3>
+                    <ul class="services-list">
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="services-box__item">
+                    <picture class="services-box__thumb">
+                        <img class="services-box__img lazy" data-src="./images/page-services/services-2-3.jpg" alt="">
+                    </picture>
+                    <h3 class="title-h3 services-box__title">Удаление <br> сосулек</h3>
+                    <ul class="services-list">
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="services-box__item">
+                    <picture class="services-box__thumb">
+                        <img class="services-box__img lazy" data-src="./images/page-services/services-2-4.jpg" alt="">
+                    </picture>
+                    <h3 class="title-h3 services-box__title">Уборка снега <br> и мусора</h3>
+                    <ul class="services-list">
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="services-box__item">
+                    <picture class="services-box__thumb">
+                        <img class="services-box__img lazy" data-src="./images/page-services/services-2-5.jpg" alt="">
+                    </picture>
+                    <h3 class="title-h3 services-box__title">Мойка фасадов <br> пром. альпинистами</h3>
+                    <ul class="services-list">
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="services-box__item">
+                    <picture class="services-box__thumb">
+                        <img class="services-box__img lazy" data-src="./images/page-services/services-2-6.jpg" alt="">
+                    </picture>
+                    <h3 class="title-h3 services-box__title">Мойка <br> окон</h3>
+                    <ul class="services-list">
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="services-box__item">
+                    <picture class="services-box__thumb">
+                        <img class="services-box__img lazy" data-src="./images/page-services/services-2-7.jpg" alt="">
+                    </picture>
+                    <h3 class="title-h3 services-box__title">Мытье <br> витражей</h3>
+                    <ul class="services-list">
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="services-box__item">
+                    <picture class="services-box__thumb">
+                        <img class="services-box__img lazy" data-src="./images/page-services/services-2-8.jpg" alt="">
+                    </picture>
+                    <h3 class="title-h3 services-box__title">Очистка фасадов <br> зданий</h3>
+                    <ul class="services-list">
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="services-box__item">
+                    <picture class="services-box__thumb">
+                        <img class="services-box__img lazy" data-src="./images/page-services/services-2-9.jpg" alt="">
+                    </picture>
+                    <h3 class="title-h3 services-box__title">Удаление <br> высолов</h3>
+                    <ul class="services-list">
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="services-box__item">
+                    <picture class="services-box__thumb">
+                        <img class="services-box__img lazy" data-src="./images/page-services/services-2-10.jpg" alt="">
+                    </picture>
+                    <h3 class="title-h3 services-box__title">Чистка стен <br> домов от копоти и&nbsp;краски</h3>
+                    <ul class="services-list">
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="services-box__item">
+                    <picture class="services-box__thumb">
+                        <img class="services-box__img lazy" data-src="./images/page-services/services-2-11.jpg" alt="">
+                    </picture>
+                    <h3 class="title-h3 services-box__title">Обеспыливание <br> металлоконструкций</h3>
+                    <ul class="services-list">
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="services-box__item">
+                    <picture class="services-box__thumb">
+                        <img class="services-box__img lazy" data-src="./images/page-services/services-2-12.jpg" alt="">
+                    </picture>
+                    <h3 class="title-h3 services-box__title">Клининг производственных помещений</h3>
+                    <ul class="services-list">
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section services">
+          <div class="container">
+            <div class="services__head">
+                <h2 class="title-h2">Кровельные работы</h2>
+            </div>
+            <div class="services-box">
+                <div class="services-box__item">
+                    <picture class="services-box__thumb">
+                        <img class="services-box__img lazy" data-src="./images/page-services/services-3-1.jpg" alt="">
+                    </picture>
+                    <h3 class="title-h3 services-box__title">Утепление <br> крыши</h3>
+                    <ul class="services-list">
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="services-box__item">
+                    <picture class="services-box__thumb">
+                        <img class="services-box__img lazy" data-src="./images/page-services/services-3-2.jpg" alt="">
+                    </picture>
+                    <h3 class="title-h3 services-box__title">Установка и&nbsp;демонтаж водосточной системы</h3>
+                    <ul class="services-list">
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="services-box__item">
+                    <picture class="services-box__thumb">
+                        <img class="services-box__img lazy" data-src="./images/page-services/services-3-3.jpg" alt="">
+                    </picture>
+                    <h3 class="title-h3 services-box__title">Установка снегозадержателей</h3>
+                    <ul class="services-list">
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="services-box__item">
+                    <picture class="services-box__thumb">
+                        <img class="services-box__img lazy" data-src="./images/page-services/services-3-4.jpg" alt="">
+                    </picture>
+                    <h3 class="title-h3 services-box__title">Кабельный обогрев <br> кровли и&nbsp;водостоков</h3>
+                    <ul class="services-list">
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="services-box__item">
+                    <picture class="services-box__thumb">
+                        <img class="services-box__img lazy" data-src="./images/page-services/services-3-5.jpg" alt="">
+                    </picture>
+                    <h3 class="title-h3 services-box__title">Демонтаж</h3>
+                    <ul class="services-list">
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="services-box__item">
+                    <picture class="services-box__thumb">
+                        <img class="services-box__img lazy" data-src="./images/page-services/services-3-6.jpg" alt="">
+                    </picture>
+                    <h3 class="title-h3 services-box__title">Крыша на&nbsp;балкон <br> последнего этажа</h3>
+                    <ul class="services-list">
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="services-box__item">
+                    <picture class="services-box__thumb">
+                        <img class="services-box__img lazy" data-src="./images/page-services/services-3-7.jpg" alt="">
+                    </picture>
+                    <h3 class="title-h3 services-box__title">Ремонт балконных <br> козырьков</h3>
+                    <ul class="services-list">
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="services-box__item">
+                    <picture class="services-box__thumb">
+                        <img class="services-box__img lazy" data-src="./images/page-services/services-3-8.jpg" alt="">
+                    </picture>
+                    <h3 class="title-h3 services-box__title">Желоба, воронки и&nbsp;отливы</h3>
+                    <ul class="services-list">
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                        <li class="services-list__item">
+                            <a class="services-list__link" href="#">Название первой услуги</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="services-buttons">
+                <button class="btn-accent services__button" type="button">Показать больше</button>
+            </div>
+          </div>
+        </section>
+
+
+        <section class="section locations">
+	<div class="container">
+    <h2 class="title-h2 locations__title">Работаем <br> по Москве и&nbsp;области</h2>
+    <div class="locations__content">
+      <div class="locations__map">
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Addaad24cf3d8860d29cae9d9530e4bc91bb9433505d187a45ba17a99b73afad7&amp;source=constructor" frameborder="0"></iframe>
+      </div>
+      <div class="locations-addresses">
+        <div class="swiper locations-addresses__slider">
+          <div class="swiper-wrapper">
+            <!--
+              <?php // Простая конструкция для вывода в цикле всех названий локаций ?>
+              <?php foreach ($cities as $city_count => $city) : ?>
+                <?php if ($city_count === 0) : ?>
+                  <?php // Открываем обертку слайда для первого элемента ?>
+                  <div class="swiper-slide cases-gallery-slide">
+                <?php elseif ($city_count % 18 === 0 && $city_count !== 0) :?>
+                  <?php // Для каждого ненулевого и 18 элемента открываем новую обертку ?>
+                  </div>
+                  <div class="swiper-slide cases-gallery-slide">
+                <?php endif;?>
+                    <?php // Размещаем элемент на каждой итерации ?>
+			              <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <?php if ($city_count === (count($cities) - 1)) : ?>
+                  <?php // Закрываем для последнего элемента блок группировщик ?>
+                  </div>
+                <?php endif; ?>
+              <?php endforeach; ?>
+            -->
+
+            <div class="swiper-slide locations-addresses__address">
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+            </div>
+            <div class="swiper-slide locations-addresses__address">
+              <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+              <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+              <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+              <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+              <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+              <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+              <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+              <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+            </div>
+          </div>
+        </div>
+        <div class="locations-addresses__buttons">
+          <button class="locations-addresses__button-prev" type="button"></button>
+          <button class="locations-addresses__button-next" type="button"></button>
+          <button class="btn-accent locations-addresses__button-more">
+              Показать больше
+          </button>
+        </div>
+      </div>
+    </div>
+	</div>
+</section>
+
+
+
+        <section class="section-shifter consultation">
+  <div class="container consultation__container">
+    <div class="consultation__bg">
+          <div class="consultation__content">
+              <h2 class="consultation__title">
+              		Запишитесь на бесплатную консультацию 
+              </h2>
+              <p class="consultation__text">Оставьте заявку, и&nbsp;наш менеджер перезвонит вам в&nbsp;течение 30&nbsp;минут и&nbsp;проконсультируем по&nbsp;всем вопросам.</p>
+          </div>
+          <div class="consultation__box">
+              <form class="form-vertical">
+                  <label class="input input-name form-control">
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="Ваше имя"
+    autocomplete="name"
+  >
+</label>
+
+                  <label class="input input-tel form-control">
+  <input
+    class="input__field mask-tel"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Ваш номер телефона"
+    maxlength="25"
+    minlength="10"
+    autocomplete="tel"
+  >
+</label>
+
+                  <button class="btn-main" type="submit">Получить консультацию</button>
+                  <span class="form__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="">персональных данных</a></span>
+              </form>
+          </div>
+      </div>
+  </div>
+</section>
+
+      </div>
+
+      <footer class="footer">
+  <div class="container">
+      <div class="footer-top">
+          <a class="footer-top__logo" href="#">
+              <img class="footer-top__img" src="./images/logo.svg" alt="AlexProm">
+          </a>
+          <div class="footer-top__nav">
+              <a class="footer-top__nav-link" href="#">Услуги</a>
+              <a class="footer-top__nav-link" href="#">Цены</a>
+              <a class="footer-top__nav-link" href="#">Проекты</a>
+              <a class="footer-top__nav-link" href="#">О компании</a>
+              <a class="footer-top__nav-link" href="#">Контакты</a>
+          </div>
+          <div class="footer-top__info">
+              <a class="link" href="mailto:zakaz@alexprom.ru">zakaz@alexprom.ru</a>
+              <a class="link" href="tel:+74951090242">+7&nbsp;(495)&nbsp;109-02-42</a>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <div class="footer-bottom__address">
+              <span>ООО «АЛЕКСПРОМ»</span>
+              <span>Москва, Братиславская 1, корпус&nbsp;3</span>
+          </div>
+          <div class="footer-bottom__docs">
+              <a class="footer-bottom__docs-link" href="#">Пользовательское соглашение</a>
+              <a class="footer-bottom__docs-link" href="#">Политика конфиденциальности</a>
+          </div>
+      </div>
+  </div>
+</footer>
+
+<div class="modal-form b_modal" id="form-contact" data-closer-type="inner">
+	<div class="modal-form__head">
+		<h3 class="modal-form__title">
+			Оставьте свои контакты <br> и мы вам перезвоним
+ 		</h3>
+		<p class="modal-form__desc">
+			Оставьте заявку, и наш менеджер перезвонит вам <br>
+			в течение 30 минут и проконсультирует по всем вопросам.
+		</p>
+	</div>
+	<div class="modal-form__body">
+	  <form class="form-vertical">
+	  		<input type="hidden" name="form_message" value>
+	      <label class="input input-name form-control">
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="Ваше имя"
+    autocomplete="name"
+  >
+</label>
+
+	      <label class="input input-tel form-control">
+  <input
+    class="input__field mask-tel"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Ваш номер телефона"
+    maxlength="25"
+    minlength="10"
+    autocomplete="tel"
+  >
+</label>
+
+	      <button class="btn-main" type="submit">Получить консультацию</button>
+			  <span class="form__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="#">персональных данных</a></span>
+	  </form>
+	</div>
+</div>
+<div class="modal-form b_modal" id="form-price" data-closer-type="inner">
+	<div class="modal-form__head">
+		<h3 class="modal-form__title">
+			Оставьте свои контакты <br> и получите прайс-лист
+ 		</h3>
+		<p class="modal-form__desc">
+			Оставьте заявку, и наш менеджер перезвонит вам <br>
+			в течение 30 минут и проконсультирует по всем вопросам.
+		</p>
+	</div>
+	<div class="modal-form__body">
+	  <form class="form-vertical">
+	  		<input type="hidden" name="form_message" value>
+	      <label class="input input-name form-control">
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="Ваше имя"
+    autocomplete="name"
+  >
+</label>
+
+	      <label class="input input-tel form-control">
+  <input
+    class="input__field mask-tel"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Ваш номер телефона"
+    maxlength="25"
+    minlength="10"
+    autocomplete="tel"
+  >
+</label>
+
+	      <button class="btn-main" type="submit">Получить консультацию</button>
+			  <span class="form__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="#">персональных данных</a></span>
+	  </form>
+	</div>
+</div>
+
+
+    </div>
+
+    <script src="./js/bundle.min.js?_v=20230607222412"></script>
+  </body>
+</html>

@@ -1,20 +1,21 @@
 .experience {
 	margin-top: 180px;
-	margin-bottom: 140px;
-	padding: 0;
+	margin-bottom: 100px;
+	padding-top: 0;
 
 	@media (max-width: $desktop-m) {
 		margin-top: 210px;
-		margin-bottom: 210px;
+		margin-bottom: 130px;
 	}
 
 	@media (max-width: $tablet-m) {
 		margin-top: 180px;
+		margin-bottom: 150px;
 	}
 
 	@media (max-width: $mobile-l) {
 		margin-top: 100px;
-		margin-bottom: 170px;
+		margin-bottom: 140px;
 	}
 }
 
@@ -32,15 +33,17 @@
 
 	@media (max-width: $desktop-m) {
 		padding-top: 45px;
-		padding-bottom: 95px;
+		padding-bottom: 140px;//95px;
 	}
 
 	@media (max-width: $tablet-m) {
 		padding-top: 80px;
+		padding-bottom: 80px;
 	}
 
 	@media (max-width: $mobile-l) {
 		padding-top: 55px;
+		padding-bottom: 95px;
 		border-radius: 60px;
 	}
 }
@@ -300,8 +303,8 @@
 	z-index: 1;
 
 	@media (max-width: $desktop-m) {
-		bottom: 16%;
-    left: -15px;
+		bottom: 19%;
+    left: 5px;
 	}
 
 	@media (max-width: $desktop-s) {
@@ -365,8 +368,6 @@
   }
 
   @media (max-width: $desktop-m) {
-  	margin-left: -15px;
-  	margin-right: -15px;
     margin-bottom: -115px;
     margin-top: -100px;
   }
@@ -384,7 +385,7 @@
   }
 
   @media (max-width: $tablet-m) {
-  	margin-top: -140px;
+  	margin-top: -130px;
   }
 
   @media (max-width: $mobile-l) {

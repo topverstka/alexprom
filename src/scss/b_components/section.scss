@@ -1,6 +1,6 @@
 .section {
-  padding-top: 140px;
-  padding-bottom: 140px;
+  padding-top: 90px;
+  padding-bottom: 90px;
 
   @media (max-width: $desktop-m) {
     padding-top: 80px;
@@ -14,8 +14,8 @@
 }
 
 .section-shifter {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 90px;
+  margin-bottom: 90px;
   padding-top: 0;
   padding-bottom: 0;
 
@@ -28,11 +28,6 @@
     padding-left: 20px;
     padding-right: 20px;
   }
-
-  // @media(max-width: 690px) {
-  //   padding-top: 100px;
-  //   padding-bottom: 100px;
-  // }
 
   @media (max-width: $mobile-xl) {
     padding: 0 16px;
@@ -70,6 +65,18 @@
 
   @media (max-width: $mobile-l) {
     padding-top: 36px;
+  }
+}
+
+.section-flip .section:last-child {
+  padding-bottom: 140px;
+
+  @media (max-width: $tablet-m) {
+    padding-bottom: 80px;
+  }
+
+  @media (max-width: $mobile-l) {
+    padding-bottom: 36px;
   }
 }
 
