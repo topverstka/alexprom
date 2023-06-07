@@ -76,6 +76,14 @@
 	}
 }
 
+.hero__container {
+    padding-top: 3rem;
+
+	@media (max-width: $tablet-m) {
+		padding-top: 1.6rem;
+	}
+}
+
 .hero__title {
     padding-top: 14.5rem;
     max-width: 800px;
@@ -101,6 +109,22 @@
 
 	@media(max-width: $mobile-l) {
 		max-width: 380px;
+	}
+}
+
+.hero--has-breadcrumbs .hero__title {
+    padding-top: 9.2rem;
+
+	@media (max-width: $desktop-m) {
+		padding-top: 5rem;
+	}
+
+	@media (max-width: $tablet-m) {
+		padding-top: 4.6rem;
+	}
+
+	@media (max-width: $mobile-xl) {
+		padding-top: 3.2rem;
 	}
 }
 

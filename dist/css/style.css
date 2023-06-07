@@ -334,6 +334,42 @@ h6 {
   transform-origin: unset;
 }
 
+.breadcrumbs {
+  color: #646464;
+  font-size: 1.4rem;
+  line-height: 1.25;
+  overflow: hidden;
+  width: 100%;
+}
+
+.breadcrumbs__list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.breadcrumbs__item {
+  color: var(--accent);
+}
+
+.breadcrumbs__link {
+  color: var(--dark);
+  transition: all 0.3s ease;
+}
+
+@media (any-hover: hover) {
+  .breadcrumbs__link:hover {
+    color: var(--accent);
+  }
+}
+
+.breadcrumbs__link:after {
+  content: "/";
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
+
 .section {
   padding-top: 90px;
   padding-bottom: 90px;
@@ -3494,6 +3530,15 @@ header {
   }
 }
 
+.hero__container {
+  padding-top: 3rem;
+}
+@media (max-width: 768px) {
+  .hero__container {
+    padding-top: 1.6rem;
+  }
+}
+
 .hero__title {
   padding-top: 14.5rem;
   max-width: 800px;
@@ -3524,6 +3569,25 @@ header {
 @media (max-width: 450px) {
   .hero__title {
     max-width: 380px;
+  }
+}
+
+.hero--has-breadcrumbs .hero__title {
+  padding-top: 9.2rem;
+}
+@media (max-width: 1536px) {
+  .hero--has-breadcrumbs .hero__title {
+    padding-top: 5rem;
+  }
+}
+@media (max-width: 768px) {
+  .hero--has-breadcrumbs .hero__title {
+    padding-top: 4.6rem;
+  }
+}
+@media (max-width: 690px) {
+  .hero--has-breadcrumbs .hero__title {
+    padding-top: 3.2rem;
   }
 }
 

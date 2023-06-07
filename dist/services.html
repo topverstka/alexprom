@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
-        <link rel="stylesheet" href="./css/style.css?_v=20230607222412">
+        <link rel="stylesheet" href="./css/style.css?_v=20230607223313">
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no">
@@ -52,12 +52,22 @@
   </div>
 </header>
 
-      <main class="hero">
+      <main class="hero hero--has-breadcrumbs">
         <div class="hero__thumb">
             <picture class="hero__pic">
               <img class="hero__img" src="./images/page-services/services-hero.jpg" alt="Услуги промышленного альпинизма">
             </picture>
-            <div class="container">
+            <div class="container hero__container">
+                <div class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="#" class="breadcrumbs__link">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item">Услуги</li>
+                    </ul>
+                </div>
                 <h1 class="title-h1 hero__title">
                     Услуги <br>
                     промышленного <br>
@@ -873,6 +883,6 @@
 
     </div>
 
-    <script src="./js/bundle.min.js?_v=20230607222412"></script>
+    <script src="./js/bundle.min.js?_v=20230607223313"></script>
   </body>
 </html>
