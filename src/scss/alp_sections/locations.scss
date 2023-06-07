@@ -156,8 +156,6 @@
 }
 
 .locations-addresses__buttons {
-	position: relative;	
-	z-index: 2;
 	display: flex;	
 	justify-content: flex-end;	
 	align-items: center;	
@@ -171,6 +169,8 @@
 
 .locations-addresses__button-next,
 .locations-addresses__button-prev {
+	position: relative;	
+	z-index: 2;
 	--size: var(--arrow-button-size);
 	max-width: var(--size);
 	min-width: var(--size);

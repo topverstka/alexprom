@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
-        <link rel="stylesheet" href="./css/style.css?_v=20230607184142">
+        <link rel="stylesheet" href="./css/style.css?_v=20230607190500">
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no">
@@ -30,13 +30,13 @@
                   <a class="header__nav-link" href="#">Блог</a>
                   <a class="header__nav-link" href="#">Контакты</a>
               </nav>
-              <button class="btn-accent header__button-callback">Заказать обратный звонок</button>
+              <button class="btn-accent header__button-callback" data-b_modal-open="form-contact">Заказать обратный звонок</button>
             </div>
           </div>
           <div class="header__info">
               <a class="link" href="mailto:zakaz@alexprom.ru">zakaz@alexprom.ru</a>
               <a class="link" href="tel:+74951090242">+7 (495) 109-02-42</a>
-              <button class="btn-primary header__btn" type="button">Заказать звонок</button>
+              <button class="btn-primary header__btn" type="button" data-b_modal-open="form-contact">Заказать звонок</button>
           </div>
           <div class="header-mobile">
               <a class="header-mobile__btn" href="tel:+74951090242">
@@ -62,9 +62,19 @@
                 <p class="hero__desc">Получите точный расчет стоимости наших услуг</p>
                 <p>Оставьте свой номер, чтобы получить прайс-лист на&nbsp;Whatsapp</p>
                 <form class="hero__form">
-                    <label class="input hero__input form-control">
-                      <input class="input__field mask-tel" type="tel" value="" placeholder="Ваш номер телефона">
-                    </label>
+                    <label class="input input-tel form-control">
+  <input
+    class="input__field mask-tel"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Ваш номер телефона"
+    maxlength="25"
+    minlength="10"
+    autocomplete="tel"
+  >
+</label>
+
                     <button class="hero__btn" type="submit">Получить прайс-лист</button>
                 </form>
                 <div class="hero-info">
@@ -338,12 +348,29 @@
           </div>
           <div class="consultation__box">
               <form class="form-vertical">
-                  <label class="input form-control">
-                    <input class="input__field" type="text" placeholder="Ваше имя">
-                  </label>
-                  <label class="input form-control">
-                    <input class="input__field mask-tel" type="tel" value="" placeholder="Ваш номер телефона">
-                  </label>
+                  <label class="input input-name form-control">
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="Ваше имя"
+    autocomplete="name"
+  >
+</label>
+
+                  <label class="input input-tel form-control">
+  <input
+    class="input__field mask-tel"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Ваш номер телефона"
+    maxlength="25"
+    minlength="10"
+    autocomplete="tel"
+  >
+</label>
+
                   <button class="btn-main" type="submit">Получить консультацию</button>
                   <span class="form__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="">персональных данных</a></span>
               </form>
@@ -920,12 +947,29 @@
           </div>
           <div class="consultation__box">
               <form class="form-vertical">
-                  <label class="input form-control">
-                    <input class="input__field" type="text" placeholder="Ваше имя">
-                  </label>
-                  <label class="input form-control">
-                    <input class="input__field mask-tel" type="tel" value="" placeholder="Ваш номер телефона">
-                  </label>
+                  <label class="input input-name form-control">
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="Ваше имя"
+    autocomplete="name"
+  >
+</label>
+
+                  <label class="input input-tel form-control">
+  <input
+    class="input__field mask-tel"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Ваш номер телефона"
+    maxlength="25"
+    minlength="10"
+    autocomplete="tel"
+  >
+</label>
+
                   <button class="btn-main" type="submit">Получить консультацию</button>
                   <span class="form__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="">персональных данных</a></span>
               </form>
@@ -1054,33 +1098,33 @@
                                     -->
 
                                     <div class="swiper-slide locations-addresses__address">
-                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
-                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
-                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
-                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
-                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
-                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
-                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
-                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
-                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
-                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
-                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
-                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
-                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
-                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
-                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
-                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
-                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
+                                        <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                                        <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                                        <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                                        <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                                        <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                                        <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                                        <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                                        <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                                        <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                                        <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                                        <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                                        <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                                        <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                                        <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                                        <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                                        <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                                        <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
                                     </div>
                                     <div class="swiper-slide locations-addresses__address">
-                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
-                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
-                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
-                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
-                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
-                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
-                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
-                                        <a href="#" class="locations-addresses__link">Апрелевка</a>
+                                        <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                                        <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                                        <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                                        <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                                        <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                                        <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                                        <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
+                                        <button type="button" class="locations-addresses__link" data-b_modal-open="form-contact">Апрелевка</button>
                                     </div>
                                 </div>
                             </div>
@@ -1107,12 +1151,29 @@
           </div>
           <div class="consultation__box">
               <form class="form-vertical">
-                  <label class="input form-control">
-                    <input class="input__field" type="text" placeholder="Ваше имя">
-                  </label>
-                  <label class="input form-control">
-                    <input class="input__field mask-tel" type="tel" value="" placeholder="Ваш номер телефона">
-                  </label>
+                  <label class="input input-name form-control">
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="Ваше имя"
+    autocomplete="name"
+  >
+</label>
+
+                  <label class="input input-tel form-control">
+  <input
+    class="input__field mask-tel"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Ваш номер телефона"
+    maxlength="25"
+    minlength="10"
+    autocomplete="tel"
+  >
+</label>
+
                   <button class="btn-main" type="submit">Получить консультацию</button>
                   <span class="form__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="">персональных данных</a></span>
               </form>
@@ -1158,9 +1219,8 @@
 <div class="modal-form b_modal" id="form-contact" data-closer-type="inner">
 	<div class="modal-form__head">
 		<h3 class="modal-form__title">
-			Оставьте свои контакты <br>
-			и мы вам перезвоним
-		</h3>
+			Оставьте свои контакты <br> и мы вам перезвоним
+ 		</h3>
 		<p class="modal-form__desc">
 			Оставьте заявку, и наш менеджер перезвонит вам <br>
 			в течение 30 минут и проконсультирует по всем вопросам.
@@ -1168,20 +1228,80 @@
 	</div>
 	<div class="modal-form__body">
 	  <form class="form-vertical">
-	      <label class="input form-control">
-	        <input class="input__field" type="text" placeholder="Ваше имя">
-	      </label>
-	      <label class="input form-control">
-	        <input class="input__field mask-tel" type="tel" value="" placeholder="Ваш номер телефона">
-	      </label>
+	  		<input type="hidden" name="form_message" value>
+	      <label class="input input-name form-control">
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="Ваше имя"
+    autocomplete="name"
+  >
+</label>
+
+	      <label class="input input-tel form-control">
+  <input
+    class="input__field mask-tel"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Ваш номер телефона"
+    maxlength="25"
+    minlength="10"
+    autocomplete="tel"
+  >
+</label>
+
+	      <button class="btn-main" type="submit">Получить консультацию</button>
+			  <span class="form__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="#">персональных данных</a></span>
+	  </form>
+	</div>
+</div>
+<div class="modal-form b_modal" id="form-price" data-closer-type="inner">
+	<div class="modal-form__head">
+		<h3 class="modal-form__title">
+			Оставьте свои контакты <br> и получите прайс-лист
+ 		</h3>
+		<p class="modal-form__desc">
+			Оставьте заявку, и наш менеджер перезвонит вам <br>
+			в течение 30 минут и проконсультирует по всем вопросам.
+		</p>
+	</div>
+	<div class="modal-form__body">
+	  <form class="form-vertical">
+	  		<input type="hidden" name="form_message" value>
+	      <label class="input input-name form-control">
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="Ваше имя"
+    autocomplete="name"
+  >
+</label>
+
+	      <label class="input input-tel form-control">
+  <input
+    class="input__field mask-tel"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Ваш номер телефона"
+    maxlength="25"
+    minlength="10"
+    autocomplete="tel"
+  >
+</label>
+
 	      <button class="btn-main" type="submit">Получить консультацию</button>
 			  <span class="form__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="#">персональных данных</a></span>
 	  </form>
 	</div>
 </div>
 
+
     </div>
 
-    <script src="./js/bundle.min.js?_v=20230607184142"></script>
+    <script src="./js/bundle.min.js?_v=20230607190500"></script>
   </body>
 </html>

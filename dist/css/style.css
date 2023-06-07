@@ -3548,16 +3548,6 @@ header {
   }
 }
 
-.hero__input {
-  flex-basis: 270px;
-}
-@media (max-width: 1100px) {
-  .hero__input {
-    flex-basis: auto;
-    width: 100%;
-  }
-}
-
 .hero__btn {
   font-size: 1.6rem;
   color: #FFF;
@@ -5796,8 +5786,6 @@ header {
 }
 
 .locations-addresses__buttons {
-  position: relative;
-  z-index: 2;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -5812,6 +5800,8 @@ header {
 
 .locations-addresses__button-next,
 .locations-addresses__button-prev {
+  position: relative;
+  z-index: 2;
   --size: var(--arrow-button-size);
   max-width: var(--size);
   min-width: var(--size);

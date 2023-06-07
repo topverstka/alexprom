@@ -134,14 +134,6 @@
 	}
 }
 
-.hero__input {
-    flex-basis: 270px;
-	@media(max-width: 1100px) {
-		flex-basis: auto;
-        width: 100%;
-	}
-}
-
 .hero__btn {
     font-size: 1.6rem;
     color: #FFF;
