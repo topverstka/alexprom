@@ -59,6 +59,28 @@
 	@extend .wysiwyg;
 }
 
+.storytell__body table {
+	margin-bottom: 43px;
+	font-family: 'Manrope', sans-serif;
+	font-size: 1.6rem;
+	
+	@media (max-width: $desktop-m) {
+		margin-bottom: 24px;
+	}
+}
+.storytell__body td {
+	padding-left: 8px;
+	padding-right: 8px;
+	border-right: 1px solid #bababa;
+}
+.storytell__body tr td:first-child {
+	padding-left: 0;
+}
+
+.storytell__body tr td:last-child {
+	border-right: none;
+}
+
 .storytell__body br {
 	@media (max-width: $laptop) {
 		display: none;

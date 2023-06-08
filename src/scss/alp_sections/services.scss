@@ -166,3 +166,45 @@
         display: none;
     }
 }
+
+.services-highlights__gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+
+    @media (max-width: $mobile-xl) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+.services-highlights__pic {
+    border-radius: 30px;
+    height: 600px;
+
+    @media (max-width: $desktop-m) {
+        height: 500px;
+    }
+
+    @media (max-width: $laptop) {
+        height: 300px;
+    }
+
+    @media (max-width: $mobile-xl) {
+        height: 200px;
+    }
+}
+
+.services-highlights__gallery .services-highlights__pic:last-of-type {
+    @media (max-width: $mobile-xl) {
+        height: 300px;
+        grid-column: 1/3;
+    }
+}
+
+.services-highlights__img {
+    border-radius: inherit;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
