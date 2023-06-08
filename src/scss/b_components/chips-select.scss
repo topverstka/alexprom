@@ -1,40 +1,52 @@
 .chips-select {
-	--c-text: #222;
-	--c-text-active: #fff;
-	--bg: transparent;
-	--bg-active: #222;
+	--c-text: var(--dark);
+	--c-text-active: var(--fg-text-on);
+	--bg: var(--bg-card);
+	--bg-active: var(--accent);
 	--brad: 9999px;
 	position: relative;
 	display: inline-flex;
 	--fz: 1.8rem;
-	line-height: 120%;
+	line-height: 1.25;
 	color: var(--c-text);
-	border: 1px solid var(--c-text);
+	border: none;
 	border-radius: var(--brad);
-	margin-right: 1rem;
+	margin-right: 2.4rem;
 	margin-bottom: 1.5rem;
 
 	@media (max-width: $tablet) {
 		--fz: 1.4rem;
 	}
+
+	@media (max-width: $mobile-xl) {
+		margin-right: 0;
+		display: flex;
+	}
 }
+
+.chips-select__label {
+	width: 100%;
+	text-align: center;
+}
+
 .chips-select__input {
 	position: absolute;
 	opacity: 0;
 	visibility: hidden;
 	appearance: none;
 }
+
 .chips-select__box {
 	border-radius: 9999px;
-	background-color: var(--brad);
-	padding: 0.7rem 1.5rem;
+	background-color: var(--bg);
+	padding: 2.8rem 4.8rem;
 	display: block;
 	transition: var(--tr-regular);
 	cursor: pointer;
 	font-size: var(--fz);
 
 	@media (max-width: $tablet) {
-		line-height: initial;
+		padding: 2.8rem 2.4rem;
 	}
 }
 .chips-select__input:checked ~ .chips-select__box {

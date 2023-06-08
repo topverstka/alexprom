@@ -78,6 +78,9 @@
 
 .hero__container {
     padding-top: 3rem;
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
 
 	@media (max-width: $tablet-m) {
 		padding-top: 1.6rem;
@@ -175,12 +178,14 @@
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     margin-top: 32px;
+    max-width: 543px;
 
 	@media(max-width: $laptop) {
         gap: 32px;
 	}
 
 	@media (max-width: $tablet-m) {
+	    max-width: 100%;
 		grid-template-columns: 100%;
 		margin-top: 46px;
 		display: grid;
@@ -214,7 +219,8 @@
 
 .hero-info {
     background-color: #FFF;
-    margin-top: 86px;
+    margin-top: auto;
+    margin-bottom: 180px;
     padding: 8px;
     border-radius: 30px;
     position: relative;
@@ -236,6 +242,10 @@
 		background-color: transparent;
         margin-top: 60px;
         padding: 0;
+	}
+
+	@media (max-width: $tablet) {
+		margin-bottom: 0;
 	}
 }
 

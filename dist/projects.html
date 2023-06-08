@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проекты</title>
+        <link rel="stylesheet" href="./css/style.css?_v=20230608093819">
+
+    <!-- Отключить автодетект телефонов -->
+    <meta name="format-detection" content="telephone=no">
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+  <div class="container">
+      <div class="header">
+          <a class="header__logo" href="#">
+              <img class="header__img" src="./images/logo.svg" alt="AlexProm">
+          </a>
+          <div class="header__menu">
+            <div class="header__menu-inner">
+              <nav class="header__nav">
+                  <a class="header__nav-link" href="#">Услуги</a>
+                  <a class="header__nav-link" href="#">Цены</a>
+                  <a class="header__nav-link" href="#">Проекты</a>
+                  <a class="header__nav-link" href="#">О компании</a>
+                  <a class="header__nav-link" href="#">Блог</a>
+                  <a class="header__nav-link" href="#">Контакты</a>
+              </nav>
+              <button class="btn-accent header__button-callback" data-b_modal-open="form-contact">Заказать обратный звонок</button>
+            </div>
+          </div>
+          <div class="header__info">
+              <a class="link" href="mailto:zakaz@alexprom.ru">zakaz@alexprom.ru</a>
+              <a class="link" href="tel:+74951090242">+7 (495) 109-02-42</a>
+              <button class="btn-primary header__btn" type="button" data-b_modal-open="form-contact">Заказать звонок</button>
+          </div>
+          <div class="header-mobile">
+              <a class="header-mobile__btn" href="tel:+74951090242">
+                  <img src="./images/icons/phone-menu.svg" alt="+74951090242">
+              </a>
+              <button class="header-mobile__btn burger" type="button">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+              </button>
+          </div>
+      </div>
+  </div>
+</header>
+
+      <main class="hero hero--has-breadcrumbs">
+        <div class="hero__thumb">
+            <picture class="hero__pic">
+              <img class="hero__img" src="./images/page-projects/projects-hero.jpg" alt="Наши проекты">
+            </picture>
+            <div class="container hero__container">
+                <div class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="#" class="breadcrumbs__link">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item">Проекты</li>
+                    </ul>
+                </div>
+                <h1 class="title-h1 hero__title">
+                    Наши проекты
+                </h1>
+                <p class="hero__desc">
+                    За 12 лет работы в сфере промышленного альпинизма <br>
+                    успели реализовать более 21500 объектов, по статистике <br>
+                    85% работ заканчиваем раньше срока
+                </p>
+                <div class="hero__buttons">
+                    <button class="hero__btn" type="button" data-b_modal-open="form-contact">Получить консультацию</button>
+                </div>
+                <div class="hero-info">
+                    <div class="hero-info__stroke">
+                        <div class="hero-info__item">
+                            <div class="hero-info__desc">
+                                <span class="hero-info__text">Приступим к работам уже&nbsp;через 3&nbsp;часа после согласования всех условий</span>
+                            </div>
+                            <picture class="hero-info__icon">
+                                <img src="./images/icons/notice.svg" alt="Приступим к работам уже через 3 часа">
+                            </picture>
+                        </div>
+                        <div class="hero-info__item">
+                            <div class="hero-info__desc">
+                                <span class="hero-info__text">Работаем 24/7 без праздников и выходных. Всегда на&nbsp;связи</span>
+                            </div>
+                            <picture class="hero-info__icon">
+                                <img src="./images/icons/celandar.svg" alt="Работаем без праздников и выходных">
+                            </picture>
+                        </div>
+                        <div class="hero-info__item">
+                            <div class="hero-info__desc">
+                                <span class="hero-info__text">Предоставляем гарантию 5&nbsp;лет на все виды наших&nbsp;работ</span>
+                            </div>
+                            <picture class="hero-info__icon">
+                                <img src="./images/icons/garant.svg" alt="редоставляем гарантию 5 лет">
+                            </picture>
+                        </div>
+                        <div class="hero-info__item">
+                            <div class="hero-info__desc">
+                                <span class="hero-info__text">По&nbsp;статистике 84,6% всех&nbsp;наших работ мы заканчиваем досрочно</span>
+                            </div>
+                            <picture class="hero-info__icon">
+                                <img src="./images/icons/chart.svg" alt="85% всех наших работ заканчиваем досрочно">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img class="hero__worker" src="./images/page-projects/projects-hero--mobile.png" alt="Наши проекты">
+        </div>
+      </main>
+
+      <div class="section-flip section-flip--light">
+
+        <section class="section projects">
+            <div class="container">
+                <div class="section__head projects__head">
+                    <form class="projects__filter">
+                        <fieldset class="projects__filter-togglers">
+                            <div class="chips-select form-control">
+	<label class="chips-select__label">
+		<input type="radio" class="chips-select__input" name="projects__filter" checked>
+		<span class="chips-select__box">
+			<span class="chips-select__caption">Все проекты</span>
+		</span>
+	</label>
+</div>
+                            <div class="chips-select form-control">
+	<label class="chips-select__label">
+		<input type="radio" class="chips-select__input" name="projects__filter" >
+		<span class="chips-select__box">
+			<span class="chips-select__caption">Фасадные работы</span>
+		</span>
+	</label>
+</div>
+                            <div class="chips-select form-control">
+	<label class="chips-select__label">
+		<input type="radio" class="chips-select__input" name="projects__filter" >
+		<span class="chips-select__box">
+			<span class="chips-select__caption">Клининговые услуги</span>
+		</span>
+	</label>
+</div>
+                            <div class="chips-select form-control">
+	<label class="chips-select__label">
+		<input type="radio" class="chips-select__input" name="projects__filter" >
+		<span class="chips-select__box">
+			<span class="chips-select__caption">Кровельные работы</span>
+		</span>
+	</label>
+</div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="projects__gallery">
+                    <div class="swiper-gallery__slide">
+                        <picture class="swiper-gallery__thumb">
+                            <img class="swiper-gallery__img lazy" data-src="./images/page-projects/project.jpg" alt="">
+                        </picture>
+                        <a href="#" class="swiper-gallery__link">Штаб квартира “Газпром”</a>
+                        <span class="swiper-gallery__title">Мойка окон</span>
+                        <span class="swiper-gallery__info swiper-gallery__arg">6500м²</span>
+                        <span class="swiper-gallery__info swiper-gallery__loc">Москва, улица Наметкина, дом 16</span>
+                    </div>
+                    <div class="swiper-gallery__slide">
+                        <picture class="swiper-gallery__thumb">
+                            <img class="swiper-gallery__img lazy" data-src="./images/page-projects/project.jpg" alt="">
+                        </picture>
+                        <a href="#" class="swiper-gallery__link">Штаб квартира “Газпром”</a>
+                        <span class="swiper-gallery__title">Мойка окон</span>
+                        <span class="swiper-gallery__info swiper-gallery__arg">6500м²</span>
+                        <span class="swiper-gallery__info swiper-gallery__loc">Москва, улица Наметкина, дом 16</span>
+                    </div>
+                    <div class="swiper-gallery__slide">
+                        <picture class="swiper-gallery__thumb">
+                            <img class="swiper-gallery__img lazy" data-src="./images/page-projects/project.jpg" alt="">
+                        </picture>
+                        <a href="#" class="swiper-gallery__link">Штаб квартира “Газпром”</a>
+                        <span class="swiper-gallery__title">Мойка окон</span>
+                        <span class="swiper-gallery__info swiper-gallery__arg">6500м²</span>
+                        <span class="swiper-gallery__info swiper-gallery__loc">Москва, улица Наметкина, дом 16</span>
+                    </div>
+                    <div class="swiper-gallery__slide">
+                        <picture class="swiper-gallery__thumb">
+                            <img class="swiper-gallery__img lazy" data-src="./images/page-projects/project.jpg" alt="">
+                        </picture>
+                        <a href="#" class="swiper-gallery__link">Штаб квартира “Газпром”</a>
+                        <span class="swiper-gallery__title">Мойка окон</span>
+                        <span class="swiper-gallery__info swiper-gallery__arg">6500м²</span>
+                        <span class="swiper-gallery__info swiper-gallery__loc">Москва, улица Наметкина, дом 16</span>
+                    </div>
+                    <div class="swiper-gallery__slide">
+                        <picture class="swiper-gallery__thumb">
+                            <img class="swiper-gallery__img lazy" data-src="./images/page-projects/project.jpg" alt="">
+                        </picture>
+                        <a href="#" class="swiper-gallery__link">Штаб квартира “Газпром”</a>
+                        <span class="swiper-gallery__title">Мойка окон</span>
+                        <span class="swiper-gallery__info swiper-gallery__arg">6500м²</span>
+                        <span class="swiper-gallery__info swiper-gallery__loc">Москва, улица Наметкина, дом 16</span>
+                    </div>
+                    <div class="swiper-gallery__slide">
+                        <picture class="swiper-gallery__thumb">
+                            <img class="swiper-gallery__img lazy" data-src="./images/page-projects/project.jpg" alt="">
+                        </picture>
+                        <a href="#" class="swiper-gallery__link">Штаб квартира “Газпром”</a>
+                        <span class="swiper-gallery__title">Мойка окон</span>
+                        <span class="swiper-gallery__info swiper-gallery__arg">6500м²</span>
+                        <span class="swiper-gallery__info swiper-gallery__loc">Москва, улица Наметкина, дом 16</span>
+                    </div>
+                    <div class="swiper-gallery__slide">
+                        <picture class="swiper-gallery__thumb">
+                            <img class="swiper-gallery__img lazy" data-src="./images/page-projects/project.jpg" alt="">
+                        </picture>
+                        <a href="#" class="swiper-gallery__link">Штаб квартира “Газпром”</a>
+                        <span class="swiper-gallery__title">Мойка окон</span>
+                        <span class="swiper-gallery__info swiper-gallery__arg">6500м²</span>
+                        <span class="swiper-gallery__info swiper-gallery__loc">Москва, улица Наметкина, дом 16</span>
+                    </div>
+                    <div class="swiper-gallery__slide">
+                        <picture class="swiper-gallery__thumb">
+                            <img class="swiper-gallery__img lazy" data-src="./images/page-projects/project.jpg" alt="">
+                        </picture>
+                        <a href="#" class="swiper-gallery__link">Штаб квартира “Газпром”</a>
+                        <span class="swiper-gallery__title">Мойка окон</span>
+                        <span class="swiper-gallery__info swiper-gallery__arg">6500м²</span>
+                        <span class="swiper-gallery__info swiper-gallery__loc">Москва, улица Наметкина, дом 16</span>
+                    </div>
+                    <div class="swiper-gallery__slide">
+                        <picture class="swiper-gallery__thumb">
+                            <img class="swiper-gallery__img lazy" data-src="./images/page-projects/project.jpg" alt="">
+                        </picture>
+                        <a href="#" class="swiper-gallery__link">Штаб квартира “Газпром”</a>
+                        <span class="swiper-gallery__title">Мойка окон</span>
+                        <span class="swiper-gallery__info swiper-gallery__arg">6500м²</span>
+                        <span class="swiper-gallery__info swiper-gallery__loc">Москва, улица Наметкина, дом 16</span>
+                    </div>
+                </div>
+                <button class="projects__button-more btn-accent" type="button">Показать больше</button>
+            </div>
+        </section>
+
+        <section class="section experience">
+  <div class="experience__main">
+    <div class="container experience__container">
+      <div class="experience__hero">
+        <div class="experience__hero-media">
+          <picture class="experience__hero-pic">
+            <img  class="experience__hero-img lazy" data-src="./images/experience/experience-hero.png" alt="">
+          </picture>
+          <div class="experience__hero-hint">
+            <p class="experience__hero-hint-title">- Жданов Александр</p>
+            <p class="experience__hero-hint-desc">
+              Генеральный директор <br>
+              ООО «АлексПром»
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="experience__content">
+        <h2 class="title-h2 experience__title">
+          Опыт, накопленный <br>
+          за 12 лет работы в&nbsp;сфере
+          промышленного альпинизма
+        </h2>
+        <div class="experience__video">
+          <div class="experience__video-box">
+            <img  class="experience__video-cover lazy" data-src="./images/experience/experience-video-cover.jpg" alt="">
+            <a href="https://www.youtube.com/watch?v=S1wf1iKU3l4" data-fancybox class="play-cover"></a>
+          </div>
+          <p class="experience__video-desc">
+            Позволяет нам предлагать рынку 
+            нестандартные решения в обмен  
+            на&nbsp;интересные и амбициозные проекты. 
+            Смотрите видео о нашей компании.
+          </p>
+        </div>
+        <div class="experience-slides">
+          <div class="gallery-carousel">
+              <div class="swiper experience-gallery">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide experience-gallery__slide">
+                      <picture class="experience-gallery__thumb">
+                          <img class="experience-gallery__img lazy" data-src="./images/experience/cert-vert.png" alt="">
+                      </picture>
+                      <a href="./images/experience/cert-vert.png" data-fancybox class="experience-gallery__link"></a>
+                    </div>
+                    <div class="swiper-slide experience-gallery__slide">
+                      <picture class="experience-gallery__thumb">
+                          <img class="experience-gallery__img lazy" data-src="./images/experience/cert-hor.png" alt="">
+                      </picture>
+                      <a href="./images/experience/cert-hor.png" data-fancybox class="experience-gallery__link"></a>
+                    </div>
+                    <div class="swiper-slide experience-gallery__slide">
+                      <picture class="experience-gallery__thumb">
+                          <img class="experience-gallery__img lazy" data-src="./images/experience/cert-vert.png" alt="">
+                      </picture>
+                      <a href="./images/experience/cert-vert.png" data-fancybox class="experience-gallery__link"></a>
+                    </div>
+                    <div class="swiper-slide experience-gallery__slide">
+                      <picture class="experience-gallery__thumb">
+                          <img class="experience-gallery__img lazy" data-src="./images/experience/cert-hor.png" alt="">
+                      </picture>
+                      <a href="./images/experience/cert-hor.png" data-fancybox class="experience-gallery__link"></a>
+                    </div>
+                    <div class="swiper-slide experience-gallery__slide">
+                      <picture class="experience-gallery__thumb">
+                          <img class="experience-gallery__img lazy" data-src="./images/experience/cert-vert.png" alt="">
+                      </picture>
+                      <a href="./images/experience/cert-vert.png" data-fancybox class="experience-gallery__link"></a>
+                    </div>
+                    <div class="swiper-slide experience-gallery__slide">
+                      <picture class="experience-gallery__thumb">
+                          <img class="experience-gallery__img lazy" data-src="./images/experience/cert-hor.png" alt="">
+                      </picture>
+                      <a href="./images/experience/cert-hor.png" data-fancybox class="experience-gallery__link"></a>
+                    </div>
+
+                  </div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="hero-info experience-info">
+        <div class="hero-info__stroke">
+            <div class="hero-info__item">
+                <div class="hero-info__desc">
+                    <p class="hero-info__title">На 35%</p>
+                    <span class="hero-info__text">
+                        дешевле чем у конкурентов, <br>
+                        при этом без потери качества
+                    </span>
+                </div>
+                <picture class="hero-info__icon">
+                    <img src="./images/experience/percent.svg" alt="">
+                </picture>
+            </div>
+            <div class="hero-info__item">
+                <div class="hero-info__desc">
+                    <p class="hero-info__title">>21 500</p>
+                    <span class="hero-info__text">
+                        количество выполненных <br>
+                        нами объектов за 12 лет работы
+                    </span>
+                </div>
+                <picture class="hero-info__icon">
+                    <img src="./images/experience/building.svg" alt="">
+                </picture>
+            </div>
+            <div class="hero-info__item">
+                <div class="hero-info__desc">
+                    <p class="hero-info__title">12 лет</p>
+                    <span class="hero-info__text">
+                        опыта работы в сфере <br>
+                        промышленного альпинизма
+                    </span>
+                </div>
+                <picture class="hero-info__icon">
+                    <img src="./images/experience/star.svg" alt="">
+                </picture>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>  
+
+
+
+        <section class="section-shifter consultation">
+  <div class="container consultation__container">
+    <div class="consultation__bg">
+          <div class="consultation__content">
+              <h2 class="consultation__title">
+              		Запишитесь на бесплатную консультацию 
+              </h2>
+              <p class="consultation__text">Оставьте заявку, и&nbsp;наш менеджер перезвонит вам в&nbsp;течение 30&nbsp;минут и&nbsp;проконсультируем по&nbsp;всем вопросам.</p>
+          </div>
+          <div class="consultation__box">
+              <form class="form-vertical">
+                  <label class="input input-name form-control">
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="Ваше имя"
+    autocomplete="name"
+  >
+</label>
+
+                  <label class="input input-tel form-control">
+  <input
+    class="input__field mask-tel"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Ваш номер телефона"
+    maxlength="25"
+    minlength="10"
+    autocomplete="tel"
+  >
+</label>
+
+                  <button class="btn-main" type="submit">Получить консультацию</button>
+                  <span class="form__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="">персональных данных</a></span>
+              </form>
+          </div>
+      </div>
+  </div>
+</section>
+
+      </div>
+
+      <footer class="footer">
+  <div class="container">
+      <div class="footer-top">
+          <a class="footer-top__logo" href="#">
+              <img class="footer-top__img" src="./images/logo.svg" alt="AlexProm">
+          </a>
+          <div class="footer-top__nav">
+              <a class="footer-top__nav-link" href="#">Услуги</a>
+              <a class="footer-top__nav-link" href="#">Цены</a>
+              <a class="footer-top__nav-link" href="#">Проекты</a>
+              <a class="footer-top__nav-link" href="#">О компании</a>
+              <a class="footer-top__nav-link" href="#">Контакты</a>
+          </div>
+          <div class="footer-top__info">
+              <a class="link" href="mailto:zakaz@alexprom.ru">zakaz@alexprom.ru</a>
+              <a class="link" href="tel:+74951090242">+7&nbsp;(495)&nbsp;109-02-42</a>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <div class="footer-bottom__address">
+              <span>ООО «АЛЕКСПРОМ»</span>
+              <span>Москва, Братиславская 1, корпус&nbsp;3</span>
+          </div>
+          <div class="footer-bottom__docs">
+              <a class="footer-bottom__docs-link" href="#">Пользовательское соглашение</a>
+              <a class="footer-bottom__docs-link" href="#">Политика конфиденциальности</a>
+          </div>
+      </div>
+  </div>
+</footer>
+
+<div class="modal-form b_modal" id="form-contact" data-closer-type="inner">
+	<div class="modal-form__head">
+		<h3 class="modal-form__title">
+			Оставьте свои контакты <br> и мы вам перезвоним
+ 		</h3>
+		<p class="modal-form__desc">
+			Оставьте заявку, и наш менеджер перезвонит вам <br>
+			в течение 30 минут и проконсультирует по всем вопросам.
+		</p>
+	</div>
+	<div class="modal-form__body">
+	  <form class="form-vertical">
+	  		<input type="hidden" name="form_message" value>
+	      <label class="input input-name form-control">
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="Ваше имя"
+    autocomplete="name"
+  >
+</label>
+
+	      <label class="input input-tel form-control">
+  <input
+    class="input__field mask-tel"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Ваш номер телефона"
+    maxlength="25"
+    minlength="10"
+    autocomplete="tel"
+  >
+</label>
+
+	      <button class="btn-main" type="submit">Получить консультацию</button>
+			  <span class="form__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="#">персональных данных</a></span>
+	  </form>
+	</div>
+</div>
+<div class="modal-form b_modal" id="form-price" data-closer-type="inner">
+	<div class="modal-form__head">
+		<h3 class="modal-form__title">
+			Оставьте свои контакты <br> и получите прайс-лист
+ 		</h3>
+		<p class="modal-form__desc">
+			Оставьте заявку, и наш менеджер перезвонит вам <br>
+			в течение 30 минут и проконсультирует по всем вопросам.
+		</p>
+	</div>
+	<div class="modal-form__body">
+	  <form class="form-vertical">
+	  		<input type="hidden" name="form_message" value>
+	      <label class="input input-name form-control">
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="Ваше имя"
+    autocomplete="name"
+  >
+</label>
+
+	      <label class="input input-tel form-control">
+  <input
+    class="input__field mask-tel"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Ваш номер телефона"
+    maxlength="25"
+    minlength="10"
+    autocomplete="tel"
+  >
+</label>
+
+	      <button class="btn-main" type="submit">Получить консультацию</button>
+			  <span class="form__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="#">персональных данных</a></span>
+	  </form>
+	</div>
+</div>
+
+
+    </div>
+
+    <script src="./js/bundle.min.js?_v=20230608093819"></script>
+  </body>
+</html>
