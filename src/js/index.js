@@ -26,6 +26,8 @@ Fancybox.bind('[data-fancybox]', {
   },
 });
 
+import "./b_helpers/smooth-anchors.js";
+
 import "./b_components/header/burger.js";
 
 import "./libs/swiper-bundle.min.js";
@@ -41,3 +43,6 @@ import "./alp_sections/locations.js";
 import "./b_components/groupers/bayan.js";
 import "./b_components/spawners/b_modal.js";
 
+
+// pages
+import "./alp_sections/project-highlights.js";

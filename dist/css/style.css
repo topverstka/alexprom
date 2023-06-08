@@ -434,6 +434,65 @@ h6 {
   color: #a7a7a7;
 }
 
+.wysiwyg, .storytell__body {
+  color: var(--dark);
+}
+.wysiwyg h1, .storytell__body h1,
+.wysiwyg h2,
+.storytell__body h2,
+.wysiwyg h3,
+.storytell__body h3,
+.wysiwyg h4,
+.storytell__body h4,
+.wysiwyg h5,
+.storytell__body h5,
+.wysiwyg h6,
+.storytell__body h6 {
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  color: var(--dark);
+}
+.wysiwyg h1, .storytell__body h1 {
+  font-size: 5rem;
+}
+.wysiwyg h2, .storytell__body h2 {
+  font-size: 4.8rem;
+}
+.wysiwyg h3, .storytell__body h3 {
+  font-size: 4.2rem;
+}
+.wysiwyg h4, .storytell__body h4 {
+  font-size: 3.6rem;
+}
+.wysiwyg h5, .storytell__body h5 {
+  margin-bottom: 3.2em;
+}
+.wysiwyg h6, .storytell__body h6 {
+  margin-bottom: 2.4em;
+}
+.wysiwyg p, .storytell__body p {
+  font-size: 1.6rem;
+  line-height: 1.45;
+  line-height: initial;
+  margin-bottom: 1.5em;
+}
+.wysiwyg p + h1, .storytell__body p + h1,
+.wysiwyg p + h2,
+.storytell__body p + h2,
+.wysiwyg p + h3,
+.storytell__body p + h3,
+.wysiwyg p + h4,
+.storytell__body p + h4,
+.wysiwyg p + h5,
+.storytell__body p + h5,
+.wysiwyg p + h6,
+.storytell__body p + h6 {
+  margin-top: 1.5em;
+}
+.wysiwyg > *:last-child, .storytell__body > *:last-child {
+  margin-bottom: 0;
+}
+
 .section {
   padding-top: 90px;
   padding-bottom: 90px;
@@ -3514,6 +3573,10 @@ header {
   }
 }
 
+.hero {
+  background-color: #f0f2f5;
+}
+
 .hero__thumb {
   position: relative;
   overflow: hidden;
@@ -3565,6 +3628,17 @@ header {
   }
 }
 
+@media (max-width: 992px) {
+  .hero--thumb-half .hero__thumb {
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 1100px) {
+  .hero--thumb-half .hero__thumb {
+    background-image: none;
+  }
+}
+
 @media (max-width: 450px) {
   .hero__thumb p {
     max-width: 300px;
@@ -3578,7 +3652,7 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: -1;
+  z-index: 0;
 }
 @media (max-width: 1100px) {
   .hero__pic {
@@ -3591,6 +3665,12 @@ header {
   height: 100%;
   display: block;
   object-fit: cover;
+}
+
+.hero--thumb-half .hero__img {
+  max-width: 50%;
+  min-height: inherit;
+  margin-left: auto;
 }
 
 .hero__worker {
@@ -3608,6 +3688,11 @@ header {
     width: auto;
   }
 }
+@media (max-width: 992px) {
+  .hero__worker {
+    min-height: 800px;
+  }
+}
 @media (max-width: 768px) {
   .hero__worker {
     height: 85vw;
@@ -3617,6 +3702,19 @@ header {
   .hero__worker {
     height: 90vw;
     bottom: 10vw;
+    min-height: 500px;
+  }
+}
+
+.hero--thumb-half .hero__worker {
+  position: static;
+  width: 100%;
+  object-fit: cover;
+  margin-top: 80px;
+}
+@media (max-width: 690px) {
+  .hero--thumb-half .hero__worker {
+    margin-top: 60px;
   }
 }
 
@@ -3631,6 +3729,8 @@ header {
   min-height: inherit;
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 1;
 }
 @media (max-width: 768px) {
   .hero__container {
@@ -3787,7 +3887,7 @@ header {
 }
 
 .hero__btn {
-  display: block;
+  display: inline-block;
   font-size: 1.6rem;
   color: #FFF;
   padding: 28px 44px;
@@ -3795,9 +3895,11 @@ header {
   border: none;
   border-radius: 10rem;
   transition: 0.2s;
+  text-align: center;
 }
 @media (max-width: 1100px) {
   .hero__btn {
+    display: block;
     flex-basis: auto;
     width: 100%;
   }
@@ -6271,6 +6373,160 @@ header {
 
 .projects ~ .experience {
   margin-top: 90px;
+}
+
+.storytell {
+  counter-reset: story;
+}
+
+.storytell__section {
+  counter-increment: story;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-bottom: 180px;
+}
+@media (max-width: 1100px) {
+  .storytell__section {
+    grid-template-columns: 100%;
+  }
+}
+
+.storytell__section:last-child {
+  margin-bottom: 0;
+}
+
+.storytell__title {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 1100px) {
+  .storytell__title {
+    display: block;
+  }
+}
+
+@media (max-width: 1100px) {
+  .storytell__title br {
+    display: none;
+  }
+}
+
+.storytell__section:not(:only-child) .storytell__title::before {
+  content: counter(story);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  --size: 40px;
+  max-width: var(--size);
+  min-width: var(--size);
+  width: var(--size);
+  height: var(--size);
+  border-radius: var(--size);
+  background-color: #f0f2f5;
+  margin-right: 115px;
+}
+@media (max-width: 1100px) {
+  .storytell__section:not(:only-child) .storytell__title::before {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.storytell__body {
+  padding-top: 40px;
+}
+
+@media (max-width: 1100px) {
+  .storytell__body br {
+    display: none;
+  }
+}
+
+.project-highlights {
+  overflow: hidden;
+}
+
+.storytell ~ .project-highlights {
+  padding-top: 10px;
+}
+
+.project-highlights__pic {
+  margin-bottom: 84px;
+  border-radius: 30px;
+  min-height: 800px;
+}
+@media (max-width: 1536px) {
+  .project-highlights__pic {
+    min-height: 600px;
+  }
+}
+@media (max-width: 690px) {
+  .project-highlights__pic {
+    min-height: 400px;
+  }
+}
+
+.project-highlights__img {
+  border-radius: inherit;
+  object-fit: cover;
+  min-height: inherit;
+  height: 100%;
+}
+
+.project-highlights__gallery {
+  position: relative;
+}
+
+.project-highlights-carousel__slide {
+  position: relative;
+  z-index: 1;
+}
+
+.project-highlights-carousel__pic {
+  border-radius: 30px;
+  height: 600px;
+}
+@media (max-width: 1536px) {
+  .project-highlights-carousel__pic {
+    height: 400px;
+  }
+}
+
+.project-highlights-carousel__img {
+  border-radius: inherit;
+  object-fit: cover;
+  height: 100%;
+}
+
+.project-highlights-carousel__link {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.project-highlights-carousel {
+  overflow: visible;
+}
+
+@media (max-width: 1100px) {
+  .project-highlights__gallery .swiper-button-next,
+  .project-highlights__gallery .swiper-button-prev {
+    display: none;
+  }
+}
+
+.project-highlights__gallery .swiper-button-next {
+  right: 30%;
+}
+
+.project-highlights__gallery .swiper-button-prev {
+  left: 30%;
 }
 
 .is-hidden {

@@ -1,3 +1,7 @@
+.hero {
+    background-color: #f0f2f5;
+}
+
 .hero__thumb {
     position: relative;
     overflow: hidden;
@@ -42,6 +46,16 @@
 	}
 }
 
+.hero--thumb-half .hero__thumb {
+	@media (max-width: $tablet) {
+		padding-bottom: 0;
+	}
+	@media (max-width: $laptop) {
+		// background-color: #fff;
+		background-image: none;
+	}
+}
+
 .hero__thumb p {
 	@media(max-width: $mobile-l) {
 		max-width: 300px;
@@ -55,7 +69,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: -1;
+    z-index: 0;
+    // background-color: #f0f2f5;
 
 	@media(max-width: $laptop) {
 		display: none;
@@ -67,6 +82,13 @@
 	height: 100%;
 	display: block;
     object-fit: cover;
+}
+
+.hero--thumb-half .hero__img {
+	max-width: 50%;
+	min-height: inherit;
+	margin-left: auto;
+	// transform: translateY(-50%);
 }
 
 .hero__worker {
@@ -83,6 +105,9 @@
         width: auto;
 	}
 
+	@media(max-width: $tablet) {
+		min-height: 800px;
+	}
 	@media(max-width: $tablet-m) {
 		height: 85vw;
 	}
@@ -90,6 +115,18 @@
 	@media(max-width: $mobile-xl) {
 		height: 90vw;
         bottom: 10vw;
+        min-height: 500px;
+	}
+}
+
+.hero--thumb-half .hero__worker {
+	position: static;
+	width: 100%;
+	object-fit: cover;
+	margin-top: 80px;
+
+	@media (max-width: $mobile-xl) {
+		margin-top: 60px;
 	}
 }
 
@@ -104,6 +141,8 @@
     min-height: inherit;
     display: flex;
     flex-direction: column;
+    position: relative;
+    z-index: 1;
 
 	@media (max-width: $tablet-m) {
 		padding-top: 1.6rem;
@@ -240,7 +279,7 @@
 }
 
 .hero__btn {
-	display: block;
+	display: inline-block;
     font-size: 1.6rem;
     color: #FFF;
     padding: 28px 44px;
@@ -248,8 +287,10 @@
     border: none;
     border-radius: 10rem;
     transition: .2s;
+    text-align: center;
 
 	@media(max-width: $laptop) {
+		display: block;
 		flex-basis: auto;
         width: 100%;
 	}

@@ -1,0 +1,80 @@
+.project-highlights {
+	overflow: hidden;
+}
+
+.storytell ~ .project-highlights {
+	padding-top: 10px;
+}
+
+.project-highlights__pic {
+	margin-bottom: 84px;
+	border-radius: 30px;
+	min-height: 800px;
+
+	@media (max-width: $desktop-m) {
+		min-height: 600px;
+	}
+
+	@media (max-width: $mobile-xl) {
+		min-height: 400px;
+	}
+}
+
+.project-highlights__img {
+	border-radius: inherit;
+	object-fit: cover;
+	min-height: inherit;
+	height: 100%;
+}
+
+.project-highlights__gallery {
+	position: relative;
+}
+
+.project-highlights-carousel__slide {
+	position: relative;
+	z-index: 1;
+}
+
+.project-highlights-carousel__pic {
+	border-radius: 30px;
+	height: 600px;
+
+	@media (max-width: $desktop-m) {
+		height: 400px;
+	}
+}
+
+.project-highlights-carousel__img {
+	border-radius: inherit;
+	object-fit: cover;
+	height: 100%;
+}
+
+.project-highlights-carousel__link {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.project-highlights-carousel {
+	overflow: visible;
+}
+
+.project-highlights__gallery .swiper-button-next,
+.project-highlights__gallery .swiper-button-prev {
+	@media (max-width: $laptop) {
+		display: none;
+	}
+}
+.project-highlights__gallery .swiper-button-next {
+	right: 30%;
+}
+
+.project-highlights__gallery .swiper-button-prev {
+	left: 30%;
+}
