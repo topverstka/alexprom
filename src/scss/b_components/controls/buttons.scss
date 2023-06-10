@@ -139,3 +139,8 @@
     --bg-play: var(--c-surface);
   }
 }
+
+.button--wait {
+  opacity: 0.4 !important;
+  pointer-events: none !important;
+}

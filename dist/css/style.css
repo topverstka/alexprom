@@ -741,6 +741,11 @@ h6 {
   }
 }
 
+.button--wait {
+  opacity: 0.4 !important;
+  pointer-events: none !important;
+}
+
 .link {
   color: var(--accent);
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, var(--accent) 100%);

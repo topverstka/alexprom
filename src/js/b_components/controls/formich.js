@@ -23,7 +23,6 @@ import {setInputValid, setInputInvalid, validateInput} from "./input-validator.j
 const formsList = document.querySelectorAll(".js_form");
 formsList.forEach((form) => {
   form.addEventListener("submit", async (event) => {
-    console.log('send')
     event.preventDefault();
 
     const inputsToValidate = [
@@ -39,39 +38,38 @@ formsList.forEach((form) => {
     const formData = new FormData(form);
 
 
-    let response = await fetch(form.action, {
-      method: "POST",
-      body: formData,
-    });
+    // let response = await fetch(form.action, {
+    //   method: "POST",
+    //   body: formData,
+    // });
 
     const submitButton = form.querySelector('button[type="submit"]');
     submitButton.classList.add('button--wait');
 
     try {
-      let result = await response.json();
+      // let result = await response.json();
       
-      if (result.status) {
-        console.error(result.status);
-      }
+      // if (result.status) {
+      //   console.error(result.status);
+      // }
+
+      let buttonText;
+      let buttonTextElement
       const submitButtonText = submitButton.querySelector('.button__text')
-      let buttonText = submitButtonText.innerText;
-      submitButtonText.innerText = '✓';
 
-      let successPop = 'modal-success-consult';
-      if (formData.get('success_modal')) {
-        successPop = formData.get('success_modal');
+      if (submitButtonText) {
+        buttonTextElement = submitButtonText;
+      } else {
+        buttonTextElement = submitButton;
       }
+      buttonText = buttonTextElement.innerText;
+      buttonTextElement.innerText = '✓';
 
-      const lastOpenedPop = window.b_modal.getLastOpenedId()
-      if (lastOpenedPop) {
-        window.b_modal.closePop(lastOpenedPop);
-      }
-      window.b_modal.openPop(successPop);
       form.reset();
 
       setTimeout(() => {
         submitButton.classList.remove('button--wait');
-        submitButtonText.innerText = buttonText;
+        buttonTextElement.innerText = buttonText;
       }, 10000)
     } catch {
     }
