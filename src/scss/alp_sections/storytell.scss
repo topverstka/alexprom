@@ -57,6 +57,10 @@
 .storytell__body {
 	padding-top: 40px;
 	@extend .wysiwyg;
+
+	@media (max-width: $laptop) {
+		padding-top: 0;
+	}
 }
 
 .storytell__body table {

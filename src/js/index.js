@@ -7,6 +7,7 @@ import "./libs/lazyload.min.js";
 let lazyLoadInstance = new LazyLoad();
 
 window.mediaSizes = {
+  desktopM: 1536,
   laptop: 1100,
   tabletM: 768,
   mobileXl: 690,
@@ -39,6 +40,7 @@ import "./alp_components/gallery.js";
 import "./alp_sections/experience.js";
 import "./alp_sections/reviews.js";
 import "./alp_sections/locations.js";
+import "./alp_sections/staff.js";
 
 import "./b_components/groupers/bayan.js";
 import "./b_components/spawners/b_modal.js";

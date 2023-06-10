@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О компании</title>
+        <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Отключить автодетект телефонов -->
+    <meta name="format-detection" content="telephone=no">
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      @@include('tpls/header.html',{})
+
+      <main class="hero hero--has-breadcrumbs hero--no-bullets hero--thumb-half">
+        <div class="hero__thumb">
+            <picture class="hero__pic">
+              <img class="hero__img" src="./images/page-about/about-hero.jpg" alt="">
+            </picture>
+            <div class="container hero__container">
+                <div class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="#" class="breadcrumbs__link">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item">О компании</li>
+                    </ul>
+                </div>
+                <h1 class="title-h1 hero__title">О компании</h1>
+                <p>
+                    Краткое описание компании, буквально в две строчки, <br>
+                    больше и не нужно, просто краткое описание компании
+                </p>
+            </div>
+            <img class="hero__worker" src="./images/page-about/about-hero.jpg" alt="">
+        </div>
+      </main>
+
+      <div class="section-flip section-flip--light" id="project">
+
+        <section class="section storytell">
+            <div class="container storytell__container">
+                <div class="storytell__section">
+                    <div class="storytell__head">
+                        <h2 class="title-h2 storytell__title">
+                            Наша миссия
+                        </h2>
+                    </div>
+                    <div class="storytell__body">
+                        <p>
+                            Один из самых масштабных проектов команды был реализован в ноябре 2021 года. <br>
+                            на высоте 72 м. Вес стеклопакета составлял 1 500 кг, размеры 6 метров на 2,2 метра.
+                        </p>
+                        <p>
+                            Для выполнения задачи мы смонтировали приемный портал на крыше здания, <br>
+                            на портал была уcтановлена кранбалка, с помощью которой стеклопакеты <br>
+                            перемещались к месту монтажа. Подъем осуществлялся двумя цепными <br>
+                            лебедками. Для оттяжки груза от фасада были использованы синтетические тросы. <br>
+                            Чтобы  минимизировать риски, мы использовали стеклоробот для юстировки <br>
+                            стеклопакета.  В реализации проекта принимали участие 19 специалистов.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="video">
+                <picture class="video__preview-pic">
+                    <img src="./images/experience/experience-video-cover.jpg" alt="" class="video__preview-img">
+                </picture>
+                <a href="https://www.youtube.com/watch?v=S1wf1iKU3l4" data-fancybox class="play-cover"></a>
+            </div>
+        </div>
+
+        @@include('tpls/alp/experience.html', {})
+
+        @@include('tpls/alp/advantages.html', {})
+
+        @@include('tpls/alp/projects-carousel.html', {})
+
+        @@include('tpls/alp/staff.html', {})
+
+        @@include('tpls/alp/reviews-carousel.html', {})
+
+        @@include('tpls/alp/clients.html', {})
+
+        @@include('tpls/alp/requisites.html', {})
+
+        @@include('tpls/alp/consultation.html', {title: "Запишитесь на\u00A0бесплатную консультацию", })
+        
+      </div>
+        
+      @@include('tpls/footer.html',{})
+    </div>
+
+    <script src="./js/bundle.min.js"></script>
+  </body>
+</html>

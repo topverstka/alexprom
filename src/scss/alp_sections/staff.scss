@@ -1,0 +1,75 @@
+.staff {
+	overflow: hidden;
+
+}
+
+.staff__head {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 80px;
+
+	@media (max-width: $mobile-xl) {
+		margin-bottom: 44px;
+	}
+}
+
+.staff__buttons {
+	display: flex;
+	justify-content: flex-end;
+
+	@media (max-width: $laptop) {
+		display: none;
+	}
+}
+
+.staff__buttons .swiper-button-next,
+.staff__buttons .swiper-button-prev {
+	position: static;
+	--size: 72px;
+	max-width: var(--size);
+	min-width: var(--size);
+	width: var(--size);
+	height: var(--size);
+}
+
+.staff__buttons .swiper-button-prev {
+	margin-right: 32px;
+}
+
+
+.staff__buttons .swiper-button-next::before,
+.staff__buttons .swiper-button-prev::before {
+	background-color: #F0F2F5;
+}
+
+.staff-carousel {
+	overflow: visible;
+}
+
+.staff-card__pic {
+	border-radius: 30px;
+	width: 100%;
+	height: 500px;
+	margin-bottom: 32px;
+}
+
+.staff-card__img {
+	border-radius: inherit;
+	height: inherit;
+	object-fit: cover;
+}
+
+.staff-card__title {
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 135%;
+	color: #202A34;
+	margin-bottom: 12px;
+}
+
+.staff-card__desc {
+	font-size: 18px;
+	line-height: 145%;
+	color: #202A34;
+}

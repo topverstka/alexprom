@@ -236,15 +236,32 @@
     font-weight: 500;
     letter-spacing: .2px;
     margin-bottom: 20px;
+    max-width: 700px;
 
     @media (max-width: $mobile-l) {
 		font-size: 1.82rem;
     }
 }
 
+.hero__desc br {
+	@media (max-width: $laptop) {
+		display: none;
+	}
+
+}
+
+.hero__title + p,
 .hero__desc + p {
+    max-width: 700px;
 	@media (max-width: $mobile-l) {
 		font-size: 1.7rem;
+	}
+}
+
+.hero__title + p br,
+.hero__desc + p br {
+	@media (max-width: $tablet-m) {
+		display: none;
 	}
 }
 
