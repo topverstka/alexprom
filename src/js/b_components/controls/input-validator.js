@@ -67,7 +67,7 @@ export function changeErrorText(input) {
 
 export function validateInput(input) {
   // return
-  console.log(input)
+  // console.log(input)
   const field = input.querySelector("[required]");
   if (field == null) return;
 
@@ -93,7 +93,7 @@ export function validateInputLength(input) {
 export function validatePhone(input) {
   // return
   const field = input.querySelector("[required]");
-  let regex = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
+  let regex = /^(\+7|8)?[\-\s]?\(?\d{3}\)?[\-\s]?\d{3}[\-\s]?\d{2}[\-\s]?\d{2}$/;
   if (!regex.test(field.value)) {
     return setInputInvalid(input);
   } else {

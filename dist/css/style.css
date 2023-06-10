@@ -760,11 +760,17 @@ h6 {
   --input-bg: #FFF;
   --input-border: 1px solid #BABABA;
   --input-padding: 28px 24px;
+  --c-invalid: #ff3b30;
 }
 @media (max-width: 1536px) {
   .input {
     --input-padding: 28px 30px;
   }
+}
+
+.input.is-invalid {
+  --input-fg: var(--c-invalid);
+  --input-border: 1px solid var(--c-invalid);
 }
 
 .input__field {

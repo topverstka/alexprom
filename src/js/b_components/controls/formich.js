@@ -20,9 +20,10 @@ import {setInputValid, setInputInvalid, validateInput} from "./input-validator.j
 //   button.disabled = false;
 // }
 
-const formsList = document.querySelectorAll(".form");
+const formsList = document.querySelectorAll(".js_form");
 formsList.forEach((form) => {
   form.addEventListener("submit", async (event) => {
+    console.log('send')
     event.preventDefault();
 
     const inputsToValidate = [
@@ -33,26 +34,72 @@ formsList.forEach((form) => {
       validateInput(input);
     });
 
-    // const formBody = new FormData(form);
-    // let response = await fetch(form.action, {
-    //   method: "POST",
-    //   body: formBody,
-    // });
+    extractUTM(form);
 
-    // try {
-    // let result = await response.json();
-    // console.log(result);
-    // console.log(form);
-    // console.log("thanks");
-    // const submitButton = form.querySelector('button[type="submit"]');
-    // if (submitButton) {
-    //   submitButton.dataset.buttonText = submitButton.innerHTML;
-    // }
+    const formData = new FormData(form);
+
+
+    let response = await fetch(form.action, {
+      method: "POST",
+      body: formData,
+    });
+
+    const submitButton = form.querySelector('button[type="submit"]');
+    submitButton.classList.add('button--wait');
+
+    try {
+      let result = await response.json();
+      
+      if (result.status) {
+        console.error(result.status);
+      }
+      const submitButtonText = submitButton.querySelector('.button__text')
+      let buttonText = submitButtonText.innerText;
+      submitButtonText.innerText = '✓';
+
+      let successPop = 'modal-success-consult';
+      if (formData.get('success_modal')) {
+        successPop = formData.get('success_modal');
+      }
+
+      const lastOpenedPop = window.b_modal.getLastOpenedId()
+      if (lastOpenedPop) {
+        window.b_modal.closePop(lastOpenedPop);
+      }
+      window.b_modal.openPop(successPop);
+      form.reset();
+
+      setTimeout(() => {
+        submitButton.classList.remove('button--wait');
+        submitButtonText.innerText = buttonText;
+      }, 10000)
+    } catch {
+    }
   });
 });
 
+function extractUTM(form) {
+  const urlParams = new URLSearchParams(window.location.search);
+
+  // Запись значений UTM-меток в соответствующие поля формы
+  form.querySelector('input[name="utm_source"]').value = urlParams.get('utm_source') || '';
+  form.querySelector('input[name="utm_medium"]').value = urlParams.get('utm_medium') || '';
+  form.querySelector('input[name="utm_campaign"]').value = urlParams.get('utm_campaign') || '';
+  form.querySelector('input[name="utm_content"]').value = urlParams.get('utm_content') || '';
+  form.querySelector('input[name="utm_term"]').value = urlParams.get('utm_term') || '';
+
+  // Запись значения referer в соответствующее поле формы
+  form.querySelector('input[name="referrer"]').value = document.referrer || '';
+
+  // Запись времени отправки формы в соответствующее поле
+  form.querySelector('input[name="requestTime"]').value = Date.now();
+
+  // Запись простой подписи (например, md5 хэш) для защиты от подделки данных на клиенте
+  // document.querySelector('input[name="requestSimpleSign"]').value = 'Ваша простая подпись';
+}
+
 // #region input-labels
-const inputs = document.querySelectorAll(".form .form-control");
+const inputs = document.querySelectorAll(".js_form .form-control");
 
 const inputClasses = {
   invalid: "is-invalid",

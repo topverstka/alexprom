@@ -27,13 +27,25 @@ Fancybox.bind('[data-fancybox]', {
   },
 });
 
+/**
+ * Маска телефона
+ */
+import "./libs/inputmask.js";
+const telInputs = document.querySelectorAll('input[type="tel"]');
+telInputs.forEach(tel => {
+  const maskOptions = {
+    mask: '+7(999) 999-99-99',
+    inputmode: 'tel',
+  };
+
+  new Inputmask(maskOptions).mask(tel);
+})
+
 import "./b_helpers/smooth-anchors.js";
 
 import "./b_components/header/burger.js";
 
 import "./libs/swiper-bundle.min.js";
-
-import "./scripts/scripts.js";
 
 import "./alp_components/gallery.js";
 
@@ -44,6 +56,7 @@ import "./alp_sections/staff.js";
 
 import "./b_components/groupers/bayan.js";
 import "./b_components/spawners/b_modal.js";
+import "./b_components/controls/formich.js";
 
 
 // pages
