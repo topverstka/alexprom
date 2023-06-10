@@ -1510,6 +1510,33 @@ h6 {
   object-fit: cover;
 }
 
+.map {
+  position: relative;
+  height: 600px;
+  width: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+}
+@media (max-width: 690px) {
+  .map {
+    height: 400px;
+  }
+}
+
+.map__content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.map__content > * {
+  width: 100%;
+  height: 100%;
+}
+
 @font-face {
   font-family: "Manrope";
   font-style: normal;
@@ -4220,6 +4247,38 @@ header {
   }
 }
 
+.hero--contacts .hero__thumb {
+  padding-bottom: 383px;
+}
+@media (max-width: 1100px) {
+  .hero--contacts .hero__thumb {
+    padding-bottom: 0;
+  }
+}
+
+.hero--contacts .hero__title {
+  padding-top: 168px;
+}
+@media (max-width: 1536px) {
+  .hero--contacts .hero__title {
+    padding-top: 187px;
+  }
+}
+@media (max-width: 1100px) {
+  .hero--contacts .hero__title {
+    padding-top: 92px;
+  }
+}
+@media (max-width: 690px) {
+  .hero--contacts .hero__title {
+    padding-top: 50px;
+  }
+}
+
+.hero--contacts .hero__img {
+  object-position: top;
+}
+
 .faq__box {
   margin-top: 80px;
 }
@@ -6844,6 +6903,53 @@ header {
 .staff-card__desc {
   font-size: 18px;
   line-height: 145%;
+  color: #202A34;
+}
+
+.contacts__gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+@media (max-width: 1100px) {
+  .contacts__gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+@media (max-width: 690px) {
+  .contacts__gallery {
+    grid-template-columns: 100%;
+  }
+}
+
+.contacts-card {
+  border-radius: 30px;
+  padding: 32px;
+  background-color: #F0F2F5;
+}
+
+.contacts-card__title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  color: #202A34;
+  margin-bottom: 24px;
+}
+@media (max-width: 1536px) {
+  .contacts-card__title {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1100px) {
+  .contacts-card__title {
+    font-size: 24px;
+  }
+}
+
+.contacts-card__desc {
+  font-size: 16px;
+  line-height: 125%;
   color: #202A34;
 }
 

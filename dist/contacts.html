@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+        <link rel="stylesheet" href="./css/style.css?_v=20230610115100">
+
+    <!-- Отключить автодетект телефонов -->
+    <meta name="format-detection" content="telephone=no">
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+  <div class="container">
+      <div class="header">
+          <a class="header__logo" href="#">
+              <img class="header__img" src="./images/logo.svg" alt="AlexProm">
+          </a>
+          <div class="header__menu">
+            <div class="header__menu-inner">
+              <nav class="header__nav">
+                  <a class="header__nav-link" href="#">Услуги</a>
+                  <a class="header__nav-link" href="#">Цены</a>
+                  <a class="header__nav-link" href="#">Проекты</a>
+                  <a class="header__nav-link" href="#">О компании</a>
+                  <a class="header__nav-link" href="#">Блог</a>
+                  <a class="header__nav-link" href="#">Контакты</a>
+              </nav>
+              <button class="btn-accent header__button-callback" data-b_modal-open="form-contact">Заказать обратный звонок</button>
+            </div>
+          </div>
+          <div class="header__info">
+              <a class="link" href="mailto:zakaz@alexprom.ru">zakaz@alexprom.ru</a>
+              <a class="link" href="tel:+74951090242">+7 (495) 109-02-42</a>
+              <button class="btn-primary header__btn" type="button" data-b_modal-open="form-contact">Заказать звонок</button>
+          </div>
+          <div class="header-mobile">
+              <a class="header-mobile__btn" href="tel:+74951090242">
+                  <img src="./images/icons/phone-menu.svg" alt="+74951090242">
+              </a>
+              <button class="header-mobile__btn burger" type="button">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+              </button>
+          </div>
+      </div>
+  </div>
+</header>
+
+      <main class="hero hero--has-breadcrumbs hero--no-bullets hero--contacts">
+        <div class="hero__thumb">
+            <picture class="hero__pic">
+              <img class="hero__img" src="./images/page-contacts/contacts-hero.jpg" alt="">
+            </picture>
+            <div class="container hero__container">
+                <div class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="#" class="breadcrumbs__link">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item">Контакты</li>
+                    </ul>
+                </div>
+                <h1 class="title-h1 hero__title">Контакты</h1>
+                <p>
+                    По вопросам сотрудничества, оформления заказа <br>
+                    или получения любой дополнительной информации <br>
+                    вы можете связаться с нашими сотрудниками любым <br>
+                    удобными для вас способом
+                </p>
+            </div>
+            <img class="hero__worker" src="./images/page-contacts/contacts-hero--mobile.png" alt="">
+        </div>
+      </main>
+
+      <div class="section-flip section-flip--light" id="project">
+
+        <section class="section contacts">
+          <div class="container contacts__container">
+            <div class="contacts__gallery">
+                <div class="contacts-card">
+                    <h3 class="contacts-card__title">
+                        Контактный телефон
+                    </h3>
+                    <p class="contacts-card__desc">
+                        <a href="tel:+74951090242">+7 (495) 109-02-42</a>
+                    </p>
+                </div>
+                <div class="contacts-card">
+                    <h3 class="contacts-card__title">
+                        Адрес компании
+                    </h3>
+                    <p class="contacts-card__desc">
+                        Г. Москва, ул. Братиславская
+                        д.&nbsp;31 корпус 3, 109469
+                    </p>
+                </div>
+                <div class="contacts-card">
+                    <h3 class="contacts-card__title">
+                        Электронная почта
+                    </h3>
+                    <p class="contacts-card__desc">
+                        <a href="mailto:zakaz@alexprom.ru">zakaz@alexprom.ru</a>
+                    </p>
+                </div>
+                <div class="contacts-card">
+                    <h3 class="contacts-card__title">
+                        График работы
+                    </h3>
+                    <p class="contacts-card__desc">
+                        Круглосуточно
+                    </p>
+                </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="container">
+            <div class="map">
+                <div class="map__content">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Addaad24cf3d8860d29cae9d9530e4bc91bb9433505d187a45ba17a99b73afad7&amp;source=constructor" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <section class="section-shifter consultation">
+  <div class="container consultation__container">
+    <div class="consultation__bg">
+          <div class="consultation__content">
+              <h2 class="consultation__title">
+              		Запишитесь на бесплатную консультацию 
+              </h2>
+              <p class="consultation__text">Оставьте заявку, и&nbsp;наш менеджер перезвонит вам в&nbsp;течение 30&nbsp;минут и&nbsp;проконсультируем по&nbsp;всем вопросам.</p>
+          </div>
+          <div class="consultation__box">
+              <form class="form-vertical">
+                  <label class="input input-name form-control">
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="Ваше имя"
+    autocomplete="name"
+  >
+</label>
+
+                  <label class="input input-tel form-control">
+  <input
+    class="input__field mask-tel"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Ваш номер телефона"
+    maxlength="25"
+    minlength="10"
+    autocomplete="tel"
+  >
+</label>
+
+                  <button class="btn-main" type="submit">Получить консультацию</button>
+                  <span class="form__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="">персональных данных</a></span>
+              </form>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+        <section class="section requisites">
+  <div class="container requisites__container">
+    <h2 class="title-h2 requisites__title">Реквизиты</h2>
+    <div class="requisites-table">
+    	<div class="requisites-table__row">
+    		<h3 class="requisites-table__title">Краткое наименование</h3>
+    		<p class="requisites-table__desc">ООО «АЛЕКСПРОМ»</p>
+    	</div>
+    	<div class="requisites-table__row">
+    		<h3 class="requisites-table__title">Полное наименование</h3>
+    		<p class="requisites-table__desc">Общество с ограниченной ответственностью «АЛЕКСПРОМ» </p>
+    	</div>
+    	<div class="requisites-table__row">
+    		<h3 class="requisites-table__title">Юридический адрес</h3>
+    		<p class="requisites-table__desc">107150, МОСКВА ГОРОД, УЛ. БОЙЦОВАЯ, Д. 22, ЭТ 2 П V K 9 ОФ 4Г</p>
+    	</div>
+    	<div class="requisites-table__row requisites-table__row--mobile-half">
+	    	<h3 class="requisites-table__title">ИНН</h3>
+    		<p class="requisites-table__desc">7708707791</p>
+    	</div>
+    	<div class="requisites-table__row requisites-table__row--mobile-half">
+    		<h3 class="requisites-table__title">КПП</h3>
+    		<p class="requisites-table__desc">771801001</p>
+    	</div>
+    	<div class="requisites-table__row">
+    		<h3 class="requisites-table__title">ОГРН</h3>
+    		<p class="requisites-table__desc">1097746686531</p>
+    	</div>
+    	<div class="requisites-table__row">
+    		<h3 class="requisites-table__title">ОКВЭД</h3>
+    		<p class="requisites-table__desc">41.20 - Строительство жилых и нежилых зданий</p>
+    	</div>
+    	<div class="requisites-table__row">
+    		<h3 class="requisites-table__title">ОКПО</h3>
+    		<p class="requisites-table__desc">63736825</p>
+    	</div>
+    </div>
+  </div>
+</section>
+        
+      </div>
+        
+      <footer class="footer">
+  <div class="container">
+      <div class="footer-top">
+          <a class="footer-top__logo" href="#">
+              <img class="footer-top__img" src="./images/logo.svg" alt="AlexProm">
+          </a>
+          <div class="footer-top__nav">
+              <a class="footer-top__nav-link" href="#">Услуги</a>
+              <a class="footer-top__nav-link" href="#">Цены</a>
+              <a class="footer-top__nav-link" href="#">Проекты</a>
+              <a class="footer-top__nav-link" href="#">О компании</a>
+              <a class="footer-top__nav-link" href="#">Контакты</a>
+          </div>
+          <div class="footer-top__info">
+              <a class="link" href="mailto:zakaz@alexprom.ru">zakaz@alexprom.ru</a>
+              <a class="link" href="tel:+74951090242">+7&nbsp;(495)&nbsp;109-02-42</a>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <div class="footer-bottom__address">
+              <span>ООО «АЛЕКСПРОМ»</span>
+              <span>Москва, Братиславская 1, корпус&nbsp;3</span>
+          </div>
+          <div class="footer-bottom__docs">
+              <a class="footer-bottom__docs-link" href="#">Пользовательское соглашение</a>
+              <a class="footer-bottom__docs-link" href="#">Политика конфиденциальности</a>
+          </div>
+      </div>
+  </div>
+</footer>
+
+<div class="modal-form b_modal" id="form-contact" data-closer-type="inner">
+	<div class="modal-form__head">
+		<h3 class="modal-form__title">
+			Оставьте свои контакты <br> и мы вам перезвоним
+ 		</h3>
+		<p class="modal-form__desc">
+			Оставьте заявку, и наш менеджер перезвонит вам <br>
+			в течение 30 минут и проконсультирует по всем вопросам.
+		</p>
+	</div>
+	<div class="modal-form__body">
+	  <form class="form-vertical">
+	  		<input type="hidden" name="form_message" value>
+	      <label class="input input-name form-control">
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="Ваше имя"
+    autocomplete="name"
+  >
+</label>
+
+	      <label class="input input-tel form-control">
+  <input
+    class="input__field mask-tel"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Ваш номер телефона"
+    maxlength="25"
+    minlength="10"
+    autocomplete="tel"
+  >
+</label>
+
+	      <button class="btn-main" type="submit">Получить консультацию</button>
+			  <span class="form__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="#">персональных данных</a></span>
+	  </form>
+	</div>
+</div>
+<div class="modal-form b_modal" id="form-price" data-closer-type="inner">
+	<div class="modal-form__head">
+		<h3 class="modal-form__title">
+			Оставьте свои контакты <br> и получите прайс-лист
+ 		</h3>
+		<p class="modal-form__desc">
+			Оставьте заявку, и наш менеджер перезвонит вам <br>
+			в течение 30 минут и проконсультирует по всем вопросам.
+		</p>
+	</div>
+	<div class="modal-form__body">
+	  <form class="form-vertical">
+	  		<input type="hidden" name="form_message" value>
+	      <label class="input input-name form-control">
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="Ваше имя"
+    autocomplete="name"
+  >
+</label>
+
+	      <label class="input input-tel form-control">
+  <input
+    class="input__field mask-tel"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Ваш номер телефона"
+    maxlength="25"
+    minlength="10"
+    autocomplete="tel"
+  >
+</label>
+
+	      <button class="btn-main" type="submit">Получить консультацию</button>
+			  <span class="form__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="#">персональных данных</a></span>
+	  </form>
+	</div>
+</div>
+
+
+    </div>
+
+    <script src="./js/bundle.min.js?_v=20230610115100"></script>
+  </body>
+</html>

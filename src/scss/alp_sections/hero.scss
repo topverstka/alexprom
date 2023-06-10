@@ -539,3 +539,32 @@
         height: 30px;
 	}
 }
+
+.hero--contacts .hero__thumb {
+	padding-bottom: 383px;
+	
+	@media (max-width: $laptop) {
+		padding-bottom: 0;
+	}
+}
+
+.hero--contacts .hero__title {
+	padding-top: 168px;
+
+	@media (max-width: $desktop-m) {
+		padding-top: 187px;
+	}
+
+	@media (max-width: $laptop) {
+		padding-top: 92px;
+	}
+
+	@media (max-width: $mobile-xl) {
+		padding-top: 50px;
+	}
+}
+
+.hero--contacts .hero__img {
+	object-position: top;
+}
+

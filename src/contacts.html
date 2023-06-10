@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+        <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Отключить автодетект телефонов -->
+    <meta name="format-detection" content="telephone=no">
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      @@include('tpls/header.html',{})
+
+      <main class="hero hero--has-breadcrumbs hero--no-bullets hero--contacts">
+        <div class="hero__thumb">
+            <picture class="hero__pic">
+              <img class="hero__img" src="./images/page-contacts/contacts-hero.jpg" alt="">
+            </picture>
+            <div class="container hero__container">
+                <div class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="#" class="breadcrumbs__link">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item">Контакты</li>
+                    </ul>
+                </div>
+                <h1 class="title-h1 hero__title">Контакты</h1>
+                <p>
+                    По вопросам сотрудничества, оформления заказа <br>
+                    или получения любой дополнительной информации <br>
+                    вы можете связаться с нашими сотрудниками любым <br>
+                    удобными для вас способом
+                </p>
+            </div>
+            <img class="hero__worker" src="./images/page-contacts/contacts-hero--mobile.png" alt="">
+        </div>
+      </main>
+
+      <div class="section-flip section-flip--light" id="project">
+
+        <section class="section contacts">
+          <div class="container contacts__container">
+            <div class="contacts__gallery">
+                <div class="contacts-card">
+                    <h3 class="contacts-card__title">
+                        Контактный телефон
+                    </h3>
+                    <p class="contacts-card__desc">
+                        <a href="tel:+74951090242">+7 (495) 109-02-42</a>
+                    </p>
+                </div>
+                <div class="contacts-card">
+                    <h3 class="contacts-card__title">
+                        Адрес компании
+                    </h3>
+                    <p class="contacts-card__desc">
+                        Г. Москва, ул. Братиславская
+                        д.&nbsp;31 корпус 3, 109469
+                    </p>
+                </div>
+                <div class="contacts-card">
+                    <h3 class="contacts-card__title">
+                        Электронная почта
+                    </h3>
+                    <p class="contacts-card__desc">
+                        <a href="mailto:zakaz@alexprom.ru">zakaz@alexprom.ru</a>
+                    </p>
+                </div>
+                <div class="contacts-card">
+                    <h3 class="contacts-card__title">
+                        График работы
+                    </h3>
+                    <p class="contacts-card__desc">
+                        Круглосуточно
+                    </p>
+                </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="container">
+            <div class="map">
+                <div class="map__content">
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Addaad24cf3d8860d29cae9d9530e4bc91bb9433505d187a45ba17a99b73afad7&amp;source=constructor" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+
+        @@include('tpls/alp/consultation.html', {title: "Запишитесь на\u00A0бесплатную консультацию", })
+
+        @@include('tpls/alp/requisites.html', {})
+        
+      </div>
+        
+      @@include('tpls/footer.html',{})
+    </div>
+
+    <script src="./js/bundle.min.js"></script>
+  </body>
+</html>
