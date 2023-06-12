@@ -103,11 +103,12 @@
         margin: 0 auto;
         height: 50vw;
         width: auto;
+        object-position: bottom;
 	}
 
-	@media(max-width: $tablet) {
-		min-height: 800px;
-	}
+	// @media(max-width: $tablet) {
+	// 	min-height: 800px;
+	// }
 	@media(max-width: $tablet-m) {
 		height: 85vw;
 	}
@@ -115,7 +116,7 @@
 	@media(max-width: $mobile-xl) {
 		height: 90vw;
         bottom: 10vw;
-        min-height: 500px;
+        // min-height: 500px;
 	}
 }
 

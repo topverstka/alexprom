@@ -184,3 +184,9 @@ scrollTopButtons.forEach((button) =>
     scrollTop(event);
   })
 );
+
+export function isElementHasClasses(element, classes = []) {
+  return classes.some(className => {
+    return element.classList.contains(className);
+  })
+}

@@ -5,7 +5,7 @@ const header = document.querySelector(".header");
 const HEADER_OPENED_CLASS = "header--opened";
 const BURGER_OPENED = "is-active";
 
-function openBurger() {
+export function openBurger() {
   header.classList.add(HEADER_OPENED_CLASS);
   burger.classList.add(BURGER_OPENED)
   bodyLock(true);
@@ -15,7 +15,8 @@ function openBurger() {
 
   stickyHeader.style.transform = '';
 }
-function closeBurger() {
+
+export function closeBurger() {
   header.classList.remove(HEADER_OPENED_CLASS);
   burger.classList.remove(BURGER_OPENED)
   bodyLock(false);

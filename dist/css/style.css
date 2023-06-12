@@ -3767,11 +3767,7 @@ header {
     margin: 0 auto;
     height: 50vw;
     width: auto;
-  }
-}
-@media (max-width: 992px) {
-  .hero__worker {
-    min-height: 800px;
+    object-position: bottom;
   }
 }
 @media (max-width: 768px) {
@@ -3783,7 +3779,6 @@ header {
   .hero__worker {
     height: 90vw;
     bottom: 10vw;
-    min-height: 500px;
   }
 }
 
