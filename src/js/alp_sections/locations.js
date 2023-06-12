@@ -1,6 +1,9 @@
 window.addEventListener('DOMContentLoaded', (event) => {
 	const locations = document.querySelector('.locations');
+	const locationsMap = document.querySelector('.locations__map');
 	if (!locations) return;
+
+	// begin locations carousel
 	const mediaBreakpoint = window.mediaSizes.laptop;
 
 	let locationsCarousel;
@@ -128,5 +131,57 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	  checkWidth();
 	});
 
+	// end locations carousel
+
+	function getMapIcon(locationsMap) {
+		return window.location.origin + locationsMap.dataset.mapIcon
+	}
+
+	ymaps.ready(() => {
+		let myMap = new ymaps.Map("locations__map", {
+	    center: [55.76, 37.64], // Координаты центра карты
+	    zoom: 10 // Масштаб карты
+		});
+
+		let cities = [...document.querySelectorAll('.locations-addresses__link')];
+		cities = cities.map(city => {
+			return {name: city.innerText};
+		});
+		cities = cities.filter(obj => {
+		  if (!cities[obj.name]) {
+		    cities[obj.name] = true;
+		    return true;
+		  }
+		  return false;
+		});
+
+		cities.forEach((city, cityIndex) => {
+			ymaps.geocode(city.name, {
+        results: 1
+			}).then(result => {
+		    const position = result.geoObjects.get(0).geometry.getCoordinates();
+		    city.coords = [position[0], position[1]];
+
+		    let placemark = new ymaps.Placemark(
+	        city.coords,
+	        { hintContent: city.name },
+	        {
+	      	  iconLayout: "default#image",
+		        iconImageHref: getMapIcon(locationsMap),
+		        iconImageSize: [32, 32],
+		        iconImageOffset: [-16, -16]
+	        }
+		    );
+				myMap.geoObjects.add(placemark);
+
+		    // console.log(`Широта: ${position[0]}, Долгота: ${position[1]}`);
+		  }).catch(error => {
+		  	console.error(error)
+		  });
+		});
+
+		window.myMap = myMap;
+
+	})
 
 });
