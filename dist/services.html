@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Услуги</title>
-        <link rel="stylesheet" href="./css/style.css?_v=20230612110605">
+        <link rel="stylesheet" href="./css/style.css?_v=20230612115044">
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no">
@@ -55,6 +55,7 @@
       <main class="hero hero--has-breadcrumbs">
         <div class="hero__thumb">
             <picture class="hero__pic">
+                <source srcset="./images/page-services/services-hero.webp" type="image/webp">
               <img class="hero__img" src="./images/page-services/services-hero.jpg" alt="Услуги промышленного альпинизма">
             </picture>
             <div class="container hero__container">
@@ -115,7 +116,11 @@
                     </div>
                 </div>
             </div>
-            <img class="hero__worker" src="./images/page-services/services-hero--mobile.png" alt="Услуги промышленного альпинизма">
+
+            <picture class="hero__worker">
+                <source srcset="./images/page-services/services-hero--mobile.webp" type="image/webp">
+                <img class="hero__worker-img" src="./images/page-services/services-hero--mobile.png" alt="Услуги промышленного альпинизма">
+            </picture>
         </div>
       </main>
 
@@ -907,6 +912,6 @@
     </div>
 
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2b19e0af-ec94-422d-9726-8deb559736fe&_v=20230217195447"></script>
-    <script src="./js/bundle.min.js?_v=20230612110605"></script>
+    <script src="./js/bundle.min.js?_v=20230612115044"></script>
   </body>
 </html>

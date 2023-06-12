@@ -3782,16 +3782,27 @@ header {
   }
 }
 
+.hero__worker-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-position: bottom;
+  object-fit: contain;
+}
+
 .hero--thumb-half .hero__worker {
   position: static;
   width: 100%;
-  object-fit: cover;
   margin-top: 80px;
 }
 @media (max-width: 690px) {
   .hero--thumb-half .hero__worker {
     margin-top: 60px;
   }
+}
+
+.hero--thumb-half .hero__worker-img {
+  object-fit: cover;
 }
 
 @media (max-width: 962px) {

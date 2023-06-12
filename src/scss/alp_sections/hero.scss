@@ -120,15 +120,25 @@
 	}
 }
 
+.hero__worker-img {
+	display: block;
+	width: 100%;
+	height: 100%;
+    object-position: bottom;
+    object-fit: contain;
+}
+
 .hero--thumb-half .hero__worker {
 	position: static;
 	width: 100%;
-	object-fit: cover;
 	margin-top: 80px;
 
 	@media (max-width: $mobile-xl) {
 		margin-top: 60px;
 	}
+}
+.hero--thumb-half .hero__worker-img {
+	object-fit: cover;
 }
 
 .hero--no-bullets .hero__worker {

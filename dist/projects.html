@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Проекты</title>
-        <link rel="stylesheet" href="./css/style.css?_v=20230612110605">
+        <link rel="stylesheet" href="./css/style.css?_v=20230612115044">
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no">
@@ -55,6 +55,7 @@
       <main class="hero hero--has-breadcrumbs">
         <div class="hero__thumb">
             <picture class="hero__pic">
+              <source srcset="./images/page-projects/projects-hero.webp" type="image/webp">
               <img class="hero__img" src="./images/page-projects/projects-hero.jpg" alt="Наши проекты">
             </picture>
             <div class="container hero__container">
@@ -116,7 +117,11 @@
                     </div>
                 </div>
             </div>
-            <img class="hero__worker" src="./images/page-projects/projects-hero--mobile.png" alt="Наши проекты">
+
+            <picture class="hero__worker">
+                <source srcset="./images/page-projects/projects-hero--mobile.webp" type="image/webp">
+                <img class="hero__worker-img" src="./images/page-projects/projects-hero--mobile.png" alt="">
+            </picture>
         </div>
       </main>
 
@@ -255,6 +260,7 @@
       <div class="experience__hero">
         <div class="experience__hero-media">
           <picture class="experience__hero-pic">
+            <source srcset="./images/experience/experience-hero.webp" type="image/webp">
             <img  class="experience__hero-img lazy" data-src="./images/experience/experience-hero.png" alt="">
           </picture>
           <div class="experience__hero-hint">
@@ -290,36 +296,42 @@
                   <div class="swiper-wrapper">
                     <div class="swiper-slide experience-gallery__slide">
                       <picture class="experience-gallery__thumb">
+                          <source srcset="./images/experience/cert-vert.webp" type="image/webp">
                           <img class="experience-gallery__img lazy" data-src="./images/experience/cert-vert.png" alt="">
                       </picture>
                       <a href="./images/experience/cert-vert.png" data-fancybox class="experience-gallery__link"></a>
                     </div>
                     <div class="swiper-slide experience-gallery__slide">
                       <picture class="experience-gallery__thumb">
+                        <source srcset="./images/experience/cert-hor.webp" type="image/webp">
                           <img class="experience-gallery__img lazy" data-src="./images/experience/cert-hor.png" alt="">
                       </picture>
                       <a href="./images/experience/cert-hor.png" data-fancybox class="experience-gallery__link"></a>
                     </div>
                     <div class="swiper-slide experience-gallery__slide">
                       <picture class="experience-gallery__thumb">
+                          <source srcset="./images/experience/cert-hor.webp" type="image/webp">
                           <img class="experience-gallery__img lazy" data-src="./images/experience/cert-vert.png" alt="">
                       </picture>
                       <a href="./images/experience/cert-vert.png" data-fancybox class="experience-gallery__link"></a>
                     </div>
                     <div class="swiper-slide experience-gallery__slide">
                       <picture class="experience-gallery__thumb">
+                          <source srcset="./images/experience/cert-hor.webp" type="image/webp">
                           <img class="experience-gallery__img lazy" data-src="./images/experience/cert-hor.png" alt="">
                       </picture>
                       <a href="./images/experience/cert-hor.png" data-fancybox class="experience-gallery__link"></a>
                     </div>
                     <div class="swiper-slide experience-gallery__slide">
                       <picture class="experience-gallery__thumb">
+                          <source srcset="./images/experience/cert-vert.webp" type="image/webp">
                           <img class="experience-gallery__img lazy" data-src="./images/experience/cert-vert.png" alt="">
                       </picture>
                       <a href="./images/experience/cert-vert.png" data-fancybox class="experience-gallery__link"></a>
                     </div>
                     <div class="swiper-slide experience-gallery__slide">
                       <picture class="experience-gallery__thumb">
+                        <source srcset="./images/experience/cert-hor.webp" type="image/webp">
                           <img class="experience-gallery__img lazy" data-src="./images/experience/cert-hor.png" alt="">
                       </picture>
                       <a href="./images/experience/cert-hor.png" data-fancybox class="experience-gallery__link"></a>
@@ -565,6 +577,6 @@
     </div>
 
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2b19e0af-ec94-422d-9726-8deb559736fe&_v=20230217195447"></script>
-    <script src="./js/bundle.min.js?_v=20230612110605"></script>
+    <script src="./js/bundle.min.js?_v=20230612115044"></script>
   </body>
 </html>
