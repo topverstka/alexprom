@@ -6502,12 +6502,12 @@ header {
 }
 
 .locations-addresses__button-prev {
-  background-image: url("/images/arrow-prev.svg");
+  background-image: url("../images/arrow-prev.svg");
   margin-right: 34px;
 }
 
 .locations-addresses__button-next {
-  background-image: url("/images/arrow-next.svg");
+  background-image: url("../images/arrow-next.svg");
 }
 
 @media (min-width: 1101px) {
