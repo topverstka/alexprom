@@ -39,6 +39,7 @@
 .section-flip {
   background-color: var(--light);
   position: relative;
+  z-index: 2;
   border-radius: 10rem 10rem 0 0;
   padding-bottom: 120px;
   margin-top: -120px;
