@@ -73,6 +73,7 @@ formsList.forEach((form) => {
       }, 10000)
     } catch {
     }
+    
   });
 });
 
