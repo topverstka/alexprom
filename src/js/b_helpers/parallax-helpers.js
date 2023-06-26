@@ -10,6 +10,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 	sections.forEach((section, index) => {
 	  let modifier = 100;
+
+	  if (window.innerWidth > 1600 && section == 0) {
+	  	modifier = -200;
+	  }
+
+	  modifier = - document.querySelector('.hero').getBoundingClientRect().height / 5
+
 	  if (index > 0){
 	  	modifier = -100
 	  }
@@ -20,6 +27,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         start: `top bottom+=${modifier}px`,
 	      end: 'center center',
 	      scrub: true,
+	      // markers: true,
 	    },
 	  });
 

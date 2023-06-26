@@ -3783,6 +3783,13 @@ header {
   }
 }
 
+@media (max-width: 690px) {
+  .hero--contacts .hero__worker {
+    height: 450px;
+    bottom: 100px;
+  }
+}
+
 .hero__worker-img {
   display: block;
   width: 100%;
@@ -4266,7 +4273,7 @@ header {
 }
 
 .hero--contacts {
-  min-height: 870px;
+  min-height: 700px;
 }
 
 .hero--contacts .hero__thumb {

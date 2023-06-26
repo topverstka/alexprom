@@ -120,6 +120,13 @@
 	}
 }
 
+.hero--contacts .hero__worker {
+	@media(max-width: $mobile-xl) {
+		height: 450px;
+		bottom: 100px;
+	}
+}
+
 .hero__worker-img {
 	display: block;
 	width: 100%;
@@ -552,8 +559,10 @@
 }
 
 .hero--contacts {
-	min-height: 870px;
+	min-height: 700px;
+	// min-height: 870px;
 }
+
 
 .hero--contacts .hero__thumb {
 	padding-bottom: 383px;
