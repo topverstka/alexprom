@@ -38,10 +38,10 @@ formsList.forEach((form) => {
     const formData = new FormData(form);
 
 
-    // let response = await fetch(form.action, {
-    //   method: "POST",
-    //   body: formData,
-    // });
+    let response = await fetch(form.action, {
+      method: "POST",
+      body: formData,
+    });
 
     const submitButton = form.querySelector('button[type="submit"]');
     submitButton.classList.add('button--wait');
