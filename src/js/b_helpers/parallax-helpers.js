@@ -8,37 +8,25 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	const sections = gsap.utils.toArray('.section-flip');
   const vh = window.innerHeight;
 
-	sections.forEach((section, index) => {
-	  let modifier = 100;
-
-	  if (window.innerWidth > 1600 && section == 0) {
-	  	modifier = -200;
+  const firstFlip = document.querySelector('.section-flip');
+	var tl = gsap.timeline({
+	  scrollTrigger: {
+	    trigger: firstFlip,
+	    start: "top bottom", // активируется, когда верх `.section-2` достигает нижней части экрана
+	    endTrigger: ".hero",
+	    end: "bottom top-=1000", // деактивируется, когда верх `.section-1` достигает верхней части экрана
+	    scrub: true, // эффект "scrub" для плавной анимации
+	    anticipatePin: 1, // предварительное оповещение о пине для более плавного скроллинга
+      // markers: true,
 	  }
-
-	  modifier = - document.querySelector('.hero').getBoundingClientRect().height / 5
-
-	  if (index > 0){
-	  	modifier = -100
-	  }
-
-	  const tl = gsap.timeline({
-	    scrollTrigger: {
-	      trigger: section,
-        start: `top bottom+=${modifier}px`,
-	      end: 'center center',
-	      scrub: true,
-	      // markers: true,
-	    },
-	  });
-
-	  // Добавляем анимацию для текущей секции
-	  tl.fromTo(section, {
-	    yPercent: 0 // начальное значение положения по оси Y - 100%
-	  }, {
-	    // yPercent: -100 // конечное значение положения по оси Y - 0%
-	    marginTop: -vh * 2,
-	  }, 0); // задержка в начале анимации - 0 секунд
 	});
 
+	const heroHeight = document.querySelector('.hero').getBoundingClientRect().height;
+	const heroHeightNegative = -heroHeight;
+
+
+	tl.set('.hero', {marginBottom: heroHeightNegative});
+	tl.set(firstFlip, {y: heroHeight - 100});
+	tl.to(firstFlip, {y: 0});
 
 });

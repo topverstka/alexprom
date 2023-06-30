@@ -6455,7 +6455,7 @@ header {
 }
 @media (max-width: 690px) {
   .locations-addresses__slider .swiper-wrapper {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 47%);
   }
 }
 @media (max-width: 330px) {
