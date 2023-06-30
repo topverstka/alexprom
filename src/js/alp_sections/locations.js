@@ -128,7 +128,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	}
 
 	checkWidth();
+	let prevWindowWidth = window.innerWidth
 	window.addEventListener('resize', () => {
+		var windowWidth = window.innerWidth;
+	  if (windowWidth === prevWindowWidth) return;
+
+	  prevWindowWidth = windowWidth;
 	  checkWidth();
 	});
 
