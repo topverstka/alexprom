@@ -115,13 +115,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
 			let {carousel, pages, links, wrapper} = getCarouselWrapStructure();
 			links = [...links].filter((link, linkIndex) => {
 				return link.classList.contains('is-hidden');
-			}).filter((link, linkIndex) => {
-				return linkIndex < showCardsCount
+			// }).filter((link, linkIndex) => {
+				// return linkIndex < showCardsCount
+				// чтобы показать больше было порционно
 			});
 
 			links.forEach(link => link.classList.remove('is-hidden'))
 
-			if (links.length >= showCardsCount) return
+			// if (links.length >= showCardsCount) return
 			moreButton.classList.add('is-hidden');
 		});
 	}
@@ -134,6 +135,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	// end locations carousel
 
 	function getMapIcon(locationsMap) {
+		window.mapIcon = window.location.origin + locationsMap.dataset.mapIcon
 		return window.location.origin + locationsMap.dataset.mapIcon
 	}
 
@@ -176,6 +178,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 		    // console.log(`Широта: ${position[0]}, Долгота: ${position[1]}`);
 		  }).catch(error => {
+		  	console.error('locations.js maps error')
 		  	console.error(error)
 		  });
 		});
