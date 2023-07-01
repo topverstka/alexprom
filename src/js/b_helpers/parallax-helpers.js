@@ -8,25 +8,31 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	const sections = gsap.utils.toArray('.section-flip');
   const vh = window.innerHeight;
 
+	const heroHeight = document.querySelector('.hero').getBoundingClientRect().height;
+	const heroHeightNegative = -heroHeight;
+	const overlapHeight = heroHeight / 5;
+	const overlapHeightNegative = -overlapHeight;
+
+	let tlOffsetStart = heroHeight / 30;
+	let tlOffsetEnd = heroHeight / 20;
+
+	console.log(overlapHeight)
+
   const firstFlip = document.querySelector('.section-flip');
 	var tl = gsap.timeline({
 	  scrollTrigger: {
 	    trigger: firstFlip,
-	    start: "top bottom", // активируется, когда верх `.section-2` достигает нижней части экрана
+	    start: `top-=${tlOffsetStart} bottom`, // активируется, когда верх `.section-2` достигает нижней части экрана
 	    endTrigger: ".hero",
-	    end: "bottom top-=1000", // деактивируется, когда верх `.section-1` достигает верхней части экрана
-	    scrub: true, // эффект "scrub" для плавной анимации
+	    end: `bottom+=${tlOffsetEnd} top`, // деактивируется, когда верх `.section-1` достигает верхней части экрана
+	    scrub: true,
 	    anticipatePin: 1, // предварительное оповещение о пине для более плавного скроллинга
       // markers: true,
 	  }
 	});
 
-	const heroHeight = document.querySelector('.hero').getBoundingClientRect().height;
-	const heroHeightNegative = -heroHeight;
-
-
-	tl.set('.hero', {marginBottom: heroHeightNegative});
-	tl.set(firstFlip, {y: heroHeight - 100});
+	tl.set('.hero', {marginBottom: overlapHeightNegative});
+	tl.set(firstFlip, {y: overlapHeight - 50});
 	tl.to(firstFlip, {y: 0});
 
 });
