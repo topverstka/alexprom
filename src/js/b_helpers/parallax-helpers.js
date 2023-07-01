@@ -10,13 +10,19 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 	const heroHeight = document.querySelector('.hero').getBoundingClientRect().height;
 	const heroHeightNegative = -heroHeight;
-	const overlapHeight = heroHeight / 5;
+
+	let overlapHeightModifier = 5;
+	if (window.innerWidth > window.mediaSizes.mobileXl) {
+		overlapHeightModifier = 2
+	}
+
+	const overlapHeight = heroHeight / overlapHeightModifier;
 	const overlapHeightNegative = -overlapHeight;
+
 
 	let tlOffsetStart = heroHeight / 30;
 	let tlOffsetEnd = heroHeight / 20;
 
-	console.log(overlapHeight)
 
   const firstFlip = document.querySelector('.section-flip');
 	var tl = gsap.timeline({
