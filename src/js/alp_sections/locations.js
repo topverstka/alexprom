@@ -141,12 +141,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 	function getMapIcon(locationsMap) {
 		window.mapIcon = window.location.origin + locationsMap.dataset.mapIcon
+		locationsMap.mapIcon = window.mapIcon;
 		return window.location.origin + locationsMap.dataset.mapIcon
 	}
 
 	ymaps.ready(() => {
 		let myMap = new ymaps.Map("locations__map", {
-	    center: [55.76, 37.64], // Координаты центра карты
+	    center: [55.76, 37.64], // Координаты центра карты, Москва
 	    zoom: 10 // Масштаб карты
 		});
 
@@ -169,14 +170,21 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		    const position = result.geoObjects.get(0).geometry.getCoordinates();
 		    city.coords = [position[0], position[1]];
 
-		    let placemark = new ymaps.Placemark(
-	        city.coords,
-	        { hintContent: city.name },
+		    let MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+		      '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+		    );
+		    let placemark = new ymaps.Placemark(city.coords,
+	        { 
+	        	hintContent: city.name,
+			      balloonContent: '',
+			      iconContent: '',
+	        },
 	        {
-	      	  iconLayout: "default#image",
+	      	  iconLayout: "default#imageWithContent",
 		        iconImageHref: getMapIcon(locationsMap),
 		        iconImageSize: [32, 32],
-		        iconImageOffset: [-16, -16]
+		        iconImageOffset: [-16, -16],
+            iconContentLayout: MyIconContentLayout,
 	        }
 		    );
 				myMap.geoObjects.add(placemark);
