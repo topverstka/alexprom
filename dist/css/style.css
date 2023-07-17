@@ -5347,6 +5347,62 @@ header {
   }
 }
 
+.clients {
+  overflow: hidden;
+}
+
+.clients-carousel {
+  position: relative;
+  margin-top: 70px;
+  overflow: visible;
+}
+@media (max-width: 768px) {
+  .clients-carousel {
+    max-width: initial;
+    margin-right: auto;
+  }
+}
+@media (max-width: 690px) {
+  .clients-carousel {
+    margin-top: 38px;
+  }
+}
+
+@media (max-width: 768px) {
+  .clients-carousel__swiper {
+    overflow: visible;
+  }
+}
+
+.clients-carousel .swiper-button-next,
+.clients-carousel .swiper-button-prev {
+  top: calc(50% - 3rem);
+}
+@media (max-width: 768px) {
+  .clients-carousel .swiper-button-next,
+  .clients-carousel .swiper-button-prev {
+    display: none;
+  }
+}
+
+.clients-carousel .swiper-button-next {
+  right: -3rem;
+}
+@media (max-width: 690px) {
+  .clients-carousel .swiper-button-next {
+    right: -1rem;
+  }
+}
+
+.clients-carousel .swiper-button-prev {
+  left: -3rem;
+}
+@media (max-width: 690px) {
+  .clients-carousel .swiper-button-prev {
+    left: -1rem;
+  }
+}
+
 .clients__box {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -5380,10 +5436,12 @@ header {
   justify-content: center;
   align-items: center;
   padding: 0 20px;
+  min-height: 17rem;
 }
 @media (max-width: 690px) {
   .clients__thumb {
     padding: 0 10px;
+    min-height: 12rem;
   }
 }
 

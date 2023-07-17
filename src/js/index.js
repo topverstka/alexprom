@@ -54,6 +54,7 @@ import "./alp_sections/experience.js";
 import "./alp_sections/reviews.js";
 import "./alp_sections/locations.js";
 import "./alp_sections/staff.js";
+import "./alp_sections/clients.js";
 
 import "./b_components/groupers/bayan.js";
 import "./b_components/spawners/b_modal.js";
