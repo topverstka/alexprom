@@ -7044,4 +7044,8 @@ header {
   display: none;
   visibility: hidden;
 }
+
+.js_counter {
+  will-change: transform;
+}
 /*# sourceMappingURL=../maps/style.css.map */
