@@ -86,19 +86,61 @@
                         Круглосуточно
                     </p>
                 </div>
+                <div class="contacts-card">
+                    <h3 class="contacts-card__title">
+                        Социальные сети
+                    </h3>
+                    <p class="contacts-card__desc">
+                        <a href="#">Вконтакте</a><br>
+                        <a href="#">Facebook</a><br>
+                        <a href="#">Одноклассники</a><br>
+                    </p>
+                </div>
+                <div class="contacts-card">
+                    <h3 class="contacts-card__title">
+                        Мессенджеры
+                    </h3>
+                    <p class="contacts-card__desc">
+                        <a href="#">WhatsApp</a><br>
+                        <a href="#">Viber</a><br>
+                        <a href="#">Telegram</a><br>
+                    </p>
+                </div>
             </div>
           </div>
         </section>
 
-        <div class="container">
+        <div class="container contacts__map-container">
             <div class="map">
                 <div class="map__content">
                     <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Addaad24cf3d8860d29cae9d9530e4bc91bb9433505d187a45ba17a99b73afad7&amp;source=constructor"></iframe>
                 </div>
             </div>
-        </div>
 
-        @@include('tpls/alp/consultation.html', {title: "Запишитесь на\u00A0бесплатную консультацию", })
+            <div class="consultation__bg">
+                <div class="consultation__content">
+                    <h2 class="consultation__title"> Запишитесь на бесплатную <br> консультацию </h2>
+                    <p class="consultation__text">
+                        Оставьте заявку, и&nbsp;наш менеджер перезвонит вам в&nbsp;течение 30&nbsp;минут и&nbsp;проконсультируем по&nbsp;всем вопросам.
+                    </p>
+                </div>
+                <div class="consultation__box">
+                    <form class="form-vertical js_form">
+                        @@include('./tpls/inputs/name.html',{})
+                        @@include('./tpls/inputs/tel.html',{})
+                        <button class="btn-main" type="submit">Получить консультацию</button>
+                        <span class="form__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="">персональных данных</a></span>
+                        <input type="hidden" name="utm_source" >
+                        <input type="hidden" name="utm_medium" >
+                        <input type="hidden" name="utm_campaign" >
+                        <input type="hidden" name="utm_content" >
+                        <input type="hidden" name="utm_term" >
+                        <input type="hidden" name="referrer" >
+                        <input type="hidden" name="requestTime" >
+                    </form>
+                </div>
+            </div>
+        </div>
 
         @@include('tpls/alp/requisites.html', {})
         

@@ -53,6 +53,17 @@
         gap: 34px;
     }
 }
+.contacts__map-container .consultation__bg {
+    gap: 0;
+    @media (min-width: $mobile-xl + 1) {
+        flex-direction: column;
+        padding: 6.4rem;
+
+        @media (max-width: $desktop-m) {
+            padding: 4rem;
+        }
+    }
+}
 
 .consultation__content {
     flex-basis: 416px;
@@ -64,6 +75,11 @@
         flex-basis: auto;
     }
 }
+.contacts__map-container .consultation__content {
+    flex-basis: initial;
+    margin-bottom: 5rem;
+}
+
 
 .consultation__title {
     font-size: 5.6rem;
@@ -93,6 +109,12 @@
         font-size: clamp(2.8rem, 9vw, 3.2rem);
     }
 }
+.contacts__map-container .consultation__title {
+    margin-right: -1rem;
+    @media (max-width: $desktop-l) {
+        font-size: 3.8rem;
+    }
+}
 
 .consultation__text {
     max-width: 339px;
@@ -110,6 +132,9 @@
     @media(max-width: $mobile-xl) {
         font-size: 1.4rem;
     }
+}
+.contacts__map-container .consultation__text {
+    max-width: 100%;
 }
 
 .consultation__box {
@@ -132,4 +157,7 @@
     @media(max-width: $mobile-xl) {
         padding: 20px 10px;
     }
+}
+.contacts__map-container .consultation__box {
+    flex-basis: initial;
 }

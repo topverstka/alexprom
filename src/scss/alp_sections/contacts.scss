@@ -1,11 +1,15 @@
 .contacts__gallery {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 40px;
+	// grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+	gap: 4rem;
+
+	@media (max-width: $desktop-m) {
+		gap: 2rem;
+	}
 
 	@media (max-width: $laptop) {
 		grid-template-columns: repeat(2, 1fr);
-		gap: 20px;
 	}
 	
 	@media (max-width: $mobile-xl) {
@@ -15,19 +19,24 @@
 
 .contacts-card {
 	border-radius: 30px;
-	padding: 32px;
+	padding: 3rem 2rem;
 	background-color: #F0F2F5;
+	text-align: center;
+
+	@media (max-width: $tablet) {
+		text-align: left;
+	}
 }
 
 .contacts-card__title {
 	font-weight: 600;
-	font-size: 24px;
+	font-size: 2.2rem;
 	line-height: 125%;
 	color: #202A34;
-	margin-bottom: 24px;
+	margin-bottom: 2.4rem;
 
 	@media (max-width: $desktop-m) {
-		font-size: 18px;
+		font-size: 1.8rem;
 	}
 
 	@media (max-width: $laptop) {
@@ -39,4 +48,15 @@
 	font-size: 16px;
 	line-height: 125%;
 	color: #202A34;
+}
+
+.contacts__map-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 4rem;
+	align-items: stretch;
+
+	@media (max-width: $laptop) {
+		grid-template-columns: 100%;
+	}
 }

@@ -1,12 +1,13 @@
 .map {
 	position: relative;
-	height: 600px;
+	min-height: 600px;
+	height: 100%;
 	width: 100%;
 	border-radius: 30px;
 	overflow: hidden;
 
 	@media (max-width: $mobile-xl) {
-		height: 400px;
+		min-height: 400px;
 	}
 }
 
