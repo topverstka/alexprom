@@ -114,6 +114,11 @@ header {
 	}
 }
 
+.header__nav-link.active {
+	color: var(--accent);
+    border-bottom: 1px solid;
+}
+
 .header__nav-link:last-child {
 	margin-right: 0;
 }
