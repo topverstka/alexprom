@@ -112,11 +112,7 @@
 .locations-card__top .locations-addresses__link {
 	padding: 0;
 	background: transparent;
-	// all: initial;
-	font-family: inherit;
-	font-size: inherit;
-	list-style: inherit;
-	color: inherit;
+	font-family: 'Manrope', sans-serif;
 }
 
 
@@ -290,7 +286,7 @@
 
 .locations-card__titie {
 	color: #202A34;
-	font-family: 'Manrope';
+	font-family: 'Manrope', sans-serif;
 	font-size: 2rem;
 	font-style: normal;
 	font-weight: 500;
