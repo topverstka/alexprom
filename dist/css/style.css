@@ -4608,8 +4608,17 @@ header {
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
-  padding-bottom: 3rem;
-  display: block;
+  /* Новые свойства без префикса */
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  /* Стандартные свойства */
+  display: -moz-box;
+  -moz-line-clamp: 4;
+  -moz-box-orient: vertical;
+  lineamp: 4;
+  box-orient: vertical;
+  margin-bottom: 2rem;
 }
 
 .services-list {
