@@ -49,6 +49,7 @@ import "./b_components/header/burger.js";
 import "./libs/swiper-bundle.min.js";
 
 import "./alp_components/gallery.js";
+import "./alp_components/button-scroll-top.js";
 
 import "./alp_sections/experience.js";
 import "./alp_sections/reviews.js";

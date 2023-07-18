@@ -7053,4 +7053,69 @@ header {
 .js_counter {
   will-change: transform;
 }
+
+.button-scroll-top {
+  position: fixed;
+  left: 2rem;
+  bottom: 2rem;
+  transition: all 0.45s ease-in-out;
+  transform: translateY(3rem);
+  opacity: 0;
+  pointer-events: none;
+  --size: 3rem;
+  max-width: var(--size);
+  min-width: var(--size);
+  width: var(--size);
+  height: var(--size);
+  background-color: #fff;
+  border-radius: 99999px;
+  background-image: url("../img/common/arrow-up.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 10;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 992px) {
+  .button-scroll-top {
+    left: 1.5rem;
+    bottom: 1.5rem;
+  }
+}
+
+.button-scroll-top::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: block;
+  width: 90%;
+  height: 90%;
+  -webkit-mask: url("../images/arrow-next.svg");
+  mask: url("../images/arrow-next.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  background-color: var(--dark);
+  transition: all 0.3s ease;
+  transform: rotate(-90deg);
+}
+
+@media (any-hover: hover) {
+  .button-scroll-top:hover::after {
+    background-color: var(--accent);
+  }
+}
+
+.button-scroll-top._show {
+  opacity: 1;
+  pointer-events: initial;
+  transform: translateY(0);
+}
 /*# sourceMappingURL=../maps/style.css.map */
