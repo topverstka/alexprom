@@ -498,25 +498,25 @@ h6 {
 }
 
 .section {
-  padding-top: 45px;
-  padding-bottom: 45px;
+  padding-top: 65px;
+  padding-bottom: 65px;
 }
 @media (max-width: 1536px) {
   .section {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
 @media (max-width: 690px) {
   .section {
-    padding-top: 25px;
-    padding-bottom: 25p50x;
+    padding-top: 35px;
+    padding-bottom: 35px;
   }
 }
 
 .section-shifter {
-  margin-top: 45px;
-  margin-bottom: 45px;
+  margin-top: 65px;
+  margin-bottom: 65px;
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -528,15 +528,15 @@ h6 {
 }
 @media (max-width: 1100px) {
   .section-shifter {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 @media (max-width: 690px) {
   .section-shifter {
     padding: 0 16px;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin-top: 35px;
+    margin-bottom: 35px;
   }
 }
 
@@ -565,11 +565,11 @@ h6 {
 }
 
 .section-flip .section:first-child {
-  padding-top: 70px;
+  padding-top: 80px;
 }
 @media (max-width: 768px) {
   .section-flip .section:first-child {
-    padding-top: 50px;
+    padding-top: 60px;
   }
 }
 @media (max-width: 450px) {
@@ -579,11 +579,11 @@ h6 {
 }
 
 .section-flip .section:last-child {
-  padding-bottom: 70px;
+  padding-bottom: 80px;
 }
 @media (max-width: 768px) {
   .section-flip .section:last-child {
-    padding-bottom: 40px;
+    padding-bottom: 60px;
   }
 }
 @media (max-width: 450px) {
@@ -4442,11 +4442,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 @media (max-width: 450px) {
   .services__head {
-    margin-bottom: 52px;
+    margin-bottom: 32px;
   }
 }
 
@@ -6863,7 +6863,7 @@ header {
 }
 
 .requisites__title {
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 @media (min-width: 1101px) {
   .requisites__title {
@@ -6872,7 +6872,7 @@ header {
 }
 @media (max-width: 690px) {
   .requisites__title {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
 }
 

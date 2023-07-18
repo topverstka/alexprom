@@ -3,14 +3,14 @@
 }
 
 .requisites__title {
-	margin-bottom: 80px;
+	margin-bottom: 60px;
 
 	@media (min-width: $laptop + 1) {
 		text-align: center;
 	}
 
 	@media (max-width: $mobile-xl) {
-		margin-bottom: 60px;
+		margin-bottom: 40px;
 	}
 }
 
