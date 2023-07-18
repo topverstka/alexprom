@@ -51,6 +51,7 @@
   height: var(--closer-height, 3rem);
   transition: var(--tr);
   transform-origin: center;
+  background: transparent;
 
   @media (max-width: $tablet) {
 	  --closer-width: 1.6rem;
@@ -66,7 +67,7 @@
   top: 50%;
   left: 50%;
   display: block;
-  background: var(--togler-color, var(--c-text-regular));
+  background: var(--togler-color, #202A34);
   transition: var(--tr);
   border-radius: 2rem;
 }
@@ -89,8 +90,38 @@
 
 .bayan--opened .bayan__toggler:before {
   transform: translate(-50%, -50%) rotate(45deg);
+  background: var(--togler-color, #fff);
 }
 
 .bayan--opened .bayan__toggler:after {
   transform: translate(-50%, -60%) rotate(45deg);
+  background: var(--togler-color, #fff);
+}
+
+
+.bayan--toggler-angle {
+	.bayan__toggler {
+		--line-width: 80%;
+		transform: scale(0.9, 0.8);
+	}
+	.bayan__toggler:before {
+		transform: rotate(50deg);
+		top: 0;
+    left: 0;
+	  width: var(--line-width, 40%);
+	  height: var(--line-height, 0.2rem);
+	}
+	.bayan__toggler:after {
+		transform: rotate(-50deg);
+		top: -10%;
+    right: -50%;
+		left: unset;
+	  width: var(--line-width, 40%);
+	  height: var(--line-height, 0.2rem);
+	}
+}
+.bayan--toggler-angle.bayan--opened {
+	.bayan__toggler {
+		transform: scale(0.9, 0.8) rotate(180deg);
+	}
 }

@@ -23,6 +23,12 @@
 	}
 }
 
+.locations--dropdowns .locations__content {
+	@media (min-width: $laptop + 1) {
+		grid-template-columns: 2fr 1fr;
+	}
+}
+
 .locations__map {
 	max-width: 890px;
 	max-width: 	100%;
@@ -96,6 +102,27 @@
   }
 }
 
+.locations-card {
+	margin-bottom: 2.4rem;
+
+	@media (max-width: $mobile-xl) {
+		margin-bottom: .6rem;
+	}
+}
+.locations-card.bayan--opened {
+	@media (max-width: $mobile-xl) {
+		margin-bottom: 1.6rem;
+	}
+}
+
+.locations-card__top .locations-addresses__link {
+	all: initial;
+	font-family: inherit;
+	font-size: inherit;
+	list-style: inherit;
+	color: inherit;
+}
+
 .locations-addresses__link:hover {
   @media (any-hover:hover) {
     color: var(--accent);
@@ -127,6 +154,10 @@
   @media (max-width: $mobile-s) {
   	--size: 16px;
   }
+}
+
+.locations-card__top .locations-addresses__link::after {
+	display: none;
 }
 
 .locations-addresses__link:hover::after {
@@ -171,6 +202,10 @@
 	@media (max-width: $laptop) {
 		margin-top: 40px;	
 	}
+}
+
+.locations--dropdowns .locations-addresses__buttons {
+	margin-top: 20px;
 }
 
 .locations-addresses__button-next,
@@ -219,5 +254,94 @@
 .locations-addresses__button-more {
 	@media (min-width: $laptop + 1) {
 		display: none;	
+	}
+}
+.locations--dropdowns .locations-addresses__button-more {
+	display: block;
+}
+
+.locations-card__top {
+	border-radius: 2rem;
+	border: 0.1rem solid #BABABA;
+	padding: 3.2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	line-height: 125%; /* 25px */
+	transition: all 0.4s ease-in-out;
+
+	@media (max-width: $mobile-xl) {
+			padding: 3rem 2.4rem;
+	}
+}
+.bayan--opened .locations-card__top {
+	background-color: var(--accent);
+}
+
+.locations-card__titie {
+	color: #202A34;
+	font-family: 'Manrope';
+	font-size: 2rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 125%; /* 25px */
+	transition: all 0.4s ease-in-out;
+
+	@media (max-width: $mobile-xl) {
+		font-size: 1.8rem;
+	}
+}
+.bayan--opened .locations-card__titie {
+	color: #fff;
+}
+
+.locations-card__contacts {
+	border-radius: 2rem;
+	padding: 2.4rem 3.2rem;
+	background: #F0F2F5;
+	margin-top: 1.6rem;
+
+	@media (max-width: $mobile-xl) {
+		padding-top: 2.4rem;
+		padding-bottom: 2.4rem;
+	}
+}
+
+.locations-card__contact {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	margin-bottom: 2rem;
+
+	@media (max-width: $mobile-xl) {
+		margin-bottom: 1.6rem;
+	}
+}
+.locations-card__contact:last-child {
+	margin-bottom: 0;
+}
+
+.locations-card__contact-icon {
+	display: block;
+	--size: 2rem;
+	max-width: var(--size);
+	min-width: var(--size);
+	width: var(--size);
+	height: var(--size);
+	margin-right: 0.6rem;
+	margin-top: 0.3rem;
+
+	@media (max-width: $mobile-xl) {
+		--size: 1.6rem;
+	}
+}
+
+.locations-card__contact a {
+	transition: all 0.3s ease;
+}
+
+.locations-card__contact a:hover {
+	@media (any-hover:hover) {
+		color: var(--accent);
 	}
 }

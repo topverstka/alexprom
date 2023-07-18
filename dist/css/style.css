@@ -972,6 +972,7 @@ h6 {
   height: var(--closer-height, 3rem);
   transition: var(--tr);
   transform-origin: center;
+  background: transparent;
 }
 @media (max-width: 992px) {
   .bayan__toggler {
@@ -988,7 +989,7 @@ h6 {
   top: 50%;
   left: 50%;
   display: block;
-  background: var(--togler-color, var(--c-text-regular));
+  background: var(--togler-color, #202A34);
   transition: var(--tr);
   border-radius: 2rem;
 }
@@ -1013,10 +1014,36 @@ h6 {
 
 .bayan--opened .bayan__toggler:before {
   transform: translate(-50%, -50%) rotate(45deg);
+  background: var(--togler-color, #fff);
 }
 
 .bayan--opened .bayan__toggler:after {
   transform: translate(-50%, -60%) rotate(45deg);
+  background: var(--togler-color, #fff);
+}
+
+.bayan--toggler-angle .bayan__toggler {
+  --line-width: 80%;
+  transform: scale(0.9, 0.8);
+}
+.bayan--toggler-angle .bayan__toggler:before {
+  transform: rotate(50deg);
+  top: 0;
+  left: 0;
+  width: var(--line-width, 40%);
+  height: var(--line-height, 0.2rem);
+}
+.bayan--toggler-angle .bayan__toggler:after {
+  transform: rotate(-50deg);
+  top: -10%;
+  right: -50%;
+  left: unset;
+  width: var(--line-width, 40%);
+  height: var(--line-height, 0.2rem);
+}
+
+.bayan--toggler-angle.bayan--opened .bayan__toggler {
+  transform: scale(0.9, 0.8) rotate(180deg);
 }
 
 @media (max-width: 768px) {
@@ -6412,6 +6439,12 @@ header {
   }
 }
 
+@media (min-width: 1101px) {
+  .locations--dropdowns .locations__content {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
 .locations__map {
   max-width: 890px;
   max-width: 100%;
@@ -6493,6 +6526,29 @@ header {
   }
 }
 
+.locations-card {
+  margin-bottom: 2.4rem;
+}
+@media (max-width: 690px) {
+  .locations-card {
+    margin-bottom: 0.6rem;
+  }
+}
+
+@media (max-width: 690px) {
+  .locations-card.bayan--opened {
+    margin-bottom: 1.6rem;
+  }
+}
+
+.locations-card__top .locations-addresses__link {
+  all: initial;
+  font-family: inherit;
+  font-size: inherit;
+  list-style: inherit;
+  color: inherit;
+}
+
 @media (any-hover: hover) {
   .locations-addresses__link:hover {
     color: var(--accent);
@@ -6528,6 +6584,10 @@ header {
   .locations-addresses__link::after {
     --size: 16px;
   }
+}
+
+.locations-card__top .locations-addresses__link::after {
+  display: none;
 }
 
 @media (any-hover: hover) {
@@ -6578,6 +6638,10 @@ header {
   }
 }
 
+.locations--dropdowns .locations-addresses__buttons {
+  margin-top: 20px;
+}
+
 .locations-addresses__button-next,
 .locations-addresses__button-prev {
   --size: var(--arrow-button-size);
@@ -6626,6 +6690,104 @@ header {
 @media (min-width: 1101px) {
   .locations-addresses__button-more {
     display: none;
+  }
+}
+
+.locations--dropdowns .locations-addresses__button-more {
+  display: block;
+}
+
+.locations-card__top {
+  border-radius: 2rem;
+  border: 0.1rem solid #BABABA;
+  padding: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 125%; /* 25px */
+  transition: all 0.4s ease-in-out;
+}
+@media (max-width: 690px) {
+  .locations-card__top {
+    padding: 3rem 2.4rem;
+  }
+}
+
+.bayan--opened .locations-card__top {
+  background-color: var(--accent);
+}
+
+.locations-card__titie {
+  color: #202A34;
+  font-family: "Manrope";
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%; /* 25px */
+  transition: all 0.4s ease-in-out;
+}
+@media (max-width: 690px) {
+  .locations-card__titie {
+    font-size: 1.8rem;
+  }
+}
+
+.bayan--opened .locations-card__titie {
+  color: #fff;
+}
+
+.locations-card__contacts {
+  border-radius: 2rem;
+  padding: 2.4rem 3.2rem;
+  background: #F0F2F5;
+  margin-top: 1.6rem;
+}
+@media (max-width: 690px) {
+  .locations-card__contacts {
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+  }
+}
+
+.locations-card__contact {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+@media (max-width: 690px) {
+  .locations-card__contact {
+    margin-bottom: 1.6rem;
+  }
+}
+
+.locations-card__contact:last-child {
+  margin-bottom: 0;
+}
+
+.locations-card__contact-icon {
+  display: block;
+  --size: 2rem;
+  max-width: var(--size);
+  min-width: var(--size);
+  width: var(--size);
+  height: var(--size);
+  margin-right: 0.6rem;
+  margin-top: 0.3rem;
+}
+@media (max-width: 690px) {
+  .locations-card__contact-icon {
+    --size: 1.6rem;
+  }
+}
+
+.locations-card__contact a {
+  transition: all 0.3s ease;
+}
+
+@media (any-hover: hover) {
+  .locations-card__contact a:hover {
+    color: var(--accent);
   }
 }
 
@@ -7106,8 +7268,8 @@ header {
 }
 
 .is-hidden {
-  display: none;
-  visibility: hidden;
+  display: none !important;
+  visibility: hidden !important;
 }
 
 .js_counter {

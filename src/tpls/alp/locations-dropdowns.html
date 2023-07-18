@@ -1,0 +1,48 @@
+<section class="section locations locations--dropdowns">
+	<div class="container">
+    <h2 class="title-h2 locations__title">Работаем <br> по Москве и&nbsp;области</h2>
+    <div class="locations__content">
+      <div class="locations__map" id="locations__map" data-map-icon="/images/map-point.svg">
+        <!-- <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Addaad24cf3d8860d29cae9d9530e4bc91bb9433505d187a45ba17a99b73afad7&amp;source=constructor" frameborder="0"></iframe> -->
+      </div>
+      <div class="locations-addresses" data-show="2">
+        @@for (var i = 0; i < 6; i++) {
+        <article class="bayan bayan--toggler-angle locations-card">
+          <div class="locations-card__top">
+            <h3 class="locations-card__titie">
+              <span class="locations-addresses__link">Реутов</span>
+            </h3>
+          </div>
+          <div class="locations-card__contacts">
+            <p class="locations-card__contact">
+              <img class="locations-card__contact-icon" src="./images/geo.png" alt="Адрес">
+              <span class="locations-card__contact-text">
+                г. Москва, улица Наметкина, дом 16 <br>
+                Режим работы: ПН - ПТ, с 9:00 до 18:00
+              </span>
+            </p>
+            <p class="locations-card__contact">
+              <img class="locations-card__contact-icon" src="./images/phone.png" alt="Телефон">
+              <span class="locations-card__contact-text">
+                <a href="tel:">+7 (999) 000 - 00 - 00</a>
+              </span>
+            </p>
+            <p class="locations-card__contact">
+              <img class="locations-card__contact-icon" src="./images/email.png" alt="Электронная почта">
+              <span class="locations-card__contact-text">
+                <a href="mailto:">info@mail.ru</a>
+              </span>
+            </p>
+          </div>
+        </article>
+        }
+        <div class="locations-addresses__buttons">
+          <button class="btn-accent locations-addresses__button-more">
+              Показать больше
+          </button>
+        </div>
+      </div>
+    </div>
+	</div>
+</section>
+

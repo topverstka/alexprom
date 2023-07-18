@@ -156,8 +156,8 @@ h3 {
 
 
 .is-hidden {
-  display: none;  
-  visibility: hidden;
+  display: none !important; 
+  visibility: hidden !important;
 }
 
 .js_counter {

@@ -8,6 +8,35 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 	let locationsCarousel;
 
+	function hideLocationsCards() {
+		const cards = [...document.querySelectorAll('.locations-card')];
+		if (cards.length < 1) return;
+
+		let visibleCount = 6;
+		const locationsAddresses = document.querySelector('.locations-addresses')
+		if (locationsAddresses) {
+			const count = locationsAddresses.dataset.show;
+			let regex = /\d/;
+			if (regex.test(count)) {
+				visibleCount = count
+			}
+		}
+
+		cards.forEach((card, index) => {
+			if (index < visibleCount) return;
+
+			card.classList.add('is-hidden')
+		})
+	}
+	function showLocationsCards() {
+		const cards = [...document.querySelectorAll('.locations-card')];
+		if (cards.length < 1) return;
+
+		cards.forEach(card => {
+			card.classList.remove('is-hidden')
+		})
+	}
+
 	function initLocationsCarousel() {
 		locationsCarousel = new Swiper('.locations-addresses__slider', {
 		  slidesPerView: 1,
@@ -42,7 +71,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	function getCarouselWrapStructure() {
 		// if (locationsCarousel == undefined) return;
 
-		const carousel = document.querySelector('.locations-addresses__slider');
+		let carousel = document.querySelector('.locations-addresses__slider');
+		if (!carousel) return false;
+
 		const pages = carousel.querySelectorAll('.locations-addresses__address');
 		const links = carousel.querySelectorAll('.locations-addresses__link');
 		const wrapper = carousel.querySelector('.swiper-wrapper');
@@ -88,7 +119,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	}
 
 	function unwrapSlideItems() {
-		const {carousel, pages, links, wrapper} = getCarouselWrapStructure();
+		const carouselStructure = getCarouselWrapStructure();
+		if (carouselStructure == false) return;
+
+		const {carousel, pages, links, wrapper} = carouselStructure;
 		pagesCount = pages.length;
 
 		links.forEach((link, linkIndex) => {
@@ -108,19 +142,26 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		}
 	}
 
+	hideLocationsCards();
 	const moreButton = document.querySelector('.locations-addresses__button-more');
 	if (moreButton) {
 		moreButton.addEventListener("click", (e) => {
-			const showCardsCount = getCurrentShowCardsCount() 
-			let {carousel, pages, links, wrapper} = getCarouselWrapStructure();
-			links = [...links].filter((link, linkIndex) => {
-				return link.classList.contains('is-hidden');
-			// }).filter((link, linkIndex) => {
-				// return linkIndex < showCardsCount
-				// чтобы показать больше было порционно
-			});
+			showLocationsCards();
 
-			links.forEach(link => link.classList.remove('is-hidden'))
+			const showCardsCount = getCurrentShowCardsCount() 
+
+			const carouselStructure = getCarouselWrapStructure();
+			if (carouselStructure) {
+				let {carousel, pages, links, wrapper} = getCarouselWrapStructure();
+				links = [...links].filter((link, linkIndex) => {
+					return link.classList.contains('is-hidden');
+				// }).filter((link, linkIndex) => {
+					// return linkIndex < showCardsCount
+					// чтобы показать больше было порционно
+				});
+
+				links.forEach(link => link.classList.remove('is-hidden'))
+			}
 
 			// if (links.length >= showCardsCount) return
 			moreButton.classList.add('is-hidden');
