@@ -4570,6 +4570,14 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
   object-fit: cover;
+  transition: all 0.4s ease;
+  transform-origin: center;
+}
+
+@media (any-hover: hover) {
+  .services-box__item:hover .services-box__img {
+    transform: scale(1.2) translate(-50%, -50%);
+  }
 }
 
 .services-box__title {
@@ -4583,6 +4591,25 @@ header {
   .services-box__title {
     min-height: auto;
   }
+}
+
+.services-box__title-link {
+  transition: all 0.3s ease;
+}
+
+@media (any-hover: hover) {
+  .services-box__title-link:hover {
+    color: var(--accent);
+  }
+}
+
+.services-box__desc {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  padding-bottom: 3rem;
+  display: block;
 }
 
 .services-list {
@@ -6470,6 +6497,13 @@ header {
   }
 }
 
+@media (min-width: 691px) {
+  .locations--dropdowns .locations__map {
+    position: sticky;
+    top: 10rem;
+  }
+}
+
 .locations__map > * {
   width: 100%;
   height: 100%;
@@ -6526,6 +6560,15 @@ header {
   }
 }
 
+.locations-card__top .locations-addresses__link {
+  padding: 0;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  list-style: inherit;
+  color: inherit;
+}
+
 .locations-card {
   margin-bottom: 2.4rem;
 }
@@ -6539,14 +6582,6 @@ header {
   .locations-card.bayan--opened {
     margin-bottom: 1.6rem;
   }
-}
-
-.locations-card__top .locations-addresses__link {
-  all: initial;
-  font-family: inherit;
-  font-size: inherit;
-  list-style: inherit;
-  color: inherit;
 }
 
 @media (any-hover: hover) {

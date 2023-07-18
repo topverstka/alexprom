@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог</title>
+        <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Отключить автодетект телефонов -->
+    <meta name="format-detection" content="telephone=no">
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      @@include('tpls/header.html',{})
+
+      <main class="hero hero--has-breadcrumbs hero--no-bullets">
+        <div class="hero__thumb">
+            <picture class="hero__pic">
+                <source srcset="./images/page-services/services-hero.webp" type="image/webp">
+              <img class="hero__img" src="./images/page-services/services-hero.jpg" alt="Услуги промышленного альпинизма">
+            </picture>
+            <div class="container hero__container">
+                <div class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="#" class="breadcrumbs__link">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item">Блог</li>
+                    </ul>
+                </div>
+                <h1 class="title-h1 hero__title">
+                    Блог
+                </h1>
+            </div>
+
+            <picture class="hero__worker">
+                <source srcset="./images/page-services/services-hero--mobile.webp" type="image/webp">
+                <img class="hero__worker-img" src="./images/page-services/services-hero--mobile.png" alt="Услуги промышленного альпинизма">
+            </picture>
+        </div>
+      </main>
+
+      <div class="section-flip section-flip--light">
+        <section class="section services">
+          <div class="container">
+            <div class="services__head">
+                <h2 class="title-h2">Нововведения</h2>
+            </div>
+            <div class="services-box">
+                @@for (var i = 0; i < 8; i++) {
+                <div class="services-box__item">
+                    <picture class="services-box__thumb">
+                        <img class="services-box__img lazy" src="./images/placeholder.jpg" data-src="./images/page-services/services-1-1.jpg" alt="">
+                    </picture>
+                    <h3 class="title-h3 services-box__title">
+                        <a class="services-box__title-link" href="#">Герметизация <br> межпанельных швов</a>
+                    </h3>
+                    <p class="services-box__desc">
+                        Однако, исследователи постоянно сталкиваются с тем, что предсознательное добросовестно использует ролевой код. Бытовой подряд вызывает международный гендер. Гарант теоретически возможен.
+                    </p>
+                </div>
+                }
+            </div>
+          </div>
+        </section>
+
+        <section class="section services">
+          <div class="container">
+            <div class="services__head">
+                <h2 class="title-h2">Контроль качества</h2>
+            </div>
+            <div class="services-box">
+                @@for (var i = 0; i < 8; i++) {
+                <div class="services-box__item">
+                    <picture class="services-box__thumb">
+                        <img class="services-box__img lazy" src="./images/placeholder.jpg" data-src="./images/page-services/services-1-1.jpg" alt="">
+                    </picture>
+                    <h3 class="title-h3 services-box__title">
+                        <a class="services-box__title-link" href="#">Герметизация <br> межпанельных швов</a>
+                    </h3>
+                    <p class="services-box__desc">
+                        Однако, исследователи постоянно сталкиваются с тем, что предсознательное добросовестно использует ролевой код. Бытовой подряд вызывает международный гендер. Гарант теоретически возможен.
+                    </p>
+                </div>
+                }
+            </div>
+          </div>
+        </section>
+
+
+        @@include('tpls/alp/locations-dropdowns.html', {})
+
+        @@include('tpls/alp/consultation.html', {title: "Запишитесь на\u00A0бесплатную консультацию", })
+      </div>
+
+      @@include('tpls/footer.html',{})
+    </div>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2b19e0af-ec94-422d-9726-8deb559736fe&_v=20230217195447"></script>
+    <script src="./js/bundle.min.js"></script>
+  </body>
+</html>

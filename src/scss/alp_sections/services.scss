@@ -95,7 +95,16 @@
     left: 50%;
     transform: translate(-50%, -50%);
     object-fit: cover;
+    transition: all 0.4s ease;
+    transform-origin: center;
 }
+
+.services-box__item:hover .services-box__img {
+    @media (any-hover:hover) {
+        transform: scale(1.2) translate(-50%, -50%);
+    }
+}
+
 
 .services-box__title {
     min-height: 60px;
@@ -106,6 +115,23 @@
     @media(max-width: 690px) {
         min-height: auto;
     }
+}
+.services-box__title-link {
+    transition: all 0.3s ease;
+}
+.services-box__title-link:hover {
+    @media (any-hover:hover) {
+        color: var(--accent);
+    }
+}
+
+.services-box__desc {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  padding-bottom: 3rem;
+  display: block;
 }
 
 .services-list {

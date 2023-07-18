@@ -51,6 +51,13 @@
 	}
 }
 
+.locations--dropdowns .locations__map {
+	@media (min-width: $mobile-xl + 1) {
+		position: sticky;
+		top: 10rem;
+	}
+}
+
 .locations__map > * {
 	width: 100%;
 	height: 100%;	
@@ -102,6 +109,17 @@
   }
 }
 
+.locations-card__top .locations-addresses__link {
+	padding: 0;
+	background: transparent;
+	// all: initial;
+	font-family: inherit;
+	font-size: inherit;
+	list-style: inherit;
+	color: inherit;
+}
+
+
 .locations-card {
 	margin-bottom: 2.4rem;
 
@@ -113,14 +131,6 @@
 	@media (max-width: $mobile-xl) {
 		margin-bottom: 1.6rem;
 	}
-}
-
-.locations-card__top .locations-addresses__link {
-	all: initial;
-	font-family: inherit;
-	font-size: inherit;
-	list-style: inherit;
-	color: inherit;
 }
 
 .locations-addresses__link:hover {
