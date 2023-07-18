@@ -4718,6 +4718,10 @@ header {
   width: 100%;
 }
 
+.services-box__media {
+  display: block;
+}
+
 .consultation__container {
   background-image: url("../images/city.jpg");
   background-repeat: no-repeat;
