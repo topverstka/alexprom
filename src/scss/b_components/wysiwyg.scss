@@ -14,34 +14,51 @@
 
 	h1 {
 		font-size: 5rem;
+
+		@media (max-width: $mobile-xl) {
+			font-size: 2.5rem;
+		}
 	}
 
 	h2 {
 		font-size: 4.8rem;
+		@media (max-width: $mobile-xl) {
+			font-size: 2.4rem;
+		}
 	}
 
 	h3 {
 		font-size: 4.2rem;
+		@media (max-width: $mobile-xl) {
+			font-size: 2rem;
+		}
 	}
 
 	h4 {
 		font-size: 3.6rem;
+		@media (max-width: $mobile-xl) {
+			font-size: 1.8rem;
+		}
 	}
 
 	h5 {
-		margin-bottom: 3.2em;
+		// margin-bottom: 3.2rem;
+		margin-bottom: 1em;
 	}
 
 	h6 {
-		margin-bottom: 2.4em;
+		margin-bottom: 2.4rem;
 	}
 
 
 	p {
-		font-size: 1.6rem;
+		font-size: 2rem;
 		line-height: 1.45;
 		line-height: initial;
 		margin-bottom: 1.5em;
+		@media (max-width: $mobile-xl) {
+			font-size: 1.6rem;
+		}
 	}
 
 	p + h1,
@@ -50,7 +67,8 @@
 	p + h4,
 	p + h5,
 	p + h6 {
-		margin-top: 1.5em;
+		margin-top: 2em;
+
 	}
 
 	> *:last-child {
@@ -61,4 +79,149 @@
 		color: var(--accent);
 		text-decoration: underline;
 	}
+
+	/* Стили для цитат */
+	blockquote {
+	  margin: 1.4em 0;
+	  padding: 1.5em 3em;
+	  background-color: #f8f8f8;
+	  // border-left: 4px solid #ccc;
+	  border-radius: 30px;
+		background: #F0F2F5;
+
+		@media (max-width: $mobile-xl) {
+			padding: 1.5em 1em;
+		}
+	}
+
+	img {
+		width: 100%;
+		display: block;
+		border-radius: 3rem;
+		margin-bottom: 7.2rem;
+
+		@media (max-width: $mobile-xl) {
+			margin-bottom: 3.5rem;
+		}
+	}
+
+	/* Стили для таблиц */
+	table {
+	  width: 100%;
+	  border-collapse: collapse;
+	  margin-top: 1.4em;
+	  margin-bottom: 1.4em;
+	}
+
+	th,
+	td {
+	  padding: 0.5em;
+	  border-bottom: 1px solid #ccc;
+	}
+
+	/* Стили для кода */
+	pre {
+	  margin-top: 1.4em;
+	  margin-bottom: 1.4em;
+	  padding: 0.5em;
+	  background-color: #f8f8f8;
+	  border: 1px solid #ccc;
+	  overflow-x: auto;
+	  font-family: monospace;
+	}
+
+	code {
+	  font-family: monospace;
+	  color: #333;
+	  background-color: #f8f8f8;
+	  padding: 0.2em 0.4em;
+	  border-radius: 3px;
+	}
+
+	/* Дополнительные стили, которые могут понадобиться */
+	strong {
+	  font-weight: bold;
+	}
+
+	em {
+	  font-style: italic;
+	}
+
+	ul,
+	ol {
+		--list-gap: 3.5rem;
+		font-size: var(--fz-ul);
+		margin-bottom: 3rem;
+		padding-left: var(--list-gap);
+		padding-top: 0.5rem;
+
+		@media (max-width: $mobile-xl) {
+			--list-gap: 2rem;
+		}
+	}
+	ol li,
+	ul li {
+		list-style: none;
+		position: relative;
+	}
+
+	ol {
+		counter-reset: ol;
+	}
+
+	ol > li {
+		counter-increment: ol;
+		list-style: none;
+		position: relative;
+	}
+	ol > li::before {
+		content: counter(ol)")";
+		position: absolute;
+		left: #{'calc(0px - var(--list-gap))'};
+		font-weight: 700;
+	}
+
+	li {
+		list-style: initial;
+		margin-bottom: 1.3rem;
+	}
+	
+	ol ul li {
+		list-style: initial;
+	}
+
+	button {
+		margin-bottom: 3rem;
+	}
+
+	img {
+		margin-bottom: 3rem;
+		border-radius: 1rem;
+	}
+
+	ol ul li::before,
+	ul li::before {
+		content: "";
+    top: 0.7rem;
+    left: -2.4rem;
+		position: absolute;
+		display: block;
+		--size: 0.8rem;
+		max-width: var(--size);
+		min-width: var(--size);
+		width: var(--size);
+		height: var(--size);
+		border-radius: 9999px;
+		background-color: var(--accent);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+
+		@media (max-width: $mobile-xl) {
+			top: 0.85rem;
+			left: -1.5rem;
+			--size: 0.8rem;
+		}
+	}
+
 }
