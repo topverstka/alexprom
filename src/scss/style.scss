@@ -166,29 +166,50 @@ h3 {
 
 .button-scroll-top {
   position: fixed;
-  left: 2rem;
+  right: 5rem;
   bottom: 2rem;
   transition: all 0.45s ease-in-out;
   transform: translateY(3rem);
   opacity: 0;
   pointer-events: none;
-  --size: 3rem;
+  --size: 9.6rem;
   max-width: var(--size);
   min-width: var(--size);
   width: var(--size);
   height: var(--size);
-  background-color: #fff;
+  background-color: rgba(84, 134, 229, 0.1);
   border-radius: 99999px;
-  background-image: url("../img/common/arrow-up.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   z-index: 10;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 
-  @media (max-width: $tablet) {
-    left: 1.5rem;
+  @media (max-width: $mobile-xl) {
+    --size: 8rem;
+    right: 1.5rem;
     bottom: 1.5rem;
+  }
+}
+
+.button-scroll-top::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: block;
+  width: 75%;
+  height: 75%;
+  background-color: var(--accent);
+  border-radius:inherit;
+  transition: all 0.3s ease;
+}
+.button-scroll-top:hover::before {
+  @media (any-hover:hover) {
+    background-color: #fff;
   }
 }
 
@@ -201,10 +222,10 @@ h3 {
   bottom: 0;
   margin: auto;
   display: block;
-  width: 90%;
-  height: 90%;
+  width: 30%;
+  height: 30%;
   @include getmask("../images/arrow-next.svg");
-  background-color: var(--dark);
+  background-color: #fff;
   transition: all 0.3s ease;
   transform: rotate(-90deg);
 }

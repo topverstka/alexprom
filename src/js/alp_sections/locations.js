@@ -194,8 +194,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 		let cities = [...document.querySelectorAll('.locations-addresses__link')];
 		cities = cities.map(city => {
-			return {name: city.innerText};
+			return {name: city.innerText, element: city};
 		});
+		/*
 		cities = cities.filter(obj => {
 		  if (!cities[obj.name]) {
 		    cities[obj.name] = true;
@@ -203,6 +204,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		  }
 		  return false;
 		});
+		//*/
 
 		cities.forEach((city, cityIndex) => {
 			ymaps.geocode(city.name, {
@@ -210,6 +212,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
 			}).then(result => {
 		    const position = result.geoObjects.get(0).geometry.getCoordinates();
 		    city.coords = [position[0], position[1]];
+
+				const cityTrigger = city.element.closest('.locations-card__top');
+				if (cityTrigger) {
+					cityTrigger.addEventListener('click', () => {
+						myMap.setCenter(city.coords);
+						myMap.setZoom(15);
+					});
+				}
 
 		    let MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
 		      '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'

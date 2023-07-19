@@ -7323,30 +7323,51 @@ header {
 
 .button-scroll-top {
   position: fixed;
-  left: 2rem;
+  right: 5rem;
   bottom: 2rem;
   transition: all 0.45s ease-in-out;
   transform: translateY(3rem);
   opacity: 0;
   pointer-events: none;
-  --size: 3rem;
+  --size: 9.6rem;
   max-width: var(--size);
   min-width: var(--size);
   width: var(--size);
   height: var(--size);
-  background-color: #fff;
+  background-color: rgba(84, 134, 229, 0.1);
   border-radius: 99999px;
-  background-image: url("../img/common/arrow-up.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   z-index: 10;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
-@media (max-width: 992px) {
+@media (max-width: 690px) {
   .button-scroll-top {
-    left: 1.5rem;
+    --size: 8rem;
+    right: 1.5rem;
     bottom: 1.5rem;
+  }
+}
+
+.button-scroll-top::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: block;
+  width: 75%;
+  height: 75%;
+  background-color: var(--accent);
+  border-radius: inherit;
+  transition: all 0.3s ease;
+}
+
+@media (any-hover: hover) {
+  .button-scroll-top:hover::before {
+    background-color: #fff;
   }
 }
 
@@ -7359,8 +7380,8 @@ header {
   bottom: 0;
   margin: auto;
   display: block;
-  width: 90%;
-  height: 90%;
+  width: 30%;
+  height: 30%;
   -webkit-mask: url("../images/arrow-next.svg");
   mask: url("../images/arrow-next.svg");
   -webkit-mask-repeat: no-repeat;
@@ -7369,7 +7390,7 @@ header {
   mask-position: center;
   -webkit-mask-size: contain;
   mask-size: contain;
-  background-color: var(--dark);
+  background-color: #fff;
   transition: all 0.3s ease;
   transform: rotate(-90deg);
 }
