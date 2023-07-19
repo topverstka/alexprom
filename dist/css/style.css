@@ -4465,6 +4465,13 @@ header {
   margin-top: 0;
 }
 
+.faq-card .bayan__toggler:before,
+.faq-card .bayan__toggler:after,
+.faq-card .bayan--opened .bayan__toggler:before,
+.faq-card .bayan--opened .bayan__toggler:after {
+  opacity: 0;
+}
+
 .services__head {
   display: flex;
   align-items: center;
@@ -4523,6 +4530,7 @@ header {
   border-radius: 30px;
   padding: 20px;
   padding-bottom: 10px;
+  position: relative;
 }
 
 @media (max-width: 1440px) {
@@ -4597,7 +4605,18 @@ header {
   transition: all 0.3s ease;
 }
 
+.services-box__title-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 @media (any-hover: hover) {
+  .services-box__item:hover .services-box__title-link,
   .services-box__title-link:hover {
     color: var(--accent);
   }
@@ -6633,6 +6652,12 @@ header {
 
 .locations-card__top .locations-addresses__link::after {
   display: none;
+}
+
+@media (any-hover: hover) {
+  .locations-card__top .locations-addresses__link:hover {
+    color: inherit;
+  }
 }
 
 @media (any-hover: hover) {

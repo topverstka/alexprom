@@ -50,6 +50,7 @@
     border-radius: 30px;
     padding: 20px;
     padding-bottom: 10px;
+    position: relative;
 }
 
 .services-box__item:nth-child(10),
@@ -116,9 +117,22 @@
         min-height: auto;
     }
 }
+
 .services-box__title-link {
     transition: all 0.3s ease;
 }
+
+.services-box__title-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.services-box__item:hover .services-box__title-link,
 .services-box__title-link:hover {
     @media (any-hover:hover) {
         color: var(--accent);

@@ -7,7 +7,7 @@
       </div>
       <div class="locations-addresses" data-show="2">
         @@for (var i = 0; i < 6; i++) {
-        <article class="bayan bayan--toggler-angle locations-card">
+        <article class="bayan bayan--selfish bayan--toggler-angle locations-card">
           <div class="locations-card__top">
             <h3 class="locations-card__titie">
               <span class="locations-addresses__link">Реутов</span>
@@ -17,8 +17,8 @@
             <p class="locations-card__contact">
               <img class="locations-card__contact-icon" src="./images/geo.png" alt="Адрес">
               <span class="locations-card__contact-text">
-                г. Москва, улица Наметкина, дом 16 <br>
-                Режим работы: ПН - ПТ, с 9:00 до 18:00
+                <span class="locations-card__contact-address">г. Москва, улица Наметкина, дом `+i+`</span> <br>
+                <span class="locations-card__contact-worktime">Режим работы: ПН - ПТ, с 9:00 до 18:00</span>
               </span>
             </p>
             <p class="locations-card__contact">

@@ -165,6 +165,11 @@
 .locations-card__top .locations-addresses__link::after {
 	display: none;
 }
+.locations-card__top .locations-addresses__link:hover {
+	@media (any-hover:hover) {
+		color: inherit;
+	}
+}
 
 .locations-addresses__link:hover::after {
 	@media (any-hover:hover) {

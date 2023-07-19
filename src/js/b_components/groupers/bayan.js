@@ -2,7 +2,7 @@
  * @bayan
  * 
  * Первый элемент внутри .bayan будет шапкой, второй будет открывающейся частью
- * 
+ * bayan--selfish, то он закроет все соседние баяны в этом родителе
  * 
  */
 const bayans = [...document.querySelectorAll(".bayan")];
@@ -10,14 +10,18 @@ const bayanOpenedClass = "bayan--opened";
 // const bayanHeight = 2000;
 
 function openBayan(bayanObject) {
-  // bayanObject.bottom.bayan.style.display = "block";
-  // bayanObject.bottom.bayan.style.maxHeight = `${bayanHeight}px`;
-  bayanObject.top.bayan.parentElement.classList.add(bayanOpenedClass);
-  bayanObject.bottom.bayan.querySelectorAll("a").forEach((anchor) => {
+  const {top, bottom, bayan} = bayanObject;
+
+  if (bayan.classList.contains('bayan--selfish')) {
+    bayan.parentElement.querySelectorAll('.bayan--opened').forEach(bayan => {
+      bayan.classList.remove(bayanOpenedClass);
+    })
+  }
+
+  top.bayan.parentElement.classList.add(bayanOpenedClass);
+  bottom.bayan.querySelectorAll("a").forEach((anchor) => {
     anchor.setAttribute("tabindex", "0");
   });
-  // setTimeout(() => {
-  // }, 10);
 }
 
 function closeBayan(bayanObject) {

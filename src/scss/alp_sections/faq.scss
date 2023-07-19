@@ -112,3 +112,9 @@
 .faq-card__answer p:first-child {
     margin-top: 0;
 }
+.faq-card .bayan__toggler:before,
+.faq-card  .bayan__toggler:after,
+.faq-card .bayan--opened .bayan__toggler:before,
+.faq-card .bayan--opened .bayan__toggler:after {
+    opacity: 0;
+}
