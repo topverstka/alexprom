@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница ошибки</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Отключить автодетект телефонов -->
+    <meta name="format-detection" content="telephone=no">
+
+  </head>
+  <body>
+    <div class="wrapper">
+      @@include('tpls/header.html',{})
+
+      <main id="primary" class="site-main main">
+
+      <div class="container">
+        <section class="error-404 not-found">
+          <p class="error-number">404</p>
+
+
+          <div class="page-content">
+            <h1 class="section-title"><?php esc_html_e( 'Упс... не нашли такой страницы', 'stairways' ); ?></h1>
+            <p class="section-desc">Нет такой страницы <br> Попробуйте вернуться на главную страницу</p>
+            <a href="/" class="btn-primary">Вернуться на главную</a>
+          </div>
+        </section>
+      </div>
+
+    </main>
+
+
+
+      @@include('tpls/footer.html',{})
+    </div>
+
+    @@include('tpls/modals.html', {})
+    <script src="./js/bundle.min.js"></script>
+  </body>
+</html>

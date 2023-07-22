@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакты</title>
-        <link rel="stylesheet" href="./css/style.css?_v=20230722094619">
+    <title>Страница ошибки</title>
+    <link rel="stylesheet" href="./css/style.css?_v=20230722094619">
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no">
-
 
   </head>
   <body>
@@ -52,195 +51,25 @@
   </div>
 </header>
 
-      <main class="hero hero--has-breadcrumbs hero--no-bullets hero--contacts">
-        <div class="hero__thumb">
-            <picture class="hero__pic">
-                <source srcset="./images/page-contacts/contacts-hero.webp" type="image/webp">
-              <img class="hero__img" src="./images/page-contacts/contacts-hero.jpg" alt="">
-            </picture>
-            <div class="container hero__container">
-                <div class="breadcrumbs">
-                    <ul class="breadcrumbs__list">
-                        <li class="breadcrumbs__item">
-                            <a href="#" class="breadcrumbs__link">
-                                Главная
-                            </a>
-                        </li>
-                        <li class="breadcrumbs__item">Контакты</li>
-                    </ul>
-                </div>
-                <h1 class="title-h1 hero__title">Контакты</h1>
-                <p>
-                    По вопросам сотрудничества, оформления заказа <br>
-                    или получения любой дополнительной информации <br>
-                    вы можете связаться с нашими сотрудниками любым <br>
-                    удобными для вас способом
-                </p>
-            </div>
-            <picture class="hero__worker">
-                <source srcset="./images/page-contacts/contacts-hero--mobile.webp" type="image/webp">
-                <img class="hero__worker-img" src="./images/page-contacts/contacts-hero--mobile.png" alt="">
-            </picture>
-        </div>
-      </main>
+      <main id="primary" class="site-main main">
 
-      <div class="section-flip section-flip--light" id="project">
+      <div class="container">
+        <section class="error-404 not-found">
+          <p class="error-number">404</p>
 
-        <section class="section contacts">
-          <div class="container contacts__container">
-            <div class="contacts__gallery">
-                <div class="contacts-card">
-                    <h3 class="contacts-card__title">
-                        Контактный телефон
-                    </h3>
-                    <p class="contacts-card__desc">
-                        <a href="tel:+74951090242">+7 (495) 109-02-42</a>
-                    </p>
-                </div>
-                <div class="contacts-card">
-                    <h3 class="contacts-card__title">
-                        Адрес компании
-                    </h3>
-                    <p class="contacts-card__desc">
-                        Г. Москва, ул. Братиславская
-                        д.&nbsp;31 корпус 3, 109469
-                    </p>
-                </div>
-                <div class="contacts-card">
-                    <h3 class="contacts-card__title">
-                        Электронная почта
-                    </h3>
-                    <p class="contacts-card__desc">
-                        <a href="mailto:zakaz@alexprom.ru">zakaz@alexprom.ru</a>
-                    </p>
-                </div>
-                <div class="contacts-card">
-                    <h3 class="contacts-card__title">
-                        График работы
-                    </h3>
-                    <p class="contacts-card__desc">
-                        Круглосуточно
-                    </p>
-                </div>
-                <div class="contacts-card">
-                    <h3 class="contacts-card__title">
-                        Социальные сети
-                    </h3>
-                    <p class="contacts-card__desc">
-                        <a href="#">Вконтакте</a><br>
-                        <a href="#">Facebook</a><br>
-                        <a href="#">Одноклассники</a><br>
-                    </p>
-                </div>
-                <div class="contacts-card">
-                    <h3 class="contacts-card__title">
-                        Мессенджеры
-                    </h3>
-                    <p class="contacts-card__desc">
-                        <a href="#">WhatsApp</a><br>
-                        <a href="#">Viber</a><br>
-                        <a href="#">Telegram</a><br>
-                    </p>
-                </div>
-            </div>
+
+          <div class="page-content">
+            <h1 class="section-title"><?php esc_html_e( 'Упс... не нашли такой страницы', 'stairways' ); ?></h1>
+            <p class="section-desc">Нет такой страницы <br> Попробуйте вернуться на главную страницу</p>
+            <a href="/" class="btn-primary">Вернуться на главную</a>
           </div>
         </section>
-
-        <div class="container contacts__map-container">
-            <div class="map">
-                <div class="map__content">
-                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Addaad24cf3d8860d29cae9d9530e4bc91bb9433505d187a45ba17a99b73afad7&amp;source=constructor"></iframe>
-                </div>
-            </div>
-
-            <div class="consultation__bg">
-                <div class="consultation__content">
-                    <h2 class="consultation__title"> Запишитесь на бесплатную <br> консультацию </h2>
-                    <p class="consultation__text">
-                        Оставьте заявку, и&nbsp;наш менеджер перезвонит вам в&nbsp;течение 30&nbsp;минут и&nbsp;проконсультируем по&nbsp;всем вопросам.
-                    </p>
-                </div>
-                <div class="consultation__box">
-                    <form class="form-vertical js_form">
-                        <label class="input input-name form-control">
-  <input
-    class="input__field"
-    name="user_name"
-    type="text"
-    placeholder="Ваше имя"
-    autocomplete="name"
-  >
-</label>
-
-                        <label class="input input-tel form-control">
-  <input
-    class="input__field mask-tel"
-    required
-    name="user_tel"
-    type="tel"
-    placeholder="Ваш номер телефона"
-    maxlength="25"
-    minlength="10"
-    autocomplete="tel"
-  >
-</label>
-
-                        <button class="btn-main" type="submit">Получить консультацию</button>
-                        <span class="form__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="">персональных данных</a></span>
-                        <input type="hidden" name="utm_source" >
-                        <input type="hidden" name="utm_medium" >
-                        <input type="hidden" name="utm_campaign" >
-                        <input type="hidden" name="utm_content" >
-                        <input type="hidden" name="utm_term" >
-                        <input type="hidden" name="referrer" >
-                        <input type="hidden" name="requestTime" >
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <section class="section requisites">
-  <div class="container requisites__container">
-    <h2 class="title-h2 requisites__title">Реквизиты</h2>
-    <div class="requisites-table">
-    	<div class="requisites-table__row">
-    		<h3 class="requisites-table__title">Краткое наименование</h3>
-    		<p class="requisites-table__desc">ООО «АЛЕКСПРОМ»</p>
-    	</div>
-    	<div class="requisites-table__row">
-    		<h3 class="requisites-table__title">Полное наименование</h3>
-    		<p class="requisites-table__desc">Общество с ограниченной ответственностью «АЛЕКСПРОМ» </p>
-    	</div>
-    	<div class="requisites-table__row">
-    		<h3 class="requisites-table__title">Юридический адрес</h3>
-    		<p class="requisites-table__desc">107150, МОСКВА ГОРОД, УЛ. БОЙЦОВАЯ, Д. 22, ЭТ 2 П V K 9 ОФ 4Г</p>
-    	</div>
-    	<div class="requisites-table__row requisites-table__row--mobile-half">
-	    	<h3 class="requisites-table__title">ИНН</h3>
-    		<p class="requisites-table__desc">7708707791</p>
-    	</div>
-    	<div class="requisites-table__row requisites-table__row--mobile-half">
-    		<h3 class="requisites-table__title">КПП</h3>
-    		<p class="requisites-table__desc">771801001</p>
-    	</div>
-    	<div class="requisites-table__row">
-    		<h3 class="requisites-table__title">ОГРН</h3>
-    		<p class="requisites-table__desc">1097746686531</p>
-    	</div>
-    	<div class="requisites-table__row">
-    		<h3 class="requisites-table__title">ОКВЭД</h3>
-    		<p class="requisites-table__desc">41.20 - Строительство жилых и нежилых зданий</p>
-    	</div>
-    	<div class="requisites-table__row">
-    		<h3 class="requisites-table__title">ОКПО</h3>
-    		<p class="requisites-table__desc">63736825</p>
-    	</div>
-    </div>
-  </div>
-</section>
-        
       </div>
-        
+
+    </main>
+
+
+
       <footer class="footer">
   <div class="container">
       <div class="footer-top">
@@ -427,7 +256,156 @@
 
     </div>
 
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2b19e0af-ec94-422d-9726-8deb559736fe&_v=20230217195447"></script>
+    <div class="modal-form b_modal" id="form-contact" data-closer-type="inner">
+	<div class="modal-form__head">
+		<h3 class="modal-form__title">
+			Оставьте свои контакты <br> и мы вам перезвоним
+ 		</h3>
+		<p class="modal-form__desc">
+			Оставьте заявку, и наш менеджер перезвонит вам <br>
+			в течение 30 минут и проконсультирует по всем вопросам.
+		</p>
+	</div>
+	<div class="modal-form__body">
+	  <form class="form-vertical js_form">
+	  		<input type="hidden" name="utm_source" >
+	  		<input type="hidden" name="form_message" value>
+	      <label class="input input-name form-control">
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="Ваше имя"
+    autocomplete="name"
+  >
+</label>
+
+	      <label class="input input-tel form-control">
+  <input
+    class="input__field mask-tel"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Ваш номер телефона"
+    maxlength="25"
+    minlength="10"
+    autocomplete="tel"
+  >
+</label>
+
+	      <button class="btn-main" type="submit">Получить консультацию</button>
+			  <span class="form__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="#">персональных данных</a></span>
+        <input type="hidden" name="utm_source" >
+        <input type="hidden" name="utm_medium" >
+        <input type="hidden" name="utm_campaign" >
+        <input type="hidden" name="utm_content" >
+        <input type="hidden" name="utm_term" >
+	      <input type="hidden" name="referrer" >
+	      <input type="hidden" name="requestTime" >
+	  </form>
+	</div>
+</div>
+<div class="modal-form b_modal" id="form-price" data-closer-type="inner">
+	<div class="modal-form__head">
+		<h3 class="modal-form__title">
+			Оставьте свои контакты <br> и получите прайс-лист
+ 		</h3>
+		<p class="modal-form__desc">
+			Оставьте заявку, и наш менеджер перезвонит вам <br>
+			в течение 30 минут и проконсультирует по всем вопросам.
+		</p>
+	</div>
+	<div class="modal-form__body">
+	  <form class="form-vertical js_form">
+	  		<input type="hidden" name="utm_source" >
+	  		<input type="hidden" name="form_message" value>
+	      <label class="input input-name form-control">
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="Ваше имя"
+    autocomplete="name"
+  >
+</label>
+
+	      <label class="input input-tel form-control">
+  <input
+    class="input__field mask-tel"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Ваш номер телефона"
+    maxlength="25"
+    minlength="10"
+    autocomplete="tel"
+  >
+</label>
+
+	      <button class="btn-main" type="submit">Получить консультацию</button>
+			  <span class="form__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="#">персональных данных</a></span>
+        <input type="hidden" name="utm_source" >
+        <input type="hidden" name="utm_medium" >
+        <input type="hidden" name="utm_campaign" >
+        <input type="hidden" name="utm_content" >
+        <input type="hidden" name="utm_term" >
+	      <input type="hidden" name="referrer" >
+	      <input type="hidden" name="requestTime" >
+	  </form>
+	</div>
+</div>
+<div class="modal-form modal-service b_modal" id="modal-service" data-closer-type="inner">
+	<div class="modal-form__head">
+		<h3 class="modal-form__title">
+			Заказать <span class="modal-service__name"></span>
+ 		</h3>
+		<p class="modal-form__desc">
+			Оставьте заявку, и наш менеджер перезвонит вам <br>
+			в течение 30 минут и проконсультирует по всем вопросам.
+		</p>
+	</div>
+	<div class="modal-form__body">
+	  <form class="form-vertical js_form">
+	      <input type="hidden" name="service_name">
+	  		<input type="hidden" name="utm_source">
+	  		<input type="hidden" name="form_message" value>
+	      <label class="input input-name form-control">
+  <input
+    class="input__field"
+    name="user_name"
+    type="text"
+    placeholder="Ваше имя"
+    autocomplete="name"
+  >
+</label>
+
+	      <label class="input input-tel form-control">
+  <input
+    class="input__field mask-tel"
+    required
+    name="user_tel"
+    type="tel"
+    placeholder="Ваш номер телефона"
+    maxlength="25"
+    minlength="10"
+    autocomplete="tel"
+  >
+</label>
+
+	      <button class="btn-main" type="submit">Заказать</button>
+			  <span class="form__agree">Нажимая на&nbsp;кнопку, я соглашаюсь на&nbsp;обработку <a href="#">персональных данных</a></span>
+
+        <input type="hidden" name="utm_source" >
+        <input type="hidden" name="utm_medium" >
+        <input type="hidden" name="utm_campaign" >
+        <input type="hidden" name="utm_content" >
+        <input type="hidden" name="utm_term" >
+	      <input type="hidden" name="referrer" >
+	      <input type="hidden" name="requestTime" >
+	  </form>
+	</div>
+</div>
+
     <script src="./js/bundle.min.js?_v=20230722094619"></script>
   </body>
 </html>
