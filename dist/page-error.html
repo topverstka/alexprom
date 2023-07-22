@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Страница ошибки</title>
-    <link rel="stylesheet" href="./css/style.css?_v=20230722094619">
+    <link rel="stylesheet" href="./css/style.css?_v=20230722095820">
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no">
@@ -53,20 +53,23 @@
 
       <main id="primary" class="site-main main">
 
-      <div class="container">
-        <section class="error-404 not-found">
-          <p class="error-number">404</p>
+        <div class="container">
+          <section class="section-error error-404 not-found">
+            <p class="section-error__number">404</p>
+            <div class="section-error__content">
+              <h1 class="section-error__title">Страница не найдена</h1>
+              <p class="section-error__desc">
+                Страница, на которую вы пытаетесь перейти не найдена.  <br>
+                Возможно, вы ввели неправильный адрес или страница была удалена
+              </p>
+              <p class="section-error__desc">
+                Перейти на <a href="/" class="link"><span class="link__text">главную страницу</span></a>
+              </p>
+            </div>
+          </section>
+        </div>
 
-
-          <div class="page-content">
-            <h1 class="section-title"><?php esc_html_e( 'Упс... не нашли такой страницы', 'stairways' ); ?></h1>
-            <p class="section-desc">Нет такой страницы <br> Попробуйте вернуться на главную страницу</p>
-            <a href="/" class="btn-primary">Вернуться на главную</a>
-          </div>
-        </section>
-      </div>
-
-    </main>
+      </main>
 
 
 
@@ -406,6 +409,6 @@
 	</div>
 </div>
 
-    <script src="./js/bundle.min.js?_v=20230722094619"></script>
+    <script src="./js/bundle.min.js?_v=20230722095820"></script>
   </body>
 </html>
