@@ -2,9 +2,12 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
 import { isMobile } from "./condition-helpers.js";
 
-gsap.registerPlugin(ScrollTrigger);
+if (typeof gsap != 'undefined') {
+	gsap.registerPlugin(ScrollTrigger);
+}
 
 window.addEventListener('DOMContentLoaded', (event) => {
+	if (typeof gsap == 'undefined') return;
 
 	let hasGsap = true;
 	window.b_isLowPowerDetectStarted = false;
@@ -26,6 +29,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		window.b_isLowPowerDetectStarted = true;
 		const lowPowerTester = document.createElement('video');
 		lowPowerTester.src = '//upload.wikimedia.org/wikipedia/commons/transcoded/8/87/Schlossbergbahn.webm/Schlossbergbahn.webm.120p.vp9.webm';
+		lowPowerTester.style.opacity = '0';
 		lowPowerTester.setAttribute('muted', '');
 		lowPowerTester.setAttribute('playsinline', '');
 		lowPowerTester.setAttribute('autoplay', '');
@@ -59,7 +63,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		const sections = gsap.utils.toArray('.section-flip');
 	  const vh = window.innerHeight;
 
-		const heroHeight = document.querySelector('.hero').getBoundingClientRect().height;
+	  const hero = document.querySelector('.hero');
+	  if (!hero) return;
+
+		const heroHeight = hero.getBoundingClientRect().height;
 		const heroHeightNegative = -heroHeight;
 
 		let overlapHeightModifier = 5;

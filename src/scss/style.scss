@@ -45,8 +45,8 @@
 @import "./components";
 
 // Шрифты
-@include font('Manrope', normal, 400, '../resources/fonts/manrope/manrope-regular');
-@include font('Manrope', normal, 600, '../resources/fonts/manrope/manrope-semibold');
+@include font('Manrope', normal, 400, '/local/templates/main/resources/fonts/manrope/manrope-regular');
+@include font('Manrope', normal, 600, '/local/templates/main/resources/fonts/manrope/manrope-semibold');
 
 :root {
   --gap: 32px;

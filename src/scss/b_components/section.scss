@@ -84,3 +84,9 @@
 .section-flip--light {
   background-color: var(--c-surface);
 }
+
+.section__buttons {
+  padding-top: 4rem;
+  display: flex;
+  justify-content: center;
+}

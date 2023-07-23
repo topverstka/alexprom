@@ -18,11 +18,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
         spaceBetween: 20,
       },
       963: {
-        slidesPerView: 2.23,
+        slidesPerView: 2,
+        // slidesPerView: 2.23,
         spaceBetween: 40,
       },
       1441: {
-        slidesPerView: 2.4,
+        slidesPerView: 2,
+        // slidesPerView: 2.4,
         spaceBetween: 40,
       }
     },

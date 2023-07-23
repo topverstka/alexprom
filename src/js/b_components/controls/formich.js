@@ -20,8 +20,55 @@ import {setInputValid, setInputInvalid, validateInput} from "./input-validator.j
 //   button.disabled = false;
 // }
 
+function serealizeForm(formNode) {
+  const inputs = [...formNode.querySelectorAll('input')];
+  const selects = [...formNode.querySelectorAll('select')];
+  const textareas = [...formNode.querySelectorAll('textarea')];
+
+  const formData = {};
+   // Обработка полей input
+  for (let i = 0; i < inputs.length; i++) {
+    const input = inputs[i];
+    formData[input.name] = input.value;
+  }
+
+  // Обработка полей select
+  for (let i = 0; i < selects.length; i++) {
+    const select = selects[i];
+    formData[select.name] = select.value;
+  }
+
+  // Обработка полей textarea
+  for (let i = 0; i < textareas.length; i++) {
+    const textarea = textareas[i];
+    formData[textarea.name] = textarea.value;
+  }
+
+  return formData; 
+
+}
+
+function getFormData(serealizedForm) {
+  const formData = new FormData();
+    for (const key in serealizedForm) {
+      if (serealizedForm.hasOwnProperty(key)) {
+        formData.append(key, serealizedForm[key]);
+      }
+    }
+
+  return formData;
+}
+
 const formsList = document.querySelectorAll(".js_form");
 formsList.forEach((form) => {
+  const button = form.querySelector('button[type="submit"]')
+  if (button) {
+    button.addEventListener('click', () => {
+      const submit =  new Event('submit', { bubbles: true, cancelable: false });
+      form.dispatchEvent(submit);
+    })
+  }
+
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
@@ -33,12 +80,15 @@ formsList.forEach((form) => {
       validateInput(input);
     });
 
+    if (form.querySelector('.is-invalid')) return;
+
+
     extractUTM(form);
 
-    const formData = new FormData(form);
+    const serealizedForm = serealizeForm(form);
+    const formData = getFormData(serealizedForm);
 
-
-    let response = await fetch(form.action, {
+    let response = await fetch(form.dataset.action, {
       method: "POST",
       body: formData,
     });

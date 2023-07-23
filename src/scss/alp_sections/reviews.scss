@@ -38,17 +38,19 @@
 .reviews-carousel {
 	position: relative;
 
-	@media (max-width: $desktop-m) and (min-width: $tablet-m + 1) {
-		max-width: 96%;
+	@media (min-width: $tablet-m + 1) {
+		max-width: 95%;
 		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
 .reviews-carousel .swiper-button-prev {
-	left: -59px;
+	// left: -59px;
+	left: -6rem;
 
 	@media (max-width: $desktop-m) {
-		left: -79px;
+		left: -8rem;
 	}
 
 	@media (max-width: $tablet-m) {
@@ -57,10 +59,11 @@
 }
 
 .reviews-carousel .swiper-button-next {
-	right: 14.4%;
+	// right: 14.4%;
+	right: -6rem;
 
-	@media (max-width: $desktop-s) {
-		right: 7.2%;
+	@media (max-width: $desktop-m) {
+		right: -8rem;
 	}
 
 	@media (max-width: $tablet-m) {
@@ -73,7 +76,9 @@
 }
 
 .reviews-gallery {
-	overflow: visible;
+	@media (max-width: $tablet) {
+		overflow: visible;
+	}
 }
 
 .reviews-gallery__slide {

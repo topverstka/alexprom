@@ -26,9 +26,9 @@
                 <h1 class="title-h1 hero__title">Промышленный альпинизм в&nbsp;Москве и&nbsp;<span class="_desktop">Московской области</span><span class="_mobile">МО</span></h1>
                 <p class="hero__desc">Получите точный расчет стоимости наших услуг</p>
                 <p>Оставьте свой номер, чтобы получить прайс-лист на&nbsp;Whatsapp</p>
-                <form class="hero__form js_form">
+                <div data-action="/" class="hero__form js_form">
                     @@include('tpls/inputs/tel.html',{})
-                    <button class="hero__btn" type="submit">Получить прайс-лист</button>
+                    <button class="hero__btn js_form__button" type="submit">Получить прайс-лист</button>
                     <input type="hidden" name="utm_source" >
                     <input type="hidden" name="utm_medium" >
                     <input type="hidden" name="utm_campaign" >
@@ -36,7 +36,7 @@
                     <input type="hidden" name="utm_term" >
                     <input type="hidden" name="referrer" >
                     <input type="hidden" name="requestTime" >
-                </form>
+                </div>
                 <div class="hero-info">
                     <div class="hero-info__stroke">
                         <div class="hero-info__item">
