@@ -26,17 +26,26 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		})
 	}
 
+	function toggleButtonMore() {
+		if (!projectsButtonMore) return;
+		const projectsCards = [...document.querySelectorAll('.projects__gallery .swiper-gallery__slide')];
+		if (projectsCards.length > 6) {
+			projectsButtonMore.classList.remove('is-hidden');
+		} else {
+			projectsButtonMore.classList.add('is-hidden');
+		}
+	}
+	toggleButtonMore();
+
 	const projectsFilters = document.querySelectorAll('.projects__filter-togglers');
 	projectsFilters.forEach(filter => {
 		filter.addEventListener('click', () => {
 			setTimeout(() => {
 				hideProjects();
-
-				const projectsCards = [...document.querySelectorAll('.projects__gallery .swiper-gallery__slide')];
-				if (projectsCards.length > 6) {
-					projectsButtonMore.classList.remove('is-hidden');
-				}
+				toggleButtonMore();
 			}, 200)
 		})
 	})
+
+
 });

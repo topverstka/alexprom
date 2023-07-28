@@ -104,87 +104,17 @@
                     </form>
                 </div>
                 <div class="projects__gallery">
-                    <div class="swiper-gallery__slide">
-                        <picture class="swiper-gallery__thumb">
-                            <img class="swiper-gallery__img lazy" src="./images/placeholder.jpg" data-src="./images/page-projects/project.jpg" alt="">
-                        </picture>
-                        <a href="#" class="swiper-gallery__link">Штаб квартира “Газпром”</a>
-                        <span class="swiper-gallery__title">Мойка окон</span>
-                        <span class="swiper-gallery__info swiper-gallery__arg">6500м²</span>
-                        <span class="swiper-gallery__info swiper-gallery__loc">Москва, улица Наметкина, дом 16</span>
-                    </div>
-                    <div class="swiper-gallery__slide">
-                        <picture class="swiper-gallery__thumb">
-                            <img class="swiper-gallery__img lazy" src="./images/placeholder.jpg" data-src="./images/page-projects/project.jpg" alt="">
-                        </picture>
-                        <a href="#" class="swiper-gallery__link">Штаб квартира “Газпром”</a>
-                        <span class="swiper-gallery__title">Мойка окон</span>
-                        <span class="swiper-gallery__info swiper-gallery__arg">6500м²</span>
-                        <span class="swiper-gallery__info swiper-gallery__loc">Москва, улица Наметкина, дом 16</span>
-                    </div>
-                    <div class="swiper-gallery__slide">
-                        <picture class="swiper-gallery__thumb">
-                            <img class="swiper-gallery__img lazy" src="./images/placeholder.jpg" data-src="./images/page-projects/project.jpg" alt="">
-                        </picture>
-                        <a href="#" class="swiper-gallery__link">Штаб квартира “Газпром”</a>
-                        <span class="swiper-gallery__title">Мойка окон</span>
-                        <span class="swiper-gallery__info swiper-gallery__arg">6500м²</span>
-                        <span class="swiper-gallery__info swiper-gallery__loc">Москва, улица Наметкина, дом 16</span>
-                    </div>
-                    <div class="swiper-gallery__slide">
-                        <picture class="swiper-gallery__thumb">
-                            <img class="swiper-gallery__img lazy" src="./images/placeholder.jpg" data-src="./images/page-projects/project.jpg" alt="">
-                        </picture>
-                        <a href="#" class="swiper-gallery__link">Штаб квартира “Газпром”</a>
-                        <span class="swiper-gallery__title">Мойка окон</span>
-                        <span class="swiper-gallery__info swiper-gallery__arg">6500м²</span>
-                        <span class="swiper-gallery__info swiper-gallery__loc">Москва, улица Наметкина, дом 16</span>
-                    </div>
-                    <div class="swiper-gallery__slide">
-                        <picture class="swiper-gallery__thumb">
-                            <img class="swiper-gallery__img lazy" src="./images/placeholder.jpg" data-src="./images/page-projects/project.jpg" alt="">
-                        </picture>
-                        <a href="#" class="swiper-gallery__link">Штаб квартира “Газпром”</a>
-                        <span class="swiper-gallery__title">Мойка окон</span>
-                        <span class="swiper-gallery__info swiper-gallery__arg">6500м²</span>
-                        <span class="swiper-gallery__info swiper-gallery__loc">Москва, улица Наметкина, дом 16</span>
-                    </div>
-                    <div class="swiper-gallery__slide">
-                        <picture class="swiper-gallery__thumb">
-                            <img class="swiper-gallery__img lazy" src="./images/placeholder.jpg" data-src="./images/page-projects/project.jpg" alt="">
-                        </picture>
-                        <a href="#" class="swiper-gallery__link">Штаб квартира “Газпром”</a>
-                        <span class="swiper-gallery__title">Мойка окон</span>
-                        <span class="swiper-gallery__info swiper-gallery__arg">6500м²</span>
-                        <span class="swiper-gallery__info swiper-gallery__loc">Москва, улица Наметкина, дом 16</span>
-                    </div>
-                    <div class="swiper-gallery__slide">
-                        <picture class="swiper-gallery__thumb">
-                            <img class="swiper-gallery__img lazy" src="./images/placeholder.jpg" data-src="./images/page-projects/project.jpg" alt="">
-                        </picture>
-                        <a href="#" class="swiper-gallery__link">Штаб квартира “Газпром”</a>
-                        <span class="swiper-gallery__title">Мойка окон</span>
-                        <span class="swiper-gallery__info swiper-gallery__arg">6500м²</span>
-                        <span class="swiper-gallery__info swiper-gallery__loc">Москва, улица Наметкина, дом 16</span>
-                    </div>
-                    <div class="swiper-gallery__slide">
-                        <picture class="swiper-gallery__thumb">
-                            <img class="swiper-gallery__img lazy" src="./images/placeholder.jpg" data-src="./images/page-projects/project.jpg" alt="">
-                        </picture>
-                        <a href="#" class="swiper-gallery__link">Штаб квартира “Газпром”</a>
-                        <span class="swiper-gallery__title">Мойка окон</span>
-                        <span class="swiper-gallery__info swiper-gallery__arg">6500м²</span>
-                        <span class="swiper-gallery__info swiper-gallery__loc">Москва, улица Наметкина, дом 16</span>
-                    </div>
-                    <div class="swiper-gallery__slide">
-                        <picture class="swiper-gallery__thumb">
-                            <img class="swiper-gallery__img lazy" src="./images/placeholder.jpg" data-src="./images/page-projects/project.jpg" alt="">
-                        </picture>
-                        <a href="#" class="swiper-gallery__link">Штаб квартира “Газпром”</a>
-                        <span class="swiper-gallery__title">Мойка окон</span>
-                        <span class="swiper-gallery__info swiper-gallery__arg">6500м²</span>
-                        <span class="swiper-gallery__info swiper-gallery__loc">Москва, улица Наметкина, дом 16</span>
-                    </div>
+                    @@for (var i = 0; i < 6; i++) {
+                        <div class="swiper-gallery__slide">
+                            <picture class="swiper-gallery__thumb">
+                                <img class="swiper-gallery__img lazy" src="./images/placeholder.jpg" data-src="./images/page-projects/project.jpg" alt="">
+                            </picture>
+                            <a href="#" class="swiper-gallery__link">Штаб квартира “Газпром”</a>
+                            <span class="swiper-gallery__title">Мойка окон</span>
+                            <span class="swiper-gallery__info swiper-gallery__arg">6500м²</span>
+                            <span class="swiper-gallery__info swiper-gallery__loc">Москва, улица Наметкина, дом 16</span>
+                        </div>
+                    }
                 </div>
                 <button class="projects__button-more btn-accent" type="button">Показать больше</button>
             </div>
