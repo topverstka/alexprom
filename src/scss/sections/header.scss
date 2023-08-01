@@ -89,6 +89,7 @@ header {
 	@media(max-width: $laptop) {
 		// display: none;
 		flex-direction: column;
+		align-items: flex-start;
 	}
 } 
 

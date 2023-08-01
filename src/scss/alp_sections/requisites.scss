@@ -88,6 +88,10 @@
 	height: 30rem;
 	margin-right: 2rem;
 
+	@media (max-width: $desktop-l) {
+		height: 20rem;
+	}
+
 	@media (max-width: $mobile-xl) {
 		margin-right: 0;
 		margin-bottom: 1rem;

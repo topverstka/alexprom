@@ -45,9 +45,24 @@
 }
 
 .contacts-card__desc {
-	font-size: 16px;
+	font-size: 1.6rem;
 	line-height: 125%;
 	color: #202A34;
+}
+
+.contacts-card__desc--bigger {
+	font-size: 3.6rem;
+	font-weight: 600;
+}
+
+.contacts-card__desc a {
+	transition: var(--tr-regular);
+}
+
+.contacts-card__desc a:hover {
+	@media (any-hover:hover) {
+		color: var(--accent);
+	}
 }
 
 .contacts__map-container {
@@ -65,4 +80,8 @@
 	  border-radius: 0;
 	}
 
+}
+
+.contacts-card__socials {
+	justify-content: center;
 }

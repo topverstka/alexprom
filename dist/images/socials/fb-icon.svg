@@ -1,0 +1,11 @@
+<svg id="fb" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_13_28)">
+<rect x="-0.133614" width="32.1182" height="32.1182" rx="16.0591" fill="#0079F2"/>
+<path d="M18 17.5591H20.5L21.5 13.5591H18V11.5591C18 10.5291 18 9.55908 20 9.55908H21.5V6.19908C21.174 6.15608 19.943 6.05908 18.643 6.05908C15.928 6.05908 14 7.71608 14 10.7591V13.5591H11V17.5591H14V26.0591H18V17.5591Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_13_28">
+<rect width="32" height="32" rx="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>
