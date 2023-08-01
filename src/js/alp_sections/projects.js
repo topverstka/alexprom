@@ -1,4 +1,5 @@
 window.addEventListener('DOMContentLoaded', (event) => {
+	/*
 	const projectsButtonMore = document.querySelector('.projects__button-more');
 
 	function hideProjects() {
@@ -47,5 +48,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		})
 	})
 
+*/
 
 });
