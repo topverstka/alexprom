@@ -111,6 +111,7 @@
 }
 
 .reviews-card__profile-source {
+	height: 2rem;
 	@media (max-width: $mobile-l) {
 		display: none;
 	}

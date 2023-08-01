@@ -55,6 +55,7 @@
 	@media (min-width: $mobile-xl + 1) {
 		position: sticky;
 		top: 10rem;
+		z-index: 3;
 	}
 }
 

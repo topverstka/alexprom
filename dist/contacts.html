@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты</title>
-        <link rel="stylesheet" href="./css/style.css?_v=20230728123620">
+        <link rel="stylesheet" href="./css/style.css?_v=20230731155248">
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no">
@@ -201,40 +201,53 @@
 
         <section class="section requisites">
   <div class="container requisites__container">
-    <h2 class="title-h2 requisites__title">Реквизиты</h2>
-    <div class="requisites-table">
-    	<div class="requisites-table__row">
-    		<h3 class="requisites-table__title">Краткое наименование</h3>
-    		<p class="requisites-table__desc">ООО «АЛЕКСПРОМ»</p>
-    	</div>
-    	<div class="requisites-table__row">
-    		<h3 class="requisites-table__title">Полное наименование</h3>
-    		<p class="requisites-table__desc">Общество с ограниченной ответственностью «АЛЕКСПРОМ» </p>
-    	</div>
-    	<div class="requisites-table__row">
-    		<h3 class="requisites-table__title">Юридический адрес</h3>
-    		<p class="requisites-table__desc">107150, МОСКВА ГОРОД, УЛ. БОЙЦОВАЯ, Д. 22, ЭТ 2 П V K 9 ОФ 4Г</p>
-    	</div>
-    	<div class="requisites-table__row requisites-table__row--mobile-half">
-	    	<h3 class="requisites-table__title">ИНН</h3>
-    		<p class="requisites-table__desc">7708707791</p>
-    	</div>
-    	<div class="requisites-table__row requisites-table__row--mobile-half">
-    		<h3 class="requisites-table__title">КПП</h3>
-    		<p class="requisites-table__desc">771801001</p>
-    	</div>
-    	<div class="requisites-table__row">
-    		<h3 class="requisites-table__title">ОГРН</h3>
-    		<p class="requisites-table__desc">1097746686531</p>
-    	</div>
-    	<div class="requisites-table__row">
-    		<h3 class="requisites-table__title">ОКВЭД</h3>
-    		<p class="requisites-table__desc">41.20 - Строительство жилых и нежилых зданий</p>
-    	</div>
-    	<div class="requisites-table__row">
-    		<h3 class="requisites-table__title">ОКПО</h3>
-    		<p class="requisites-table__desc">63736825</p>
-    	</div>
+    <div class="section__head requisites__head">
+      <h2 class="title-h2 requisites__title">Реквизиты</h2>
+      <a href="#" download class="btn-primary _desktop">Скачать реквизиты</a>
+    </div>
+    <div class="requisites__content">
+      <div class="requisites-table">
+        <div class="requisites-table__row">
+          <h3 class="requisites-table__title">Краткое наименование</h3>
+          <p class="requisites-table__desc">ООО «АЛЕКСПРОМ»</p>
+        </div>
+        <div class="requisites-table__row">
+          <h3 class="requisites-table__title">Полное наименование</h3>
+          <p class="requisites-table__desc">Общество с ограниченной ответственностью «АЛЕКСПРОМ» </p>
+        </div>
+        <div class="requisites-table__row">
+          <h3 class="requisites-table__title">Юридический адрес</h3>
+          <p class="requisites-table__desc">107150, МОСКВА ГОРОД, УЛ. БОЙЦОВАЯ, Д. 22, ЭТ 2 П V K 9 ОФ 4Г</p>
+        </div>
+        <div class="requisites-table__row requisites-table__row--mobile-half">
+          <h3 class="requisites-table__title">ИНН</h3>
+          <p class="requisites-table__desc">7708707791</p>
+        </div>
+        <div class="requisites-table__row requisites-table__row--mobile-half">
+          <h3 class="requisites-table__title">КПП</h3>
+          <p class="requisites-table__desc">771801001</p>
+        </div>
+        <div class="requisites-table__row">
+          <h3 class="requisites-table__title">ОГРН</h3>
+          <p class="requisites-table__desc">1097746686531</p>
+        </div>
+        <div class="requisites-table__row">
+          <h3 class="requisites-table__title">ОКВЭД</h3>
+          <p class="requisites-table__desc">41.20 - Строительство жилых и нежилых зданий</p>
+        </div>
+        <div class="requisites-table__row">
+          <h3 class="requisites-table__title">ОКПО</h3>
+          <p class="requisites-table__desc">63736825</p>
+        </div>
+      </div>
+      <div class="requisites-qr">
+        <h3 class="requisites-qr__title">Оплата через QR</h3>
+        <a href="#" class="requisites-qr__media">
+            <picture class="requisites-qr__media-pic">
+              <img src="./images/common/placeholder.svg" alt="" class="requisites-qr__media-img">
+            </picture>
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -257,16 +270,36 @@
           <div class="footer-top__info">
               <a class="link" href="mailto:zakaz@alexprom.ru">zakaz@alexprom.ru</a>
               <a class="link" href="tel:+74951090242">+7&nbsp;(495)&nbsp;109-02-42</a>
+              <span>Москва, Братиславская 1, корпус&nbsp;3</span>
+          </div>
+          <div class="footer-top__qr">
+              <picture class="footer-top__qr-pic">
+                <img src="images/common/qr-contact.jpeg" alt="" class="footer-top__qr-img">
+              </picture> 
           </div>
       </div>
       <div class="footer-bottom">
-          <div class="footer-bottom__address">
-              <span>ООО «АЛЕКСПРОМ»</span>
-              <span>Москва, Братиславская 1, корпус&nbsp;3</span>
-          </div>
           <div class="footer-bottom__docs">
-              <a class="footer-bottom__docs-link" href="#">Пользовательское соглашение</a>
-              <a class="footer-bottom__docs-link" href="#">Политика конфиденциальности</a>
+              <a class="footer-bottom__docs-link" href="/">ООО «АЛЕКСПРОМ»</span>
+              <a class="footer-bottom__docs-link" href="privacy-notice">Политика конфиденциальности</a>
+          </div>
+          <div class="footer-bottom__socials socials">
+            <a href="#" class="socials__link" aria-label="Alexprom в оVK">
+              <svg class="socials__icon">
+                <use href="./images/socials/vk-icon.svg#vk" />
+              </svg>
+            </a>
+
+            <a href="#" class="socials__link" aria-label="Alexprom в Telegram">
+              <svg class="socials__icon">
+                <use href="./images/socials/tg-icon.svg#tg" />
+              </svg>
+            </a>
+            <a href="#" class="socials__link" aria-label="Alexprom в одноклассниках">
+              <svg class="socials__icon">
+                <use href="./images/socials/ok-icon.svg#ok" />
+              </svg>
+            </a>
           </div>
       </div>
   </div>
@@ -425,9 +458,13 @@
 </div>
 
 
+<div class="preloader">
+  <img src="./images/common/loader.svg" alt="" class="preloader__loader">
+</div>
+
     </div>
 
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2b19e0af-ec94-422d-9726-8deb559736fe&_v=20230217195447"></script>
-    <script src="./js/bundle.min.js?_v=20230728123620"></script>
+    <script src="./js/bundle.min.js?_v=20230731155248"></script>
   </body>
 </html>

@@ -1,0 +1,42 @@
+.socials {
+  display: flex;
+  align-items: center;
+  --icons-size: 3.7rem;
+  --icons-gap: 1rem;
+
+  @media (max-width: $tablet) {
+    --icons-size: 2.142rem;
+    --icons-gap: 1.0714rem;
+  }
+}
+
+.socials__link {
+  --size: var(--icons-size);
+  display: block;
+  width: var(--size);
+  min-width: var(--size);
+  max-width: var(--size);
+  height: var(--size);
+  min-height: var(--size);
+  max-height: var(--size);
+  transition: var(--tr);
+  margin-right: var(--icons-gap);
+  transition: var(--tr-regular);
+  border-radius: 50%;
+  @media (max-width: $mobile-l) {
+  }
+}
+.socials__link:last-child {
+  margin-right: 0;
+}
+.socials__link:hover {
+  @media (any-hover:hover) {
+    transform: scale(1.1);
+  }
+}
+
+.socials__icon {
+  height: 100%;
+  width: 100%;
+  border-radius: 9999px;
+}

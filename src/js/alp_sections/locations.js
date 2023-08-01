@@ -52,7 +52,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 	function destroyLocationsCarousel() {
 		if (typeof locationsCarousel == 'undefined') return;
-    locationsCarousel.destroy(true, true);
+		console.log(locationsCarousel)
+	    locationsCarousel.destroy(true, true);
 	}
 
 	let isPageLoadInit = true;

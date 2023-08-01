@@ -63,6 +63,7 @@ import "./b_components/groupers/bayan.js";
 import "./b_components/spawners/b_modal.js";
 import "./b_components/controls/formich.js";
 import "./b_components/counter.js";
+import "./b_components/preloader.js";
 
 
 // pages
