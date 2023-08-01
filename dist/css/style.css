@@ -3684,6 +3684,7 @@ header {
   border-radius: 10rem 10rem 0 0;
   max-width: 1920px;
   margin: 0 auto;
+  font-size: 2rem;
 }
 @media (max-width: 690px) {
   .footer {
@@ -3706,21 +3707,22 @@ header {
 
 .footer-top__logo {
   display: block;
-  height: 85px;
+  height: 18.5rem;
 }
 @media (max-width: 1536px) {
   .footer-top__logo {
-    height: 63px;
+    height: 16.3rem;
   }
 }
 @media (max-width: 768px) {
   .footer-top__logo {
-    height: 47px;
+    height: 14.7rem;
   }
 }
 @media (max-width: 690px) {
   .footer-top__logo {
     margin-bottom: 3rem;
+    height: 4.7rem;
   }
 }
 
@@ -3732,6 +3734,8 @@ header {
 .footer-top__nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+  font-weight: 600;
 }
 @media (max-width: 690px) {
   .footer-top__nav {
@@ -3740,15 +3744,6 @@ header {
     width: 100%;
     flex-wrap: wrap;
     padding-top: 4rem;
-  }
-}
-
-.footer-top__qr {
-  width: 16rem;
-}
-@media (max-width: 1280px) {
-  .footer-top__qr {
-    display: none;
   }
 }
 
