@@ -839,6 +839,10 @@ h6 {
   justify-content: center;
 }
 
+.section-text--underline {
+  border-bottom: 1px solid;
+}
+
 .btn-primary {
   text-align: center;
   font-size: 1.6rem;
@@ -5025,19 +5029,13 @@ header {
 
 .contacts__map-container .consultation__bg {
   gap: 0;
+  padding: 0;
 }
 @media (min-width: 691px) {
   .contacts__map-container .consultation__bg {
     flex-direction: column;
-    padding: 6.4rem;
   }
 }
-@media (min-width: 691px) and (max-width: 1536px) {
-  .contacts__map-container .consultation__bg {
-    padding: 4rem;
-  }
-}
-
 .consultation__content {
   flex-basis: 416px;
 }
@@ -7342,7 +7340,7 @@ header {
 .requisites__content {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
 }
 @media (max-width: 992px) {
   .requisites__content {
@@ -7351,16 +7349,14 @@ header {
 }
 
 .requisites-qr {
-  position: sticky;
-  top: 10rem;
-  padding: 40px;
-  border-radius: 30px;
+  padding: 4rem;
+  border-radius: 3rem;
   background-color: #F0F2F5;
   margin-left: 3rem;
 }
 @media (max-width: 1100px) {
   .requisites-qr {
-    padding: 40px 20px;
+    padding: 4rem 2rem;
   }
 }
 @media (max-width: 992px) {
@@ -7372,7 +7368,8 @@ header {
   .requisites-qr {
     display: flex;
     flex-wrap: wrap;
-    padding: 20px;
+    padding: 2rem;
+    justify-content: center;
   }
 }
 
@@ -7388,23 +7385,35 @@ header {
 }
 
 .requisites-qr__media {
-  display: block;
-  width: 40rem;
-  height: 40rem;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 5rem;
 }
 @media (max-width: 690px) {
   .requisites-qr__media {
-    width: 26rem;
-    height: 26rem;
+    flex-direction: column;
+    margin-bottom: 3rem;
   }
+}
+
+.requisites-qr__media:last-of-type {
+  margin-bottom: 0;
 }
 
 .requisites-qr__media-pic {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 30rem;
+  height: 30rem;
+  margin-right: 2rem;
+}
+@media (max-width: 690px) {
+  .requisites-qr__media-pic {
+    margin-right: 0;
+    margin-bottom: 1rem;
+    width: 22rem;
+    height: 22rem;
+  }
 }
 
 .requisites-qr__media-img {
@@ -7413,8 +7422,12 @@ header {
   height: 100%;
 }
 
+.requisites-qr__media-caption {
+  max-width: 28rem;
+}
+
 .requisites-table {
-  max-width: 128rem;
+  max-width: 110rem;
   width: 100%;
   padding: 40px;
   border-radius: 30px;
@@ -7639,10 +7652,15 @@ header {
   grid-template-columns: repeat(2, 1fr);
   gap: 4rem;
   align-items: stretch;
+  background-color: var(--accent);
+  border-radius: 3rem;
+  padding: 6.4rem;
 }
 @media (max-width: 1100px) {
   .contacts__map-container {
     grid-template-columns: 100%;
+    padding: 4rem 2rem;
+    border-radius: 0;
   }
 }
 

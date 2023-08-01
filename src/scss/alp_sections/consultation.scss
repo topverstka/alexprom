@@ -53,16 +53,17 @@
         gap: 34px;
     }
 }
+
 .contacts__map-container .consultation__bg {
     gap: 0;
     @media (min-width: $mobile-xl + 1) {
         flex-direction: column;
-        padding: 6.4rem;
 
         @media (max-width: $desktop-m) {
-            padding: 4rem;
+            // padding: 4rem;
         }
     }
+    padding: 0;
 }
 
 .consultation__content {
