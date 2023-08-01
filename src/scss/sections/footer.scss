@@ -6,6 +6,10 @@
     margin: 0 auto;
     font-size: 2rem;
 
+	@media (max-width: $tablet) {
+	    font-size: 1.6rem;
+	}
+
 	@media(max-width: $mobile-xl) {
 		border-radius: 6rem 6rem 0 0;
 	}
@@ -26,13 +30,18 @@
 .footer-top__logo {
 	display: block;
 	height: 18.5rem;
+	margin-right: 2rem;
 
 	@media (max-width: $desktop-m) {
 		height: 16.3rem;
 	}
 
+	@media (max-width: $tablet) {
+		height: 9.3rem;
+	}
+
 	@media (max-width: $tablet-m) {
-		height: 14.7rem;
+		// height: 14.7rem;
 	}
 
 	@media (max-width: $mobile-xl) {
@@ -51,6 +60,7 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
     font-weight: 600;
+    margin-right: 2rem;
 
 	@media(max-width: $mobile-xl) {
 		order: 3;
@@ -113,6 +123,10 @@
     align-items: flex-start;
 	flex-direction: column;
 
+	@media (max-width: $tablet) {
+		max-width: 20rem;
+	}
+
 	@media (max-width: $mobile-l) {
 		padding-bottom: 15px;
 	}
@@ -145,10 +159,10 @@
 .footer-top__nav-link,
 .footer-bottom__docs-link {
     transition: var(--tr);
-    margin-right: 32px;
+    // margin-right: 32px;
 
 	@media (max-width: $desktop-m) {
-		margin-right: 24px;
+		// margin-right: 24px;
 	}
 	@media (max-width: $tablet-m) {
         font-size: 1.6rem;
@@ -174,9 +188,14 @@
 .footer-bottom__socials {
 	padding-right: 10rem;
 
-	@media (max-width: $mobile-xl) {
-		width: 100%;
+	@media (max-width: $tablet) {
+		padding-right: 15rem;
 		--icons-size: 4.2rem;
+	}
+
+	@media (max-width: $mobile-xl) {
+		padding-right: 10rem;
+		width: 100%;
 		flex-wrap: wrap;
 	}
 }
