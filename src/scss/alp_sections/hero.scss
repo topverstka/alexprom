@@ -242,6 +242,14 @@
 	}
 }
 
+.hero--privacy .hero__title {
+	font-size: 3.6rem;
+	
+	@media (max-width: $mobile-xl) {
+		font-size: 2.8rem;
+	}
+}
+
 .hero__title ._mobile {
     display: none;
 	@media(max-width: $mobile-xl) {

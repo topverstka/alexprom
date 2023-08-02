@@ -57,7 +57,7 @@
   }
 }
 
-.section-flip .section:first-child {
+.section-flip .section:not(.storytell):first-child {
   padding-top: 80px;
 
   @media (max-width: $tablet-m) {

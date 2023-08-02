@@ -237,8 +237,13 @@ class b_modal {
   }
 
   openb_modalHash() {
+    const ignoreHash = [
+      'modal-service',
+    ];
     if (window.location.hash) {
       const hash = window.location.hash.substring(1);
+      if (ignoreHash.includes(hash)) return;
+      
       const b_modal = document.querySelector(`.b_modal#${hash}`);
       if (b_modal) {
         this.openPop(hash);

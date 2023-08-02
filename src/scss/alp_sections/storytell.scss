@@ -7,10 +7,14 @@
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 40px;
-	margin-bottom: 180px;
+	margin-bottom: 18rem;
 
 	@media (max-width: $laptop) {
 		grid-template-columns: 100%;
+		margin-bottom: 10rem;
+	}
+
+	@media (max-width: $mobile-xl) {
 	}
 }
 
@@ -59,6 +63,7 @@
 	@extend .wysiwyg;
 
 	@media (max-width: $laptop) {
+		font-size: 1.6rem;
 		padding-top: 0;
 	}
 }

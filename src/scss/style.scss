@@ -184,8 +184,10 @@ h3 {
   background-size: contain;
   z-index: 10;
   // box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: var(--tr-regular);
 
   @media (max-width: $mobile-xl) {
+    opacity: 1;
     --size: 8rem;
     right: 1.5rem;
     bottom: 1.5rem;
@@ -236,7 +238,11 @@ h3 {
   }
 }
 .button-scroll-top._show {
-  opacity: 1;
+  opacity: 0.6;
   pointer-events: initial;
   transform: translateY(0);
 }
+.button-scroll-top._show:hover {
+  opacity: 1;
+}
+

@@ -84,4 +84,8 @@
 
 .contacts-card__socials {
 	justify-content: center;
+
+	@media (max-width: $mobile-xl) {
+		justify-content: flex-start;
+	}
 }

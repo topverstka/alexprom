@@ -4,7 +4,11 @@
     border-radius: 10rem 10rem 0 0;
     max-width: 1920px;
     margin: 0 auto;
-    font-size: 2rem;
+    font-size: 3.2rem;
+
+    @media (max-width: $desktop-l) {
+	    font-size: 2rem;
+    }
 
 	@media (max-width: $tablet) {
 	    font-size: 1.6rem;
@@ -159,18 +163,25 @@
 .footer-top__nav-link,
 .footer-bottom__docs-link {
     transition: var(--tr);
-    // margin-right: 32px;
 
-	@media (max-width: $desktop-m) {
-		// margin-right: 24px;
-	}
 	@media (max-width: $tablet-m) {
         font-size: 1.6rem;
 	}
 
 	@media (max-width: $mobile-l) {
-		margin-bottom: 24px;
+		margin-bottom: 2.4rem;
 		line-height: 1.25;
+	}
+}
+
+.footer-bottom__docs-link {
+    margin-right: 3.2rem;
+
+	@media (max-width: $desktop-m) {
+		margin-right: 2.4rem;
+	}
+	@media (max-width: $tablet-m) {
+		margin-right: 0;
 	}
 }
 
@@ -186,12 +197,8 @@
 }
 
 .footer-bottom__socials {
-	padding-right: 10rem;
-
-	@media (max-width: $tablet) {
-		padding-right: 15rem;
-		--icons-size: 4.2rem;
-	}
+	padding-right: 15rem;
+	--icons-size: 4.2rem;
 
 	@media (max-width: $mobile-xl) {
 		padding-right: 10rem;
@@ -199,6 +206,7 @@
 		flex-wrap: wrap;
 	}
 }
+
 .footer-bottom__socials > * {
 	@media (max-width: $mobile-xl) {
 		margin-bottom: 1.2rem;

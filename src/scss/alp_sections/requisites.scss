@@ -84,8 +84,8 @@
 
 .requisites-qr__media-pic {
 	display: block;
-	width: 30rem;
-	height: 30rem;
+	width: 28rem;
+	height: 28rem;
 	margin-right: 2rem;
 
 	@media (max-width: $desktop-l) {
@@ -98,6 +98,10 @@
 		width: 22rem;
 		height: 22rem;
 	}
+	@media (max-width: $mobile-l) {
+		width: 100%;
+		height: initial;
+	}
 }
 
 .requisites-qr__media-img {
@@ -107,7 +111,12 @@
 }
 
 .requisites-qr__media-caption {
-	max-width: 28rem;
+	max-width: 30rem;
+	font-size: 1.8rem;
+
+	@media (max-width: $mobile-xl) {
+		font-size: 1.5rem;
+	}
 }
 
 
