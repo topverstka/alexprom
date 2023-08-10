@@ -10,11 +10,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
     grabCursor: true,
     breakpoints: {
       320: {
-        slidesPerView: 1.05,
+        slidesPerView: 1,
         spaceBetween: 20,
       },
       690: {
-        slidesPerView: 1.15,
+        slidesPerView: 1,
         spaceBetween: 20,
       },
       1101: {

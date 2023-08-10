@@ -41,7 +41,7 @@ telInputs.forEach(tel => {
   new Inputmask(maskOptions).mask(tel);
 })
 
-import "./b_helpers/parallax-helpers.js";
+// import "./b_helpers/parallax-helpers.js";
 import "./b_helpers/smooth-anchors.js";
 
 import "./b_components/header/burger.js";

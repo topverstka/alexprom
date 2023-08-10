@@ -13,11 +13,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	    centeredSlidesBounds: true,
 	    breakpoints: {
 	      320: {
-	        slidesPerView: 1.3,
+	        slidesPerView: 1,
 	        spaceBetween: 10,
 	      },
 	      690: {
-	        slidesPerView: 2.3,
+	        slidesPerView: 2,
 	        spaceBetween: 10,
 	      },
 	      1101: {

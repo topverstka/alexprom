@@ -1,10 +1,10 @@
 .footer {
-    background-color: var(--light);
+    // background-color: var(--light);
     position: relative;
     border-radius: 10rem 10rem 0 0;
     max-width: 1920px;
     margin: 0 auto;
-    font-size: 3.2rem;
+    font-size: 2rem;
 
     @media (max-width: $desktop-l) {
 	    font-size: 2rem;
@@ -33,15 +33,15 @@
 
 .footer-top__logo {
 	display: block;
-	height: 18.5rem;
+	height: 12.5rem;
 	margin-right: 2rem;
 
 	@media (max-width: $desktop-m) {
-		height: 16.3rem;
+		height: 11.3rem;
 	}
 
 	@media (max-width: $tablet) {
-		height: 9.3rem;
+		height: 10.7rem;
 	}
 
 	@media (max-width: $tablet-m) {

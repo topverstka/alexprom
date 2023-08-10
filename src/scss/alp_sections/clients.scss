@@ -5,7 +5,7 @@
 .clients-carousel {
     position: relative;
     margin-top: 70px;        
-    overflow: visible;
+    // overflow: visible;
 
     @media (max-width: $tablet-m) {
         max-width: initial;
@@ -26,7 +26,8 @@
     top: #{'calc(50% - 3rem)'};
 
     @media (max-width: $tablet-m) {
-        display: none;
+    //     display: none;
+        top: 100%;
     }
 }
 .clients-carousel .swiper-button-next {

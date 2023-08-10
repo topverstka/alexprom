@@ -1,6 +1,8 @@
 .staff {
 	overflow: hidden;
-
+	@media (max-width: $mobile-xl) {
+		position: relative;
+	}
 }
 
 .staff__head {
@@ -19,7 +21,16 @@
 	justify-content: flex-end;
 
 	@media (max-width: $laptop) {
-		display: none;
+		// display: none;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		width: 98%;
+		display: flex;
+		justify-content: space-between;
 	}
 }
 
@@ -44,7 +55,7 @@
 }
 
 .staff-carousel {
-	overflow: visible;
+	// overflow: visible;
 }
 
 .staff-card__pic {

@@ -38,6 +38,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	}
 
 	function initLocationsCarousel() {
+		if (!document.querySelector('.locations-addresses__slider')) return
 		locationsCarousel = new Swiper('.locations-addresses__slider', {
 		  slidesPerView: 1,
 		  spaceBetween: 40,
@@ -52,7 +53,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 	function destroyLocationsCarousel() {
 		if (typeof locationsCarousel == 'undefined') return;
-		if (typeof locationsCarousel.destroy() == 'undefined') return;
+		if (typeof locationsCarousel.destroy == 'undefined') return;
 	    locationsCarousel.destroy(true, true);
 	}
 

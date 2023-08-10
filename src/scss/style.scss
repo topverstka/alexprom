@@ -45,10 +45,16 @@
 @import "./components";
 
 // Шрифты
-@include font('Manrope', normal, 400, '/local/templates/main/resources/fonts/manrope/manrope-regular');
-@include font('Manrope', normal, 600, '/local/templates/main/resources/fonts/manrope/manrope-semibold');
+// @include font('Manrope', normal, 400, '/local/templates/main/resources/fonts/manrope/manrope-regular');
+// @include font('Manrope', normal, 600, '/local/templates/main/resources/fonts/manrope/manrope-semibold');
+
+@include font('Gotham Pro', normal, 400, '/local/templates/main/resources/fonts/gothampro/gothampro');
+@include font('Gotham Pro', normal, 600, '/local/templates/main/resources/fonts/gothampro/gothampro-bold');
+// @include font('Gotham Pro', normal, 400, '../resources/fonts/gothampro/gothampro');
+// @include font('Gotham Pro', normal, 600, '../resources/fonts/gothampro/gothampro-bold');
 
 :root {
+  --ff-regular: 'Gotham Pro', sans-serif;
   --gap: 32px;
   @media(max-width: 1440px) {
     --gap: 24px;
@@ -60,7 +66,7 @@ html {
 }
 
 body {
-  font: 400 1.8rem/2rem 'Manrope', sans-serif;
+  font: 400 1.8rem/2rem var(--ff-regular);
   color: var(--dark);
   line-height: 1.45;
   margin: 0;
@@ -82,7 +88,7 @@ button {
 
 input,
 button {
-  font-family: 'Manrope', sans-serif;
+  font-family: var(--ff-regular);
 }
 
 input:focus,
@@ -109,6 +115,9 @@ h3 {
   font-weight: 600;
   line-height: 1.35;
 
+  @media (max-width: $desktop-l) {
+    font-size: 6.8rem;
+  }
   @media (max-width: $desktop-m) {
     font-size: 5.4rem;
   }
@@ -118,16 +127,16 @@ h3 {
   }
 
   @media (max-width: $mobile-l) {
-    font-size: 4rem;
+    font-size: 3.6rem;
   }
 
   @media (max-width: $mobile-s) {
-    font-size: 3.6rem;
+    font-size: 3.2rem;
   }
 }
 
 .title-h2 {
-  font-size: 6.4rem;
+  font-size: 6rem;
   font-weight: 600;
   line-height: 1.35;
 
@@ -140,12 +149,12 @@ h3 {
   }
 
   @media (max-width: $mobile-xl) {
-    font-size: 3.2rem;
+    font-size: 2.6rem;
   }
 }
 
 .title-h3 {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 600;
   line-height: 1.25;
 }
@@ -167,7 +176,7 @@ h3 {
 .button-scroll-top {
   position: fixed;
   right: 5rem;
-  bottom: 2rem;
+  bottom: 3rem;
   transition: all 0.45s ease-in-out;
   transform: translateY(3rem);
   opacity: 0;
@@ -187,10 +196,14 @@ h3 {
   transition: var(--tr-regular);
 
   @media (max-width: $mobile-xl) {
-    opacity: 1;
-    --size: 8rem;
+    --size: 6rem;
     right: 1.5rem;
     bottom: 1.5rem;
+  }
+}
+.button-scroll-top._show {
+  @media (max-width: $mobile-xl) {
+    opacity: 1;
   }
 }
 
@@ -237,12 +250,14 @@ h3 {
     background-color: var(--accent);
   }
 }
+
 .button-scroll-top._show {
   opacity: 0.6;
   pointer-events: initial;
   transform: translateY(0);
-}
-.button-scroll-top._show:hover {
-  opacity: 1;
+
+  @media (max-width: $mobile-xl) {
+    opacity: 1;
+  }
 }
 

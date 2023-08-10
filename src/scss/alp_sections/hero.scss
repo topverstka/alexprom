@@ -168,7 +168,7 @@
 }
 
 .hero__title {
-    padding-top: 14.5rem;
+    padding-top: 11.5rem;
     max-width: 900px;
     margin-top: 0;
     margin-bottom: 26px;
@@ -278,9 +278,9 @@
 
 .hero__title + p,
 .hero__desc + p {
-    max-width: 700px;
+    max-width: 73rem;
 	@media (max-width: $mobile-l) {
-		font-size: 1.7rem;
+		font-size: 1.6rem;
 	}
 }
 
@@ -352,7 +352,7 @@
 .hero-info {
     background-color: #FFF;
     margin-top: auto;
-    margin-bottom: 180px;
+    margin-bottom: 160px;
     padding: 8px;
     border-radius: 30px;
     position: relative;
@@ -600,8 +600,10 @@
 	object-position: top;
 }
 
+
+.hero--thumb-half .hero__desc + p,
 .hero--thumb-half .hero__title {
-	max-width: 70rem;
+	max-width: 62rem;
 }
 
 

@@ -84,8 +84,8 @@
 
 .consultation__title {
     font-size: 5.6rem;
-    font-weight: 600;
-    line-height: 1.35;
+    font-weight: 700;
+    line-height: 1.4;
     margin-bottom: 24px;
 
     @media(max-width: $desktop-m) {
@@ -118,7 +118,7 @@
 }
 
 .consultation__text {
-    max-width: 339px;
+    max-width: 360px;
 
     @media(max-width: $desktop-m) {
         font-size: 1.8rem;

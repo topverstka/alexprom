@@ -149,6 +149,11 @@
     box-shadow: inset 10.7333px -10.7333px 10.7333px rgba(165, 165, 165, 0.1), inset -10.7333px 10.7333px 10.7333px rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10.7333px);
     border-radius: 50%;
+
+    @media (max-width: $mobile-xl) {
+        width: 67px;
+        height: 67px;
+    }
 }
 
 .gallery .swiper-button-next,

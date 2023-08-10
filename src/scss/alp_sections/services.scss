@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 75px;
 
     @media (max-width: $mobile-l) {
         margin-bottom: 32px;
@@ -84,7 +84,7 @@
     }
 
     @media (max-width: $mobile-l) {
-        height: 150px;
+        height: 190px;
     }
 }
 
@@ -163,7 +163,7 @@
 }
 
 .services-list__item {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 
 .services-list__link {
