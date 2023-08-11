@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проекты</title>
+        <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Отключить автодетект телефонов -->
+    <meta name="format-detection" content="telephone=no">
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      @@include('tpls/header.html',{})
+
+      <main class="hero hero--has-breadcrumbs">
+        <div class="hero__thumb">
+            <picture class="hero__pic">
+              <source srcset="./images/page-projects/projects-hero.webp" type="image/webp">
+              <img class="hero__img" src="./images/page-projects/projects-hero.jpg" alt="Наши проекты">
+            </picture>
+            <div class="container hero__container">
+                <div class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a href="#" class="breadcrumbs__link">
+                                Главная
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item">Проекты</li>
+                    </ul>
+                </div>
+                <h1 class="title-h1 hero__title">
+                    Наши проекты
+                </h1>
+                <p class="hero__desc">
+                    За 12 лет работы в сфере промышленного альпинизма <br>
+                    успели реализовать более 21500 объектов, по статистике <br>
+                    85% работ заканчиваем раньше срока
+                </p>
+                <div class="hero__buttons">
+                    <button class="hero__btn" type="button" data-b_modal-open="form-contact">Получить консультацию</button>
+                </div>
+                <div class="hero-info">
+                    <div class="hero-info__stroke">
+                        <div class="hero-info__item">
+                            <div class="hero-info__desc">
+                                <span class="hero-info__text">Приступим к работам уже&nbsp;через 3&nbsp;часа после согласования всех условий</span>
+                            </div>
+                            <picture class="hero-info__icon">
+                                <img src="./images/icons/notice.svg" alt="Приступим к работам уже через 3 часа">
+                            </picture>
+                        </div>
+                        <div class="hero-info__item">
+                            <div class="hero-info__desc">
+                                <span class="hero-info__text">Работаем 24/7 без праздников и выходных. Всегда на&nbsp;связи</span>
+                            </div>
+                            <picture class="hero-info__icon">
+                                <img src="./images/icons/celandar.svg" alt="Работаем без праздников и выходных">
+                            </picture>
+                        </div>
+                        <div class="hero-info__item">
+                            <div class="hero-info__desc">
+                                <span class="hero-info__text">Предоставляем гарантию 5&nbsp;лет на все виды наших&nbsp;работ</span>
+                            </div>
+                            <picture class="hero-info__icon">
+                                <img src="./images/icons/garant.svg" alt="редоставляем гарантию 5 лет">
+                            </picture>
+                        </div>
+                        <div class="hero-info__item">
+                            <div class="hero-info__desc">
+                                <span class="hero-info__text">По&nbsp;статистике 84,6% всех&nbsp;наших работ мы заканчиваем досрочно</span>
+                            </div>
+                            <picture class="hero-info__icon">
+                                <img src="./images/icons/chart.svg" alt="85% всех наших работ заканчиваем досрочно">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <picture class="hero__worker">
+                <source srcset="./images/page-projects/projects-hero--mobile.webp" type="image/webp">
+                <img class="hero__worker-img" src="./images/page-projects/projects-hero--mobile.png" alt="">
+            </picture>
+        </div>
+      </main>
+
+      <div class="section-flip section-flip--light">
+
+        <div class="section projects">
+            <div class="container is-loading">
+                <div class="section__head projects__head">
+                    <form class="projects__filter">
+                        <fieldset class="projects__filter-togglers">
+                            @@include('tpls/inputs/chips-select.html',{caption: "Все проекты", attrs: "checked"})
+                            @@include('tpls/inputs/chips-select.html',{caption: "Фасадные работы", attrs: ""})
+                            @@include('tpls/inputs/chips-select.html',{caption: "Клининговые услуги", attrs: ""})
+                            @@include('tpls/inputs/chips-select.html',{caption: "Кровельные работы", attrs: ""})
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="projects__gallery">
+                    @@for (var i = 0; i < 6; i++) {
+                        <div class="swiper-gallery__slide">
+                            <picture class="swiper-gallery__thumb">
+                                <img class="swiper-gallery__img lazy" src="./images/placeholder.jpg" data-src="./images/page-projects/project.jpg" alt="">
+                            </picture>
+                            <a href="#" class="swiper-gallery__link">Штаб квартира “Газпром”</a>
+                            <span class="swiper-gallery__title">Мойка окон</span>
+                            <span class="swiper-gallery__info swiper-gallery__arg">6500м²</span>
+                            <span class="swiper-gallery__info swiper-gallery__loc">Москва, улица Наметкина, дом 16</span>
+                        </div>
+                    }
+                </div>
+                <button class="projects__button-more btn-accent" type="button">Показать больше</button>
+            </div>
+        </div>
+
+        @@include('tpls/alp/experience.html',{})
+
+        @@include('tpls/alp/consultation.html', {title: "Запишитесь на\u00A0бесплатную консультацию", })
+      </div>
+
+      @@include('tpls/footer.html',{})
+    </div>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2b19e0af-ec94-422d-9726-8deb559736fe&_v=20230217195447"></script>
+    <script src="./js/bundle.min.js"></script>
+  </body>
+</html>

@@ -12,6 +12,7 @@
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 40px;
+	transition: var(--tr);
 
 	@media (max-width: $tablet-l) {
 		grid-template-columns: repeat(2, 1fr);
@@ -41,4 +42,46 @@
 
 .projects ~ .experience {
 	margin-top: 90px;
+}
+
+.projects .chips-select__input:checked + .chips-select__box .chips-select__caption::before {
+	content: "";
+	position: absolute;
+	z-index: 5;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	display: block;
+	width: 1.6rem;
+	height: 1.6rem;
+	background-image: url("../images/common/loader-white.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	opacity: 0;
+	pointer-events: none;
+	transition: var(--tr);
+	transform: scale(0);
+}
+
+.projects .is-loading .chips-select__input:checked + .chips-select__box .chips-select__caption::before {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.projects .chips-select__input:checked + .chips-select__box .chips-select__caption {
+	transition: var(--tr);
+	pointer-events: none;
+	position: relative;
+}
+
+.projects .is-loading .chips-select__input:checked + .chips-select__box .chips-select__caption {
+	color: rgba(255,255,255, 0.15);
+}
+
+.projects .is-loading .projects__gallery {
+	opacity: 0.4;
+	pointer-events: none;
 }
