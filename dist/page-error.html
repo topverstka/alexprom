@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Страница ошибки</title>
-    <link rel="stylesheet" href="./css/style.css?_v=20230810094649">
+    <link rel="stylesheet" href="./css/style.css?_v=20230812000036">
 
     <!-- Отключить автодетект телефонов -->
     <meta name="format-detection" content="telephone=no">
@@ -27,7 +27,12 @@
                   <a class="header__nav-link" href="#">Проекты</a>
                   <a class="header__nav-link" href="#">О компании</a>
                   <a class="header__nav-link" href="#">Блог</a>
-                  <a class="header__nav-link" href="#">Контакты</a>
+                  <div class="header__nav-dropdown">
+                    <a class="header__nav-link" href="#">Контакты</a>
+                    <div class="header__nav-dropdown-menu">
+                      <a class="header__nav-link" href="#">Вакансии</a>
+                    </div>
+                  </div>
               </nav>
               <button class="btn-accent header__button-callback" data-b_modal-open="form-contact">Заказать обратный звонок</button>
             </div>
@@ -428,6 +433,6 @@
 	</div>
 </div>
 
-    <script src="./js/bundle.min.js?_v=20230810094649"></script>
+    <script src="./js/bundle.min.js?_v=20230812000036"></script>
   </body>
 </html>
