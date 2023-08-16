@@ -25,7 +25,8 @@
 	}
 
 	@media(max-width: $mobile-xl) {
-		padding-bottom: 100vw;
+		padding-bottom: 35vw;
+		// padding-bottom: 100vw;
 	}
 }
 
@@ -42,7 +43,8 @@
 	}
 
 	@media (max-width: $mobile-xl) {
-		padding-bottom: 50px;
+		padding-bottom: 90px;
+		// padding-bottom: 50px;
 	}
 }
 
@@ -55,6 +57,13 @@
 		background-image: none;
 	}
 }
+
+.hero--has-breadcrumbs .hero__thumb {
+	@media (max-width: $tablet) {
+		padding-bottom: 7rem;
+	}
+}
+
 
 .hero__thumb p {
 	@media(max-width: $mobile-l) {
@@ -567,7 +576,7 @@
 }
 
 .hero--contacts {
-	min-height: 700px;
+	// min-height: 700px;
 	// min-height: 870px;
 }
 
@@ -577,6 +586,9 @@
 	
 	@media (max-width: $laptop) {
 		padding-bottom: 0;
+	}
+	@media (max-width: $tablet) {
+		padding-bottom: 5rem;
 	}
 }
 

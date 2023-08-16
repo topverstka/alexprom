@@ -22,6 +22,11 @@
   background-image: url("../images/email.png");
 }
 
+.link--geo::before {
+  background-image: url("../images/geo.png");
+}
+
+.link--geo,
 .link--phone,
 .link--mail {
   color: var(--dark);
@@ -30,6 +35,7 @@
   background: none;
 }
 
+.link--geo::before,
 .link--phone::before,
 .link--mail::before {
   content: "";

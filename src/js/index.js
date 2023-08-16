@@ -45,6 +45,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
   const squareElements = [
     ...document.querySelectorAll('.price-table__qt'),
     ...document.querySelectorAll('.swiper-gallery__arg'),
+    ...document.querySelectorAll('.hero__desc'),
+    ...document.querySelectorAll('.storytell__body td'),
   ]
   squareElements.forEach(price => {
     let priceText = price.innerHTML

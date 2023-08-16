@@ -23,6 +23,7 @@ header {
 
 .header__logo {
 	margin-right: 3.5rem;
+    mix-blend-mode: multiply;
 
 	@media (max-width: $desktop-m) {
 		margin-right: 4rem;
@@ -31,6 +32,10 @@ header {
 	@media (max-width: $tablet-l) {
 		margin-right: 0;
 	}
+	@media (max-width: $mobile-l) {
+		position: relative;
+		z-index: 3;
+	}	
 }
 
 .header__menu {
@@ -137,7 +142,6 @@ header {
 	pointer-events: initial;
 	padding-top: 3rem;
 	padding-bottom: 3rem;
-	text-decoration: underline;
 
 	@media (min-width: $laptop + 1) {
 		display: none;
@@ -276,6 +280,26 @@ header {
 	font-weight: 400;
 	margin-right: 0;
 	margin-bottom: 1em;
+
+	@media (max-width: $tablet) {
+		margin-bottom: 0.2em;
+		font-size: 2rem;
+		position: relative;
+	}
+}
+
+.header__nav-dropdown-menu .header__nav-link::before {
+	@media (max-width: $tablet) {
+		content: "";
+		display: block;
+		width: 0.6rem;
+		height: 0.6rem;
+		border-radius: 0.6rem;
+		position: absolute;
+		left: -0.7em;
+	    top: 0.55em;
+		background: var(--accent);
+	}
 }
 
 .header__nav-dropdown-menu .header__nav-link:last-child {

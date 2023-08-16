@@ -1,7 +1,8 @@
 .footer {
-    // background-color: var(--light);
+    background-color: var(--light);
     position: relative;
     border-radius: 10rem 10rem 0 0;
+    // padding-bottom: 15.3rem;
     max-width: 1920px;
     margin: 0 auto;
     font-size: 2rem;
@@ -16,16 +17,17 @@
 
 	@media(max-width: $mobile-xl) {
 		border-radius: 6rem 6rem 0 0;
+	    padding-bottom: 0;
 	}
 }
 
 .footer-top {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-start;
+    justify-content: flex-start;
     padding: 50px 0;
 
-	@media(max-width: $mobile-xl) {
+	@media(max-width: $tablet) {
 		flex-wrap: wrap;
 		padding-bottom: 2.5rem;
 	}
@@ -33,30 +35,26 @@
 
 .footer-top__logo {
 	display: block;
-	height: 12.5rem;
-	margin-right: 2rem;
-
-	@media (max-width: $desktop-m) {
-		height: 11.3rem;
-	}
+	height: 14.5rem;
+	margin-right: 11.7rem;
 
 	@media (max-width: $tablet) {
 		height: 10.7rem;
-	}
-
-	@media (max-width: $tablet-m) {
-		// height: 14.7rem;
+		margin-bottom: 11.7rem;
+		margin-right: auto;
 	}
 
 	@media (max-width: $mobile-xl) {
-		margin-bottom: 3rem;
-		height: 4.7rem;
+		margin-left: 0;
+		margin-bottom: 5rem;
+		height: 9.4rem;
 	}
 }
 
 .footer-top__img {
 	width: 100%;	
 	height: 100%;	
+	margin-right: auto;
 }
 
 .footer-top__nav {
@@ -112,6 +110,8 @@
 .footer-bottom__docs {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
 
 	@media(max-width: $mobile-xl) {
 		flex-direction: column;
@@ -197,11 +197,10 @@
 }
 
 .footer-bottom__socials {
-	padding-right: 15rem;
-	--icons-size: 4.2rem;
+	margin-left: auto;
+	--icons-size: 4rem;
 
 	@media (max-width: $mobile-xl) {
-		padding-right: 10rem;
 		width: 100%;
 		flex-wrap: wrap;
 	}
@@ -210,5 +209,48 @@
 .footer-bottom__socials > * {
 	@media (max-width: $mobile-xl) {
 		margin-bottom: 1.2rem;
+	}
+}
+
+.footer__menu {
+	margin-right: 8.9rem;
+	max-width: 31.2rem;
+
+	@media (max-width: $tablet) {
+		margin-right: 3rem;
+		max-width: 28rem;
+	}
+
+	@media (max-width: $mobile-xl) {
+		margin-right: 0;
+		max-width: 100%;
+		// width: 100%;
+		margin-bottom: 3rem;
+	}
+}
+
+.footer__menu:last-of-type {
+	margin-left: auto;
+	margin-right: 0;
+}
+
+.footer__menu-title {
+	font-size: 2.2rem;
+	margin-bottom: 3.8rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 125%; /* 27.5px */
+
+	@media (max-width: $mobile-xl) {
+		margin-bottom: 2.2rem;
+	}
+}
+
+.footer__menu-item {
+	font-size: 1.6rem;
+	margin-bottom: 2.1rem;
+
+	@media (max-width: $mobile-xl) {
+		margin-bottom: 1.5rem;
 	}
 }
