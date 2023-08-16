@@ -115,17 +115,24 @@ formsList.forEach((form) => {
       buttonText = buttonTextElement.innerText;
       buttonTextElement.innerText = '✓ Ваша заявка принята';
 
-      form.reset();
+      resetForm(form);
 
       setTimeout(() => {
         submitButton.classList.remove('button--wait');
         buttonTextElement.innerText = buttonText;
-      }, 10000)
-    } catch {
+      }, 5000)
+    } catch (error) {
+      console.log(error)
     }
     
   });
 });
+
+function resetForm(form) {
+  form.querySelectorAll('.input__field').forEach(input => {
+    input.value = "";
+  })
+}
 
 function extractUTM(form) {
   const urlParams = new URLSearchParams(window.location.search);

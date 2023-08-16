@@ -3760,7 +3760,7 @@ header {
 
 @media (min-width: 1101px) {
   .header__nav-dropdown-menu {
-    padding-top: 5.6rem;
+    padding-top: 6.1rem;
     position: absolute;
     opacity: 0;
     pointer-events: none;
@@ -5415,9 +5415,10 @@ header {
 
 .price-table__row {
   display: grid;
-  grid-template-columns: 1.15fr 1fr 100px;
+  grid-template-columns: 1.15fr 1fr 0.8fr;
   margin-bottom: 40px;
   gap: 3vw;
+  align-items: center;
 }
 @media (max-width: 1536px) {
   .price-table__row {
@@ -5426,7 +5427,7 @@ header {
 }
 @media (max-width: 1100px) {
   .price-table__row {
-    grid-template-columns: 2fr 1fr 80px;
+    grid-template-columns: 2fr 1fr 0.8fr;
   }
 }
 @media (max-width: 768px) {
@@ -5436,10 +5437,11 @@ header {
 }
 @media (max-width: 690px) {
   .price-table__row {
-    grid-template-columns: 1fr 80px;
+    grid-template-columns: 1fr auto;
     margin-bottom: 30px;
     gap: 0 3vw;
     align-items: start;
+    position: relative;
   }
 }
 
@@ -5458,6 +5460,44 @@ header {
   background-position: 0 90%;
   background-size: 1px 1px;
   transition: 0.2s;
+}
+
+@media (max-width: 690px) {
+  .price-table__item:nth-child(1) {
+    padding-bottom: 2rem;
+  }
+}
+
+@media (max-width: 690px) {
+  .price-table__item:nth-child(2) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.price-table__item:nth-child(3) .price-table__link {
+  background: #5486e5;
+  color: #fff;
+  padding: 0.75em 1em;
+  font-size: 2rem;
+  border-radius: 1em;
+}
+@media (max-width: 992px) {
+  .price-table__item:nth-child(3) .price-table__link {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 690px) {
+  .price-table__item:nth-child(3) .price-table__link {
+    font-size: 1.6rem;
+  }
+}
+
+@media (any-hover: hover) {
+  .price-table__item:nth-child(3) .price-table__link:hover {
+    opacity: 0.8;
+  }
 }
 
 @media (any-hover: hover) {
