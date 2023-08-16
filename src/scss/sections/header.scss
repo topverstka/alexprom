@@ -100,7 +100,7 @@ header {
     margin-right: 3.2rem;
 
     @media (max-width: $desktop-m) {
-    	margin-right: 2.4rem;
+    	margin-right: 2.7rem;
     }
 
     @media (max-width: $laptop) {
@@ -233,6 +233,10 @@ header {
 	background-position: center;
 	background-size: contain;
 
+	@media (max-width: $desktop-m) {
+		right: 1.2rem;
+	}
+
 	@media (max-width: $laptop) {
 		display: none;
 	}
@@ -243,19 +247,24 @@ header {
 }
 
 .header__nav-dropdown-menu {
-	background-color: #f8f8f8;
-	padding: 2.4rem 1.6rem;
-	border-radius: 1rem;
-	transition: var(--tr);
-
 	@media (min-width: $laptop + 1) {
+		padding-top: 5.6rem;
 		position: absolute;
 		opacity: 0;
 		pointer-events: none;
 		transform: translateY(2rem);
 	}
 
+}
+
+.header__nav-dropdown-menu-inner {
+	background-color: #fff;
+	padding: 2.4rem 1.6rem;
+	border-radius: 1rem;
+	transition: var(--tr);
+
 	@media (max-width: $laptop) {
+		min-width: 20rem;
 		padding-top: 0.8rem;
 		padding-left: 2.8rem;
 		background-color: transparent;
@@ -263,7 +272,14 @@ header {
 }
 
 .header__nav-dropdown-menu .header__nav-link {
+	display: block;
 	font-weight: 400;
+	margin-right: 0;
+	margin-bottom: 1em;
+}
+
+.header__nav-dropdown-menu .header__nav-link:last-child {
+	margin-bottom: 0;
 }
 
 .header__nav-dropdown:hover .header__nav-dropdown-menu {
@@ -272,3 +288,4 @@ header {
 	opacity: 1;
 	pointer-events: initial;
 }
+

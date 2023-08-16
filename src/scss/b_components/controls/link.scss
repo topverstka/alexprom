@@ -10,3 +10,34 @@
     color: var(--accent-hover);
   }
 }
+
+.link--phone::before {
+  background-image: url("../images/phone.png");
+}
+
+.link--mail {
+}
+
+.link--mail::before {
+  background-image: url("../images/email.png");
+}
+
+.link--phone,
+.link--mail {
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  background: none;
+}
+
+.link--phone::before,
+.link--mail::before {
+  content: "";
+  display: block;
+  width: 1em;
+  height: 1em;
+  margin-right: 0.3em;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}

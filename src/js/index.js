@@ -41,6 +41,18 @@ telInputs.forEach(tel => {
   new Inputmask(maskOptions).mask(tel);
 })
 
+window.addEventListener('DOMContentLoaded', (event) => {
+  const squareElements = [
+    ...document.querySelectorAll('.price-table__qt'),
+    ...document.querySelectorAll('.swiper-gallery__arg'),
+  ]
+  squareElements.forEach(price => {
+    let priceText = price.innerHTML
+    priceText = priceText.replace('²', '<span class="font-default">²</span>')
+    price.innerHTML = priceText
+  })
+});
+
 // import "./b_helpers/parallax-helpers.js";
 import "./b_helpers/smooth-anchors.js";
 
