@@ -17,7 +17,8 @@
         background-image: url(../images/bg-thumb.png);
         background-repeat: no-repeat;
         background-size: cover;
-        padding-bottom: 54vw;
+        // padding-bottom: 54vw;
+        padding-bottom: 12vw;
 	}
 
 	@media(max-width: $tablet-m) {
@@ -60,7 +61,7 @@
 
 .hero--has-breadcrumbs .hero__thumb {
 	@media (max-width: $tablet) {
-		padding-bottom: 7rem;
+		padding-bottom: 12rem;
 	}
 }
 
@@ -267,7 +268,8 @@
 }
 
 .hero__desc {
-    font-size: 2.4rem;
+    font-size: 2rem;
+    // font-size: 2.4rem;
     font-weight: 500;
     letter-spacing: .2px;
     margin-bottom: 20px;
@@ -287,7 +289,10 @@
 
 .hero__title + p,
 .hero__desc + p {
-    max-width: 73rem;
+    max-width: 62rem;
+	@media (max-width: $desktop-s) {
+		max-width: 50rem;
+	}
 	@media (max-width: $mobile-l) {
 		font-size: 1.6rem;
 	}
@@ -565,6 +570,9 @@
 }
 
 .hero-info__icon > img {
+	width: 50px;
+	height: 50px;
+	
 	@media(max-width: 1670px) {
 		width: 24px;
         height: 24px;
@@ -615,7 +623,14 @@
 
 .hero--thumb-half .hero__desc + p,
 .hero--thumb-half .hero__title {
-	max-width: 62rem;
+	// max-width: 83rem;
+	max-width: 77rem;
+	@media (max-width: $desktop-m) {
+		max-width: 60rem;
+	}
+	@media (max-width: $desktop-s) {
+		max-width: 50rem;
+	}
 }
 
 

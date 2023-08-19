@@ -41,7 +41,7 @@ header {
 .header__menu {
     flex-grow: 1;
 
-    @media (max-width: $laptop) {
+    @media (max-width: $desktop-s) {
     	position: fixed;
     	width: 100%;
     	z-index: 2;
@@ -57,13 +57,13 @@ header {
 }
 
 .header--opened .header__menu {
-	@media (max-width: $laptop) {
+	@media (max-width: $desktop-s) {
 		background: rgba(31,31,31,0.7);
 	}
 }
 
 .header__menu-inner {
-	@media (max-width: $laptop) {
+	@media (max-width: $desktop-s) {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -93,7 +93,7 @@ header {
 	pointer-events: initial;
     display: flex;
 
-	@media(max-width: $laptop) {
+	@media(max-width: $desktop-s) {
 		// display: none;
 		flex-direction: column;
 		align-items: flex-start;
@@ -103,12 +103,13 @@ header {
 .header__nav-link {
     transition: .2s;
     margin-right: 3.2rem;
+    text-transform: uppercase;
 
     @media (max-width: $desktop-m) {
     	margin-right: 2.7rem;
     }
 
-    @media (max-width: $laptop) {
+    @media (max-width: $desktop-s) {
     	font-size: 4rem;
     	font-weight: 600;
     	line-height: 1.45;
@@ -128,7 +129,7 @@ header {
 }
 
 .header__nav-link:last-child {
-	margin-right: 0;
+	// margin-right: auto;
 }
 
 .header__nav-link:hover {
@@ -143,7 +144,7 @@ header {
 	padding-top: 3rem;
 	padding-bottom: 3rem;
 
-	@media (min-width: $laptop + 1) {
+	@media (min-width: $desktop-s + 1) {
 		display: none;
 	}
 
@@ -199,7 +200,7 @@ header {
     display: none;
     z-index: 2;
 
-	@media(max-width: $laptop) {
+	@media(max-width: $desktop-s) {
 		display: flex;
 	}
 }
@@ -220,28 +221,42 @@ header {
 
 .header__nav-dropdown {
 	position: relative;
+    margin-right: 3.2rem;
+
+    @media (max-width: $desktop-m) {
+    	margin-right: 2.7rem;
+    }
+
+    @media (max-width: $desktop-s) {
+    	margin-bottom: 3.2rem;
+		margin-right: 0;
+    }
+
+	@media (max-width: $mobile-l) {
+		margin-bottom: 2.4rem;
+	}
+}
+
+.header__nav-dropdown > .header__nav-link {
+	margin-right: 2rem;
 }
 
 .header__nav-dropdown::after {
 	content: "";
 	position: absolute;
 	top: 0.6rem;
-	right: 1.6rem;
+	right: 0;
 	display: block;
 	width: 1rem;
 	height: 1rem;
 	transition: var(--tr);
 	transform: rotate(90deg);
-	background-image: url("../images/link-angle.svg");
+	background-image: url("../images/link-angle-accent.svg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
 
-	@media (max-width: $desktop-m) {
-		right: 1.2rem;
-	}
-
-	@media (max-width: $laptop) {
+	@media (max-width: $desktop-s) {
 		display: none;
 	}
 }
@@ -251,7 +266,7 @@ header {
 }
 
 .header__nav-dropdown-menu {
-	@media (min-width: $laptop + 1) {
+	@media (min-width: $desktop-s + 1) {
 		padding-top: 6.1rem;
 		position: absolute;
 		opacity: 0;
@@ -267,7 +282,7 @@ header {
 	border-radius: 1rem;
 	transition: var(--tr);
 
-	@media (max-width: $laptop) {
+	@media (max-width: $desktop-s) {
 		min-width: 20rem;
 		padding-top: 0.8rem;
 		padding-left: 2.8rem;
@@ -281,15 +296,18 @@ header {
 	margin-right: 0;
 	margin-bottom: 1em;
 
-	@media (max-width: $tablet) {
+	@media (max-width: $desktop-s) {
 		margin-bottom: 0.2em;
-		font-size: 2rem;
+		font-size: 2.6rem;
 		position: relative;
+	}
+	@media (max-width: $mobile-xl) {
+		font-size: 2rem;
 	}
 }
 
 .header__nav-dropdown-menu .header__nav-link::before {
-	@media (max-width: $tablet) {
+	@media (max-width: $desktop-s) {
 		content: "";
 		display: block;
 		width: 0.6rem;
@@ -297,8 +315,11 @@ header {
 		border-radius: 0.6rem;
 		position: absolute;
 		left: -0.7em;
-	    top: 0.55em;
+	    top: 0.56em;
 		background: var(--accent);
+	}
+	@media (max-width: $mobile-xl) {
+	    top: 0.55em;
 	}
 }
 

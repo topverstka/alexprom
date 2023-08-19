@@ -5,14 +5,14 @@
     // padding-bottom: 15.3rem;
     max-width: 1920px;
     margin: 0 auto;
-    font-size: 2rem;
+    // font-size: 2rem;
+    font-size: 1.6rem;
 
     @media (max-width: $desktop-l) {
-	    font-size: 2rem;
+	    // font-size: 2rem;
     }
 
 	@media (max-width: $tablet) {
-	    font-size: 1.6rem;
 	}
 
 	@media(max-width: $mobile-xl) {
@@ -27,9 +27,18 @@
     justify-content: flex-start;
     padding: 50px 0;
 
-	@media(max-width: $tablet) {
+    @media (min-width: $desktop-m + 1) {
+    	padding-left: 70px;
+    	padding-right: 70px;
+    }
+
+	@media (max-width: $tablet) {
 		flex-wrap: wrap;
 		padding-bottom: 2.5rem;
+	}
+
+	@media (max-width: $tablet) and (min-width: $mobile-xl + 1) {
+		padding-top: 12rem;
 	}
 }
 
@@ -37,6 +46,12 @@
 	display: block;
 	height: 14.5rem;
 	margin-right: 11.7rem;
+	margin-top: 4rem;
+
+	@media (max-width: $desktop-m) {
+		margin-top: 0;
+		margin-right: 6.7rem;
+	}
 
 	@media (max-width: $tablet) {
 		height: 10.7rem;
@@ -216,6 +231,10 @@
 	margin-right: 8.9rem;
 	max-width: 31.2rem;
 
+	@media (max-width: $desktop-m) {
+		margin-right: 6rem;
+	}
+
 	@media (max-width: $tablet) {
 		margin-right: 3rem;
 		max-width: 28rem;
@@ -229,9 +248,24 @@
 	}
 }
 
+.footer__menu:first-of-type {
+	@media (max-width: $tablet) {
+	    margin-right: 0;
+	    max-width: 24rem;	
+	}
+
+	@media (min-width: $mobile-xl + 1) and (max-width: $tablet) {
+		margin-bottom: 3rem;
+	}
+}
+
 .footer__menu:last-of-type {
 	margin-left: auto;
 	margin-right: 0;
+
+	@media (max-width: $tablet) {
+		margin-right: auto;
+	}
 }
 
 .footer__menu-title {

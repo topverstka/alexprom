@@ -31,7 +31,7 @@
 .link--mail {
   color: var(--dark);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   background: none;
 }
 
@@ -41,8 +41,10 @@
   content: "";
   display: block;
   width: 1em;
+  min-width: 1em;
   height: 1em;
   margin-right: 0.3em;
+  margin-top: 0.25em;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;

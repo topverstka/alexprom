@@ -174,7 +174,17 @@ class b_modal {
     window.location.hash = id;
     const event = new Event("b_modal-open");
     pop.dispatchEvent(event);
-    pop.querySelector(".b_modal").dispatchEvent(event);
+    const b_modal = pop.querySelector(".b_modal")
+    b_modal.dispatchEvent(event);
+
+    console.log(pop)
+    console.log(b_modal)
+
+    if (b_modal.getBoundingClientRect().height > window.innerHeight) {
+      pop.classList.add('b_modal--scrollable')
+    } else {
+      pop.classList.remove('b_modal--scrollable')
+    }
 
     bodyLock(true);
   }

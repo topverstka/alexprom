@@ -16,6 +16,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 			if (servicePrice) {
 				servicePrice = columns[1].querySelector('.price-table__qt').innerText;
 				servicePrice = servicePrice.toLowerCase();
+
+		    servicePrice = servicePrice.replace('²', '<span class="font-default">²</span>')
 			}
 
 			const modalService = document.querySelector('.modal-service');

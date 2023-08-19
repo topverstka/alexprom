@@ -7,11 +7,11 @@
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 40px;
-	margin-bottom: 18rem;
+	margin-bottom: 6rem;
 
 	@media (max-width: $laptop) {
 		grid-template-columns: 100%;
-		margin-bottom: 10rem;
+		margin-bottom: 5rem;
 	}
 
 	@media (max-width: $mobile-xl) {

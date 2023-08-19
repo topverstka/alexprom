@@ -196,7 +196,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 		let cities = [...document.querySelectorAll('.locations-addresses__link')];
 		cities = cities.map(city => {
-			const cityAddress = city.closest('.locations-card').querySelector('.locations-card__contact-address');
+			let cityAddress = city.closest('.locations-card')?.querySelector('.locations-card__contact-address');
 			if (cityAddress) {
 				return {name: cityAddress.innerText, element: city, addressElement: cityAddress};
 			}

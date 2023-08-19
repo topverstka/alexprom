@@ -64,3 +64,28 @@
 .modal-form .b_modal__closer::after {
 	height: 12%;
 }
+
+.modal-service {
+	max-width: 70rem;
+
+	@media (max-width: $tablet) {
+		max-width: 40rem;
+	}
+
+	@media (max-width: $mobile-xl) {
+		max-width: 90%;
+	}
+}
+
+.modal-service .modal-form__title {
+	@media (max-width: $tablet) {
+		font-size: 2.4rem;
+	}
+	@media (max-width: $mobile-xl) {
+		font-size: 2rem;
+	}
+}
+
+.modal-service__name br {
+	display: none;
+}
