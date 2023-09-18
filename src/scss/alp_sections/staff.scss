@@ -18,7 +18,12 @@
 
 .staff__buttons {
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-between;
+	position: absolute;
+  max-width: 100%;
+  width: 100%;
+  top: 50%;
+  left: 0;
 
 	@media (max-width: $laptop) {
 		// display: none;

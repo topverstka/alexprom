@@ -1,6 +1,6 @@
 .experience {
-	margin-top: 180px;
-	margin-bottom: 100px;
+	margin-top: 130px;
+	margin-bottom: 70px;
 	padding-top: 0;
 
 	@media (max-width: $desktop-m) {
@@ -138,26 +138,23 @@
 
 .experience-slides .swiper-button-prev,
 .experience-slides .swiper-button-next {
-	@media (max-width: $desktop-s) {
-	  width: 60px;
-	  height: 60px;
-	  top: calc(50% + 20px);
-	  transform: translateY(-50%);
-	  display: flex;
-	}
+  width: 60px;
+  height: 60px;
+  top: calc(50% + 20px);
+  transform: translateY(-50%);
+  display: flex;
 }
 
 .experience-slides .swiper-button-next::before,
 .experience-slides .swiper-button-prev::before {
-	@media (max-width: $desktop-s) {
-		height: 44px;
-		width: 44px;
-	}
+	height: 44px;
+	width: 44px;
 }
 
 .experience-slides .swiper-button-prev {
+	left: -49px;
 	@media (max-width: $tablet-m) {
-		left: 3px;
+		left: -17px;
 	}
 
 	@media (max-width: $mobile-s) {
@@ -166,8 +163,9 @@
 }
 
 .experience-slides .swiper-button-next {
+	right: -49px;
 	@media (max-width: $tablet-m) {
-		right: 3px;
+		right: -17px;
 	}
 	
 	@media (max-width: $mobile-s) {
@@ -246,7 +244,7 @@
 	overflow: hidden;
 	border-radius: 30px;
   position: relative;
-  padding-top: 54.8%;
+  padding-top: 64.8%;
 
 	@media (max-width: $desktop-m) {
 	  padding-top: 69.8%;

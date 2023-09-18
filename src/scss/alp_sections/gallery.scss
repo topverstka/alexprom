@@ -1,3 +1,9 @@
+.gallery {
+    padding-bottom: 30px;
+    @media (max-width: $desktop-m) {
+        padding-bottom: 15px;
+    }
+}
 .gallery__head {
     display: flex;
     align-items: center;

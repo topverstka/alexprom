@@ -12,6 +12,10 @@ header {
     padding: 28px 0;
     font-size: 1.6rem;
 
+    @media (max-width: $laptop-l) {
+	    font-size: 1.4rem;
+    }
+
 	@media(max-width: 1380px) {
 		justify-content: space-between;
 	}
@@ -106,7 +110,7 @@ header {
     text-transform: uppercase;
 
     @media (max-width: $desktop-m) {
-    	margin-right: 2.7rem;
+    	margin-right: 1.6rem;
     }
 
     @media (max-width: $desktop-s) {

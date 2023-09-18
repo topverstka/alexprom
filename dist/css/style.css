@@ -954,9 +954,10 @@ h6 {
 }
 
 .play-cover:before {
-  --size: 100px;
-  --bg-circle: var(--c-surface);
+  --size: 70px;
+  --bg-circle: transparent;
   background-color: var(--bg-circle);
+  border: 0.4rem solid var(--main);
   z-index: 1;
   border-radius: var(--size);
 }
@@ -967,7 +968,7 @@ h6 {
 }
 
 .play-cover:after {
-  --size: 40px;
+  --size: 25px;
   --path: polygon(17% 0, 17% 100%, 100% 50%);
   --bg-play: var(--main);
   background-color: var(--bg-play);
@@ -1504,6 +1505,7 @@ h6 {
   font-size: 40px;
   line-height: 1.35;
   margin-bottom: 24px;
+  text-align: center;
 }
 @media (max-width: 450px) {
   .modal-form__title {
@@ -1521,6 +1523,7 @@ h6 {
 .modal-form__desc {
   font-size: 18px;
   line-height: 1.45;
+  text-align: center;
 }
 @media (max-width: 450px) {
   .modal-form__desc {
@@ -1902,7 +1905,7 @@ h6 {
   font-style: normal;
   font-weight: 400;
   font-stretch: 100%;
-  src: url("/local/templates/main/resources/fonts/gothampro/gothampro.woff2") format("woff2"), url("/local/templates/main/resources/fonts/gothampro/gothampro.woff") format("woff");
+  src: url("../resources/fonts/gothampro/gothampro.woff2") format("woff2"), url("../resources/fonts/gothampro/gothampro.woff") format("woff");
   font-display: swap;
 }
 @font-face {
@@ -1910,7 +1913,7 @@ h6 {
   font-style: normal;
   font-weight: 600;
   font-stretch: 100%;
-  src: url("/local/templates/main/resources/fonts/gothampro/gothampro-bold.woff2") format("woff2"), url("/local/templates/main/resources/fonts/gothampro/gothampro-bold.woff") format("woff");
+  src: url("../resources/fonts/gothampro/gothampro-bold.woff2") format("woff2"), url("../resources/fonts/gothampro/gothampro-bold.woff") format("woff");
   font-display: swap;
 }
 :root {
@@ -3548,6 +3551,11 @@ header {
   padding: 28px 0;
   font-size: 1.6rem;
 }
+@media (max-width: 1500px) {
+  .header {
+    font-size: 1.4rem;
+  }
+}
 @media (max-width: 1380px) {
   .header {
     justify-content: space-between;
@@ -3651,7 +3659,7 @@ header {
 }
 @media (max-width: 1536px) {
   .header__nav-link {
-    margin-right: 2.7rem;
+    margin-right: 1.6rem;
   }
 }
 @media (max-width: 1280px) {
@@ -4230,17 +4238,11 @@ header {
     padding-bottom: 12vw;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .hero__thumb {
-    padding-bottom: 88vw;
+    padding-bottom: 0;
   }
 }
-@media (max-width: 690px) {
-  .hero__thumb {
-    padding-bottom: 35vw;
-  }
-}
-
 .hero--no-bullets .hero__thumb {
   min-height: initial;
   padding-bottom: 318px;
@@ -4306,12 +4308,6 @@ header {
   object-fit: cover;
 }
 
-.hero--thumb-half .hero__img {
-  max-width: 50%;
-  min-height: inherit;
-  margin-left: auto;
-}
-
 .hero__worker {
   display: none;
 }
@@ -4326,6 +4322,11 @@ header {
     height: 50vw;
     width: auto;
     object-position: bottom;
+  }
+}
+@media (max-width: 992px) {
+  .hero__worker {
+    position: static;
   }
 }
 @media (max-width: 768px) {
@@ -4353,6 +4354,7 @@ header {
   height: 100%;
   object-position: bottom;
   object-fit: contain;
+  mix-blend-mode: multiply;
 }
 
 .hero--thumb-half .hero__worker {
@@ -4604,7 +4606,7 @@ header {
 .hero-info {
   background-color: #FFF;
   margin-top: auto;
-  margin-bottom: 160px;
+  margin-bottom: 70px;
   padding: 8px;
   border-radius: 30px;
   position: relative;
@@ -4618,6 +4620,7 @@ header {
 @media (max-width: 1536px) {
   .hero-info {
     margin-top: 62px;
+    margin-bottom: 60px;
   }
 }
 @media (max-width: 1368px) {
@@ -6088,6 +6091,7 @@ header {
 
 .clients {
   overflow: hidden;
+  background-color: var(--light);
 }
 
 .clients-carousel {
@@ -6121,6 +6125,17 @@ header {
   .clients-carousel .swiper-button-prev {
     top: 100%;
   }
+}
+@media (max-width: 690px) {
+  .clients-carousel .swiper-button-next,
+  .clients-carousel .swiper-button-prev {
+    top: 40%;
+  }
+}
+
+.clients-carousel .swiper-button-next:before,
+.clients-carousel .swiper-button-prev:before {
+  background-color: var(--light);
 }
 
 .clients-carousel .swiper-button-next {
@@ -6168,7 +6183,7 @@ header {
 }
 
 .clients__thumb {
-  background-color: var(--light);
+  background-color: #fff;
   border-radius: 30px;
   display: flex;
   justify-content: center;
@@ -6213,7 +6228,19 @@ header {
 }
 @media (max-width: 690px) {
   .clients__img {
-    max-width: 100%;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+
+.gallery {
+  padding-bottom: 30px;
+}
+@media (max-width: 1536px) {
+  .gallery {
+    padding-bottom: 15px;
   }
 }
 
@@ -6489,8 +6516,8 @@ header {
 }
 
 .experience {
-  margin-top: 180px;
-  margin-bottom: 100px;
+  margin-top: 130px;
+  margin-bottom: 70px;
   padding-top: 0;
 }
 @media (max-width: 1536px) {
@@ -6641,28 +6668,27 @@ header {
   opacity: 0;
 }
 
-@media (max-width: 1280px) {
-  .experience-slides .swiper-button-prev,
-  .experience-slides .swiper-button-next {
-    width: 60px;
-    height: 60px;
-    top: calc(50% + 20px);
-    transform: translateY(-50%);
-    display: flex;
-  }
+.experience-slides .swiper-button-prev,
+.experience-slides .swiper-button-next {
+  width: 60px;
+  height: 60px;
+  top: calc(50% + 20px);
+  transform: translateY(-50%);
+  display: flex;
 }
 
-@media (max-width: 1280px) {
-  .experience-slides .swiper-button-next::before,
-  .experience-slides .swiper-button-prev::before {
-    height: 44px;
-    width: 44px;
-  }
+.experience-slides .swiper-button-next::before,
+.experience-slides .swiper-button-prev::before {
+  height: 44px;
+  width: 44px;
 }
 
+.experience-slides .swiper-button-prev {
+  left: -49px;
+}
 @media (max-width: 768px) {
   .experience-slides .swiper-button-prev {
-    left: 3px;
+    left: -17px;
   }
 }
 @media (max-width: 330px) {
@@ -6671,9 +6697,12 @@ header {
   }
 }
 
+.experience-slides .swiper-button-next {
+  right: -49px;
+}
 @media (max-width: 768px) {
   .experience-slides .swiper-button-next {
-    right: 3px;
+    right: -17px;
   }
 }
 @media (max-width: 330px) {
@@ -6762,7 +6791,7 @@ header {
   overflow: hidden;
   border-radius: 30px;
   position: relative;
-  padding-top: 54.8%;
+  padding-top: 64.8%;
 }
 @media (max-width: 1536px) {
   .experience__video-box {
@@ -8020,7 +8049,12 @@ header {
 
 .staff__buttons {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  position: absolute;
+  max-width: 100%;
+  width: 100%;
+  top: 50%;
+  left: 0;
 }
 @media (max-width: 1100px) {
   .staff__buttons {

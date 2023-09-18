@@ -1,5 +1,6 @@
 .clients {
     overflow: hidden;
+    background-color: var(--light);
 }
 
 .clients-carousel {
@@ -29,6 +30,13 @@
     //     display: none;
         top: 100%;
     }
+    @media (max-width: $mobile-xl) {
+        top: 40%;
+    }
+}
+.clients-carousel .swiper-button-next:before,
+.clients-carousel .swiper-button-prev:before {
+    background-color: var(--light);
 }
 .clients-carousel .swiper-button-next {
     right: -3rem;
@@ -64,7 +72,7 @@
 }
 
 .clients__thumb {
-    background-color: var(--light);
+    background-color: #fff;
     border-radius: 30px;
     display: flex;
     justify-content: center;
@@ -105,6 +113,9 @@
         max-height: 130px;
     }
     @media(max-width: 690px) {
-        max-width: 100%;
+        max-width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
     }
 }

@@ -108,9 +108,11 @@
 }
 
 .play-cover:before {
-  --size: 100px;
-  --bg-circle: var(--c-surface);
+  --size: 70px;
+  // --bg-circle: var(--c-surface);
+  --bg-circle: transparent;
   background-color: var(--bg-circle);
+  border: 0.4rem solid var(--main);
   z-index: 1;
   border-radius: var(--size);
 
@@ -120,7 +122,7 @@
 }
 
 .play-cover:after {
-  --size: 40px;
+  --size: 25px;
   --path: polygon(17% 0, 17% 100%, 100% 50%);
   --bg-play: var(--main);
   background-color: var(--bg-play);
