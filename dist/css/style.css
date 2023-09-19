@@ -3551,7 +3551,7 @@ header {
   padding: 28px 0;
   font-size: 1.6rem;
 }
-@media (max-width: 1500px) {
+@media (max-width: 1580px) {
   .header {
     font-size: 1.4rem;
   }
@@ -4222,11 +4222,16 @@ header {
   position: relative;
   overflow: hidden;
   width: 100%;
-  min-height: 1100px;
+  min-height: 1000px;
+}
+@media (max-width: 1800px) {
+  .hero__thumb {
+    min-height: 800px;
+  }
 }
 @media (max-width: 1536px) {
   .hero__thumb {
-    min-height: 930px;
+    min-height: 600px;
   }
 }
 @media (max-width: 1100px) {
@@ -4436,7 +4441,7 @@ header {
   margin-bottom: 16px;
   padding-top: 150px;
 }
-@media (max-width: 1536px) {
+@media (max-width: 1800px) {
   .hero--no-bullets .hero__title {
     max-width: 800px;
     padding-top: 98px;
@@ -4541,6 +4546,7 @@ header {
 
 .hero__buttons {
   margin-top: 32px;
+  margin-bottom: 32px;
 }
 @media (max-width: 768px) {
   .hero__buttons {
@@ -4550,6 +4556,7 @@ header {
 @media (max-width: 690px) {
   .hero__buttons {
     margin-top: 32px;
+    margin-bottom: 0;
   }
 }
 
@@ -4558,6 +4565,7 @@ header {
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   margin-top: 32px;
+  margin-bottom: 32px;
   max-width: 543px;
 }
 @media (max-width: 1100px) {
@@ -4577,6 +4585,7 @@ header {
   .hero__form {
     gap: 24px;
     margin-top: 32px;
+    margin-bottom: 0;
   }
 }
 
@@ -4611,11 +4620,6 @@ header {
   border-radius: 30px;
   position: relative;
   z-index: 2;
-}
-@media (max-width: 1670px) {
-  .hero-info {
-    margin-top: 100px;
-  }
 }
 @media (max-width: 1536px) {
   .hero-info {
@@ -4678,10 +4682,14 @@ header {
 }
 @media (max-width: 1670px) {
   .hero-info__item {
+    gap: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .hero-info__item {
     flex-direction: column-reverse;
     align-items: flex-start;
     justify-content: flex-end;
-    gap: 10px;
   }
 }
 @media (max-width: 1368px) {
@@ -4717,7 +4725,7 @@ header {
 @media (max-width: 1536px) {
   .hero-info__item::after {
     height: 122px;
-    right: 15px;
+    right: 0;
   }
 }
 @media (max-width: 1100px) {
@@ -4753,8 +4761,7 @@ header {
 }
 @media (max-width: 1670px) {
   .hero-info__desc {
-    flex-basis: auto;
-    width: 90%;
+    flex-basis: 67%;
   }
 }
 @media (max-width: 768px) {
@@ -4793,7 +4800,7 @@ header {
 
 @media (max-width: 1536px) {
   .hero-info__text {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 }
 @media (max-width: 768px) {
@@ -4815,6 +4822,7 @@ header {
   min-width: var(--size);
   width: var(--size);
   height: var(--size);
+  min-height: var(--size);
   border-radius: 100%;
   border: 2px solid var(--accent);
   display: flex;
@@ -4824,7 +4832,7 @@ header {
 }
 @media (max-width: 1670px) {
   .hero-info__icon {
-    --size: 48px;
+    --size: 58px;
     border: 1px solid var(--accent);
   }
 }
@@ -4840,8 +4848,8 @@ header {
 }
 @media (max-width: 1670px) {
   .hero-info__icon > img {
-    width: 24px;
-    height: 24px;
+    width: 34px;
+    height: 34px;
   }
 }
 @media (max-width: 1100px) {
@@ -6522,7 +6530,7 @@ header {
 }
 @media (max-width: 1536px) {
   .experience {
-    margin-top: 210px;
+    margin-top: 110px;
     margin-bottom: 130px;
   }
 }
@@ -8028,11 +8036,7 @@ header {
 
 .staff {
   overflow: hidden;
-}
-@media (max-width: 690px) {
-  .staff {
-    position: relative;
-  }
+  position: relative;
 }
 
 .staff__head {
@@ -8051,10 +8055,13 @@ header {
   display: flex;
   justify-content: space-between;
   position: absolute;
-  max-width: 100%;
+  max-width: 98%;
   width: 100%;
   top: 50%;
   left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media (max-width: 1100px) {
   .staff__buttons {

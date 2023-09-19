@@ -6,10 +6,13 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    min-height: 1100px;
+    min-height: 1000px;
 
+	@media(max-width: $desktop-l) {
+		min-height: 800px;
+	}
 	@media(max-width: $desktop-m) {
-		min-height: 930px;
+		min-height: 600px;
 	}
 
 	@media(max-width: $laptop) {
@@ -222,7 +225,7 @@
 	margin-bottom: 16px;
 	padding-top: 150px;
 
-	@media (max-width: $desktop-m) {
+	@media (max-width: $desktop-l) {
 		max-width: 800px;
 		padding-top: 98px;
 	}
@@ -313,6 +316,7 @@
 
 .hero__buttons {
     margin-top: 32px;
+    margin-bottom: 32px;
 
 	@media (max-width: $tablet-m) {
 		margin-top: 46px;
@@ -320,6 +324,7 @@
 
 	@media(max-width: $mobile-xl) {
         margin-top: 32px;
+	    margin-bottom: 0;
 	}
 }
 
@@ -328,6 +333,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     margin-top: 32px;
+    margin-bottom: 32px;
     max-width: 543px;
 
 	@media(max-width: $laptop) {
@@ -344,6 +350,7 @@
 	@media(max-width: $mobile-xl) {
 		gap: 24px;
         margin-top: 32px;
+	    margin-bottom: 0;
 	}
 }
 
@@ -378,9 +385,9 @@
     position: relative;
     z-index: 2;
 
-	@media(max-width: 1670px) {
-		margin-top: 100px;
-	}
+	// @media(max-width: 1670px) {
+	// 	margin-top: 100px;
+	// }
 
 	@media(max-width: $desktop-m) {
 		margin-top: 62px;
@@ -435,10 +442,13 @@
     position: relative;
 
 	@media(max-width: 1670px) {
+        gap: 10px;
+	}
+
+	@media (max-width: $tablet-m) {
 		flex-direction: column-reverse;
         align-items: flex-start;
         justify-content: flex-end;
-        gap: 10px;
 	}
 
 	@media(max-width: $laptop-m) {
@@ -470,7 +480,7 @@
 
 	@media(max-width: $desktop-m) {
 		height: 122px;
-	    right: 15px;
+	    right: 0;
 	}
 	@media(max-width: $laptop) {
 		display: none;
@@ -503,11 +513,12 @@
     margin-right: 0.6rem;
 
 	@media(max-width: 1670px) {
-		flex-basis: auto;
-        width: 90%;
+	    flex-basis: 67%;
+        // width: 90%;
 	}
 
 	@media (max-width: $tablet-m) {
+		// flex-basis: auto;
 		width: 75%;
 	}
 
@@ -538,7 +549,7 @@
 
 .hero-info__text {
     @media (max-width: $desktop-m) {
-    	font-size: 1.6rem;
+    	font-size: 1.4rem;
     }
 
     @media (max-width: $tablet-m) {
@@ -559,6 +570,7 @@
     min-width: var(--size);
     width: var(--size);
     height: var(--size);
+    min-height: var(--size);
     border-radius: 100%;
     border: 2px solid var(--accent);
     display: flex;
@@ -567,7 +579,7 @@
     box-sizing: border-box;
 
 	@media(max-width: 1670px) {
-	    --size: 48px;
+	    --size: 58px;
         border: 1px solid var(--accent);
 	}
 
@@ -581,8 +593,8 @@
 	height: 50px;
 	
 	@media(max-width: 1670px) {
-		width: 24px;
-        height: 24px;
+		width: 34px;
+        height: 34px;
 	}
 	@media(max-width: $laptop) {
 		width: 30px;

@@ -1,8 +1,6 @@
 .staff {
 	overflow: hidden;
-	@media (max-width: $mobile-xl) {
-		position: relative;
-	}
+	position: relative;
 }
 
 .staff__head {
@@ -20,10 +18,13 @@
 	display: flex;
 	justify-content: space-between;
 	position: absolute;
-  max-width: 100%;
+  max-width: 98%;
   width: 100%;
   top: 50%;
   left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 
 	@media (max-width: $laptop) {
 		// display: none;

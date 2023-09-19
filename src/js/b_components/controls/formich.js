@@ -69,6 +69,9 @@ formsList.forEach((form) => {
     })
   }
 
+  // form.addEventListener("submit", async (event) => {
+  //   event.preventDefault();
+  // })
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
