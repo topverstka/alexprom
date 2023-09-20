@@ -55,6 +55,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
   })
 });
 
+
+const hero = document.querySelector('.hero');
+if (hero) {
+  const heroPic = hero.querySelector('.hero__pic');
+  if (!heroPic) {
+    hero.classList.remove('hero--has-overlay');
+  }
+}
+
 // import "./b_helpers/parallax-helpers.js";
 import "./b_helpers/smooth-anchors.js";
 
