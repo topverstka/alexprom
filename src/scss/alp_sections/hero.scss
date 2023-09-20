@@ -511,6 +511,7 @@
 .hero-info__desc {
     flex-basis: 60%;
     margin-right: 0.6rem;
+    margin-bottom: auto;
 
 	@media(max-width: 1670px) {
 	    flex-basis: 67%;
