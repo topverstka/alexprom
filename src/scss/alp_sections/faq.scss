@@ -118,3 +118,14 @@
 .faq-card .bayan--opened .bayan__toggler:after {
     opacity: 0;
 }
+
+.faq__button-more {
+    margin-top: 5rem;
+    max-width: 28rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: $mobile-xl) {
+        margin-top: 3rem;
+    }
+}

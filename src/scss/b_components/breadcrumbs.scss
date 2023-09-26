@@ -32,9 +32,14 @@
 	margin-right: 0.3rem;
 }
 
-.hero--has-overlay .breadcrumbs__link {
-	color: #fff;
+/*
+@media (min-width: $laptop + 1) {
+	.hero--has-overlay .breadcrumbs__link {
+		color: #fff;
+	}
+
+	.hero--has-overlay .breadcrumbs__item {
+		color: #5fb2f2;
+	}
 }
-.hero--has-overlay .breadcrumbs__item {
-	color: #5fb2f2;
-}
+//*/

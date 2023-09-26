@@ -64,6 +64,30 @@ if (hero) {
   }
 }
 
+
+const faqButtonMore = document.querySelector('.faq__button-more');
+if (faqButtonMore) {
+  const faqSection = faqButtonMore.closest('.faq')
+  const SHOW_INITIAL_CARDS = faqSection.dataset.showCards || 5;
+  const faqCards = [...faqSection.querySelectorAll('.faq-card')];
+
+  if (faqCards.length <= SHOW_INITIAL_CARDS) {
+    faqButtonMore.style.display = 'none';
+  }
+
+  faqCards.forEach((card, index) => {
+    if (index > SHOW_INITIAL_CARDS - 1) {
+      card.style.display = 'none';
+    }
+  })
+  faqButtonMore.addEventListener('click', () => {
+    faqCards.forEach((card, index) => {
+      card.style.display = '';
+    })
+    faqButtonMore.style.display = 'none';
+  })
+}
+
 // import "./b_helpers/parallax-helpers.js";
 import "./b_helpers/smooth-anchors.js";
 
